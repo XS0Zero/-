@@ -1,4 +1,6 @@
 import sys
+
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
 from Gui.Login import Ui_MainWindow as Login_window
 from Gui.MainWindow import Ui_MainWindow as MainWindow
@@ -15,6 +17,10 @@ class Login_window(QMainWindow, Login_window):
         self.setWindowTitle("登录窗口")
         self.pushButton.clicked.connect(lambda: on_login_button_clicked(self,window,Main_window))
         self.pushButton_2.clicked.connect(on_exit_button_clicked)
+
+    def keyPressEvent(self, QKeyEvent):
+        if QKeyEvent.key() == Qt.Key_Return:
+            on_login_button_clicked(self,window,Main_window)
 
 
 class MainWindow(QMainWindow, MainWindow):

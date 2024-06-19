@@ -2,6 +2,7 @@ import os
 import sys
 
 import pandas as pd
+from PyQt5.QtCore import Qt
 
 array = []
 def getUserInfo():
@@ -40,4 +41,5 @@ def check_password(n, p):
         if array[i][0] == n and array[i][1] == p:
             return True
     return False
+
 
