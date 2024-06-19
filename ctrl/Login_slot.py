@@ -15,7 +15,7 @@ def getUserInfo():
 def on_login_button_clicked(self,window,Main_window):
     print("登录按钮被点击了")
     # 在这里添加登录逻辑
-    if check_password(self.lineEdit.text(), self.lineEdit_2.text()):
+    if get_input_text(self.lineEdit.text(), self.lineEdit_2.text()):
         print("登录成功")
         window.hide()
         Main_window.show()
@@ -40,3 +40,4 @@ def check_password(n, p):
         if array[i][0] == n and array[i][1] == p:
             return True
     return False
+

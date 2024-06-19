@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
 from Gui.Login import Ui_MainWindow as Login_window
 from Gui.MainWindow import Ui_MainWindow as MainWindow
+from ctrl.Jieliu_slot import on_compute_button_clicked
 
 from ctrl.Login_slot import getUserInfo, on_login_button_clicked, on_exit_button_clicked
 
@@ -21,6 +22,7 @@ class MainWindow(QMainWindow, MainWindow):
         super(MainWindow, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("主窗口")
+        self.pushButton.clicked.connect(lambda: on_compute_button_clicked(self))
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
