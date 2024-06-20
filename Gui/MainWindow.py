@@ -730,12 +730,12 @@ class Ui_MainWindow(object):
         self.label_54.setMaximumSize(QtCore.QSize(50, 16777215))
         self.label_54.setObjectName("label_54")
         self.horizontalLayout_27.addWidget(self.label_54)
-        self.label_50 = QtWidgets.QLabel(self.frame_29)
-        self.label_50.setStyleSheet("font: 11pt \"宋体\";\n"
+        self.P3jl = QtWidgets.QLabel(self.frame_29)
+        self.P3jl.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
-        self.label_50.setObjectName("label_50")
-        self.horizontalLayout_27.addWidget(self.label_50)
+        self.P3jl.setObjectName("P3jl")
+        self.horizontalLayout_27.addWidget(self.P3jl)
         self.label_51 = QtWidgets.QLabel(self.frame_29)
         self.label_51.setMaximumSize(QtCore.QSize(20, 16777215))
         self.label_51.setObjectName("label_51")
@@ -1047,7 +1047,7 @@ class Ui_MainWindow(object):
         self.P2jl.setText(_translate("MainWindow", "输出结果"))
         self.label_48.setText(_translate("MainWindow", "mm"))
         self.label_54.setText(_translate("MainWindow", "三级节流"))
-        self.label_50.setText(_translate("MainWindow", "输出结果"))
+        self.P3jl.setText(_translate("MainWindow", "输出结果"))
         self.label_51.setText(_translate("MainWindow", "mm"))
         self.label_30.setText(_translate("MainWindow", "判断能否满足预期产量"))
         self.label_55.setText(_translate("MainWindow", "一级节流"))

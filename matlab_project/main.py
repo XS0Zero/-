@@ -24,7 +24,8 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     # D = 0.062  # 管径,m
     A = math.pi * float(D) ** 2 / 4  # 管截面积
     # n = 10  # 弯头总个数
-    Qd = 0 #初始化Qd=0
+    # 初始化
+    Qd = 0
     P2_bool = '无需一级节流'
     P22_bool = '无需二级节流'
     P222_bool = '无需三级节流'
@@ -197,7 +198,7 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     P40, Pctiz4 = Mz_func(Vccc, LL3, D, dennn, P222)
     P222 = P40
-    P1j3 = P222 + sum(Pctiz4)  # 二级节流后压力，MPa ?
+    P1j3 = P222 + np.sum(Pctiz4)  # 二级节流后压力，MPa ?
 
     if P222 > Pflq:
         P1111 = P222  # 三级节流后压力
