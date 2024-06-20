@@ -24,6 +24,24 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     # D = 0.062  # 管径,m
     A = math.pi * float(D) ** 2 / 4  # 管截面积
     # n = 10  # 弯头总个数
+    Qd = 0 #初始化Qd=0
+    P2_bool = '无需一级节流'
+    P22_bool = '无需二级节流'
+    P222_bool = '无需三级节流'
+    d = None
+    dd = None
+    ddd = None
+    T2 = None
+    T22 = None
+    T222 = None
+    P1j1 = None
+    P1j2 = None
+    P1j3 = None
+    P2_bool, P22_bool, P222_bool
+    Pctiz1 = None
+    Pctiz2 = None
+    Pctiz3 = None
+    Pctiz4 = None
 
     if r >= 0.7:
         Pc = (4881 - 386.11 * r) / 1000  # 压力,MPa
@@ -71,22 +89,32 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     #######二级节流前摩阻计算#######
 
-    n2 = 2  # 弯头个数
-    LL1 = np.zeros(n2 + 1)
+    # n2 = 2  # 弯头个数
+    # LL1 = np.zeros(n2 + 1)
     Lep = 30 * D * 1
-    LL1[0] = 1 + Lep
-    LL1[1] = 2 + Lep
-    LL1[2] = 2
+    # LL1[0] = 1 + Lep
+    # LL1[1] = 2 + Lep
+    # LL1[2] = 2
+
+    for i in range(n2):
+        if (i != n2):
+            LL1[0, i] = LL1[0, i] + Lep
+        else:
+            LL1[0, i] = LL1[0, i]
+
     P20, Pctiz2 = Mz_func(Vc, LL1, D, den, P2)
     P2 = P20
     P1j1 = P2 + np.sum(Pctiz2)  # 一级节流后压力，MPa
 
     if P2 > Pflq:
         P11 = P2  # 一级节流后压力（减掉摩阻）
+        P2_bool = '不满足产量要求'
     elif P2 <= Pflq:
         GG = G1
         n0 = n - n1 - n2
         Qd = MAXQd_func(den, P2, k, n0, D)  # 二级节流后极限处理产量
+        P2_bool = '满足产量要求'
+        return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4,
         raise ValueError('程序已完成,需要一级节流')
 
     #######二级节流#######
@@ -104,21 +132,32 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     # plt.text(P22, T22, '二级节流')
 
     #######三级节流前摩阻#######
-    n3 = 2  # 弯头个数
-    LL2 = np.zeros(n3 + 1)
+    # n3 = 2  # 弯头个数
+    # LL2 = np.zeros(n3 + 1)
     Lep = 30 * D * 1
-    LL2[0] = 1 + Lep
-    LL2[1] = 2 + Lep
-    LL2[2] = 2
+
+    # LL2[0] = 1 + Lep
+    # LL2[1] = 2 + Lep
+    # LL2[2] = 2
+
+    for i in range(n3):
+        if (i != n3):
+            LL2[0, i] = LL2[0, i] + Lep
+        else:
+            LL2[0, i] = LL2[0, i]
+
     P30, Pctiz3 = Mz_func(Vcc, LL2, D, denn, P22)
     P22 = P30
-    P1j2 = P22 + np.sum(Pctiz3)  # 三级节流前压力
+    P1j2 = P22 + np.sum(Pctiz3)  # 三级节流前压力 ?
     if P22 > Pflq:
         P111 = P22  # 二级节流后压力（减掉摩阻后）
+        P22_bool = '不满足产量要求'
     elif P22 <= Pflq:
         GG = G1 + G2
         n00 = n - n1 - n2 - n3
         Qd = MAXQd_func(denn, P22, k, n00, D)  # 二级节流后极限处理产量
+        P22_bool = '满足产量要求'
+        return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4,
         raise ValueError('程序已完成，需要二级节流')
 
     #######三级节流#######
@@ -143,23 +182,36 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     plt.show()
 
     #######三级节流后摩阻计算#######
-    n4 = 2  # 到分离器前弯头个数
-    LL3 = np.zeros(n4 + 1)
+    # n4 = 2  # 到分离器前弯头个数
+    # LL3 = np.zeros(n4 + 1)
     Lep = 30 * D * 1
-    LL3[0] = 1 + Lep
-    LL3[1] = 2 + Lep
-    LL3[2] = 2  # 前面数字代表分离器前管线每个弯头前的长度
+
+    # LL3[0] = 1 + Lep
+    # LL3[1] = 2 + Lep
+    # LL3[2] = 2  # 前面数字代表分离器前管线每个弯头前的长度
+
+    for i in range(n4):
+        if (i != n4):
+            LL3[0, i] = LL3[0, i] + Lep
+        else:
+            LL3[0, i] = LL3[0, i]
 
     P40, Pctiz4 = Mz_func(Vccc, LL3, D, dennn, P222)
     P222 = P40
-    P1j3 = P222 + sum(Pctiz4)  # 二级节流后压力，MPa
+    P1j3 = P222 + sum(Pctiz4)  # 二级节流后压力，MPa ?
 
     if P222 > Pflq:
         P1111 = P222  # 三级节流后压力
         Qd = MAXQd_func(dennn, Pflq, k, n, D)  # 三级节流后极限处理产量
+        P222_bool='不能满足产量要求'
+        return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4, Qd
         raise Exception('程序已完成，不能满足产量要求')
     elif P222 <= Pflq:
         GG = G1 + G2 + G3
         n000 = n - n1 - n2 - n3 - n4
         Qd = MAXQd_func(dennn, P222, k, n000, D)
+        P222_bool='满足产量要求'
+        return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4, Qd
         raise Exception('程序已完成，需要三级节流')
+
+
