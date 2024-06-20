@@ -1,4 +1,8 @@
+import re
 
+import numpy as np
+
+import matlab_project.main
 
 
 def on_compute_button_clicked(self):
@@ -13,9 +17,51 @@ def on_compute_button_clicked(self):
     n = self.nEdit.toPlainText()
 
     LL = self.LLEdit.toPlainText()
+
+    n1 = LL.count(',') + LL.count('，')  # 一级节流前弯头个数
+    print('一级节流前弯头个数', n1)
+    LL_list = re.split(',|，', LL)
+    LL = np.zeros((1, n1 + 1))
+    for item in LL_list:
+        print(item)
+        LL[0, LL_list.index(item)] = item
+    print(LL)
+
     LL1 = self.LL1Edit.toPlainText()
+
+    n2 = LL1.count(',') + LL1.count('，')  # 二级节流前弯头个数
+    print('二级节流前弯头个数', n2)
+    LL1_list = re.split(',|，', LL1)
+    LL1 = np.zeros((1, n2 + 1))
+    for item in LL1_list:
+        print(item)
+        LL1[0, LL1_list.index(item)] = item
+    print(LL1)
+
     LL2 = self.LL2Edit.toPlainText()
+
+    n3 = LL2.count(',') + LL2.count('，')  # 三级节流前弯头个数
+    print('三级节流前弯头个数', n3)
+    LL2_list = re.split(',|，', LL2)
+    LL2 = np.zeros((1, n3 + 1))
+    for item in LL2_list:
+        print(item)
+        LL2[0, LL2_list.index(item)] = item
+    print(LL2)
+
     LL3 = self.LL3Edit.toPlainText()
 
+    n4 = LL3.count(',') + LL3.count('，')  # 三级节流到分离器前
+    print('三级节流到分离器前弯头个数', n4)
+    LL3_list = re.split(',|，', LL3)
+    LL3 = np.zeros((1, n4 + 1))
+    for item in LL3_list:
+        print(item)
+        LL3[0, LL3_list.index(item)] = item
+    print(LL3)
+
     print(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3)
+
+    matlab_project.main.compute(float(Qg), float(Ql), float(r), float(P1), float(Pflq), float(T1), float(D), int(n), LL,LL1,LL2,LL3,int(n1),int(n2),int(n3),int(n4))
+
 

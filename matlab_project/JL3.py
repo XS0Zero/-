@@ -1,5 +1,5 @@
 import numpy as np
-from BWRSV1 import BWRSV1_func
+from matlab_project.BWRSV1 import BWRSV1_func
 def JL_func(P1,T1,Qg,r,k,R,Pc,Tc,Pci,Tci):
     T1 = T1 + 273.15
     Pr1 = P1 / Pc  # 节流前拟对比压力
