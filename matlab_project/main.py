@@ -37,7 +37,6 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     P1j1 = None
     P1j2 = None
     P1j3 = None
-    P2_bool, P22_bool, P222_bool
     Pctiz1 = None
     Pctiz2 = None
     Pctiz3 = None
