@@ -1,5 +1,8 @@
 import numpy as np
-    
+
+from matlab2.mainfunc import pars
+
+
 def get_model_param(drcs1 = None,data = None,Drcs1 = None): 
     #---------------------可变参数----------------------#
     pars.md1 = drcs1[0] / 1000

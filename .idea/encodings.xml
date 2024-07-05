@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/matlab2/banjing.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/matlab2/banjing1.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/matlab2/cal_wellbore_state.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/matlab2/compute_load_vec.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/matlab2/create_hit_load.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/matlab2/create_model.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/matlab2/create_timevary_stiff.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/matlab2/mainfunc.py" charset="GBK" />
     <file url="file://$PROJECT_DIR$/user.csv" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

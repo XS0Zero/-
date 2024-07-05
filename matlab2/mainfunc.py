@@ -1,4 +1,14 @@
 import numpy as np
+import pandas as pd
+
+from matlab2.banjing import banjing
+from matlab2.banjing1 import banjing1
+from matlab2.cal_wellbore_state import cal_wellbore_state
+from matlab2.create_model import create_model
+from matlab2.deal_input_data import deal_input_data
+from matlab2.get_model_param import get_model_param
+from matlab2.newmark_compute import newmark_compute
+
 
 dt = 0.001
 time = 60
@@ -8,8 +18,8 @@ wellbore_state_dz = 1
 timevary_stiff_flag = 0
 
 #---------------------导入参数----------------------# a
-drcs = csvread('输入数据2.csv')
-Drcs = csvread('输入数据.csv')
+drcs = pd.read_excel('输入数据2.csv')
+Drcs = pd.read_excel('输入数据.csv')
 id_im = len(drcs(:,1))
 id_im1 = len(Drcs(:,1))
 drcs1 = cell(id_im,1)
