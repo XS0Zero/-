@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtCore import Qt, QMimeData, QPoint
-from PyQt5.QtGui import QPixmap, QDrag
+from PyQt5.QtGui import QPixmap, QDrag, QPainter
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton
 
 class DraggableLabel(QLabel):

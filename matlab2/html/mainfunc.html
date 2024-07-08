@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+<title>mainfunc</title>
+<meta name="generator" content="MATLAB 23.2">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2024-06-30">
+<meta name="DC.source" content="mainfunc.m">
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="content">
+<pre class="codeinput">
+<span class="keyword">function</span> mainfunc()
+tic
+clear;
+clc;
+dt=0.001;
+time=60;        <span class="comment">%计算时间步长和计算时间</span>
+wellbore_state_dz=1;           <span class="comment">%计算井流体状态输出状态结果关于深度的步长取值</span>
+timevary_stiff_flag=0;         <span class="comment">%是否考虑时变刚度矩阵，考虑则为</span>
+<span class="comment">%---------------------导入参数----------------------% a</span>
+drcs=csvread(<span class="string">'输入数据2.csv'</span>);
+Drcs=csvread(<span class="string">'输入数据.csv'</span>);
+id_im=length(drcs(:,1));
+id_im1=length(Drcs(:,1));
+drcs1=cell(id_im,1);
+<span class="keyword">for</span> i=1:id_im
+last_nonzero_index = find(drcs(i,:)~=0, 1, <span class="string">'last'</span>);
+drcs11=drcs(i,1:last_nonzero_index);
+drcs1{i}=drcs11;
+<span class="keyword">end</span>
+<span class="keyword">for</span> i=1:id_im1
+last_nonzero_index = find(Drcs(i,:)~=0, 1, <span class="string">'last'</span>);
+Drcs11=Drcs(i,1:last_nonzero_index);
+Drcs1{i}=Drcs11;
+<span class="keyword">end</span>
+<span class="comment">%如果为空，则令其为0</span>
+mms=length(drcs1);
+<span class="keyword">for</span> i=1:mms
+    <span class="keyword">if</span> isempty(drcs1{i})==1
+        drcs1{i}=0;
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+fgqwz=drcs1{12};<span class="comment">%多封隔器位置</span>
+flength_id=Drcs1{8}*2;
+<span class="comment">% data1=zeros(1,3);</span>
+<span class="keyword">if</span> length(drcs1{9})~=length(drcs1{10})||length(drcs1{9})~=length(drcs1{11})
+    drcs1{10}=drcs(10,1:length(drcs1{9}));
+    drcs1{11}=drcs(11,1:length(drcs1{9}));
+<span class="keyword">end</span>
+data=[drcs1{9};drcs1{10};drcs1{11}]';
+data(end,1)=round(data(end,1));
+<span class="comment">% data=[data1;data];</span>
+<span class="comment">%---------------------设置默认参数----------------------%</span>
+
+pars=get_model_param(drcs1,data,Drcs1);                 <span class="comment">%定义计算参数</span>
+
+[Ss,Xs,Ys,Zs,alphas,phis]=deal_input_data(data);
+<span class="comment">% pars.DT=(pars.Tint-pars.Tint1)/Zs(end);</span>
+
+C=[pars.Rvi*2;pars.Rvo*2;pars.Ls]';
+B=[pars.DW;pars.LLS]';
+[Rt1,rt1,It1]=banjing(C);
+[DDW]=banjing1(B);
+<span class="keyword">for</span> i=1:sum(pars.mesh)+1
+    <span class="keyword">if</span> i==1
+        DDDW(1)=DDW(1);
+    <span class="keyword">else</span>
+        mmsn(i)=20*i;
+        <span class="keyword">if</span> mmsn(i)&gt;=length(DDW)
+           DDDW(i)=DDW(end);
+        <span class="keyword">else</span>
+           DDDW(i)=DDW(mmsn(i));
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+DDDW= DDDW';
+<span class="comment">%求解不同深度的流体速度和密度，数据转换成从井口到井底，状态随垂深变化</span>
+[Vz,pz,Tz,rho0z,state_z,Tei]=cal_wellbore_state(pars,wellbore_state_dz,Ss,Zs,alphas,rt1);
+
+<span class="comment">%求解系统的刚度质量阻尼矩阵</span>
+<span class="comment">%注意有限元模型单元坐标系X,Y为横向Z为轴向，单元坐标系下节点自由度顺序为：z,x,ry,y,rx</span>
+[Mgg,Kgg,Cgg,Fgravg,transmat,nodes,A1,A2,le,I1,I2]=create_model(Vz,rho0z,state_z,pars,Ss,Xs,Ys,Zs,alphas,phis);
+<span class="comment">%计算系统动响应</span>
+<span class="comment">%返回系统在全局坐标系下每个节点的五个自由度响应Ug,Vg,Ag，单元坐标系下节点的三个平动响应ux,uy,uz和时间序列</span>
+
+                        <span class="comment">%套管半径沿井深分布</span>
+[Ug,Vg,Ag,ux,uy,uz,Nx,contact_force,tspan,Fv1]=newmark_compute(dt,time,Mgg,Kgg,Cgg,Fgravg,transmat,nodes,pars,Vz,rho0z,state_z,timevary_stiff_flag,flength_id,DDDW);
+<span class="keyword">for</span> i=1:length(ux(:,1))
+    uuxx(i)=(ux(i,5000));
+<span class="keyword">end</span>
+ss22=length(ux(:,1));
+ddep=0:(pars.LS/(ss22-1)):pars.LS;
+UXX=[ddep;uuxx]';
+csvwrite(<span class="string">'振动位移随管长变化.csv'</span>,UXX);
+</pre>
+<pre class="codeoutput error">错误使用 csvwrite
+无法打开文件 振动位移随管长变化.csv。
+
+出错 mainfunc (第 83 行)
+csvwrite('振动位移随管长变化.csv',UXX);
+</pre>
+<p class="footer">
+<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023b</a>
+<br>
+</p>
+</div>
+<!--
+##### SOURCE BEGIN #####
+function mainfunc()
+tic
+clear;
+clc;
+dt=0.001;
+time=60;        %计算时间步长和计算时间
+wellbore_state_dz=1;           %计算井流体状态输出状态结果关于深度的步长取值
+timevary_stiff_flag=0;         %是否考虑时变刚度矩阵，考虑则为
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-导入参数REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH% a
+drcs=csvread('输入数据2.csv');
+Drcs=csvread('输入数据.csv');
+id_im=length(drcs(:,1));
+id_im1=length(Drcs(:,1));
+drcs1=cell(id_im,1); 
+for i=1:id_im  
+last_nonzero_index = find(drcs(i,:)~=0, 1, 'last');
+drcs11=drcs(i,1:last_nonzero_index);
+drcs1{i}=drcs11;
+end
+for i=1:id_im1  
+last_nonzero_index = find(Drcs(i,:)~=0, 1, 'last');
+Drcs11=Drcs(i,1:last_nonzero_index);
+Drcs1{i}=Drcs11;
+end
+%如果为空，则令其为0
+mms=length(drcs1);
+for i=1:mms
+    if isempty(drcs1{i})==1
+        drcs1{i}=0;
+    end
+end  
+fgqwz=drcs1{12};%多封隔器位置
+flength_id=Drcs1{8}*2;
+% data1=zeros(1,3);
+if length(drcs1{9})~=length(drcs1{10})||length(drcs1{9})~=length(drcs1{11})
+    drcs1{10}=drcs(10,1:length(drcs1{9}));
+    drcs1{11}=drcs(11,1:length(drcs1{9}));
+end
+data=[drcs1{9};drcs1{10};drcs1{11}]';
+data(end,1)=round(data(end,1));
+% data=[data1;data];
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-设置默认参数REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+pars=get_model_param(drcs1,data,Drcs1);                 %定义计算参数
+
+[Ss,Xs,Ys,Zs,alphas,phis]=deal_input_data(data);
+% pars.DT=(pars.Tint-pars.Tint1)/Zs(end);
+
+C=[pars.Rvi*2;pars.Rvo*2;pars.Ls]';
+B=[pars.DW;pars.LLS]';  
+[Rt1,rt1,It1]=banjing(C);
+[DDW]=banjing1(B); 
+for i=1:sum(pars.mesh)+1
+    if i==1
+        DDDW(1)=DDW(1);
+    else
+        mmsn(i)=20*i;
+        if mmsn(i)>=length(DDW)
+           DDDW(i)=DDW(end);
+        else
+           DDDW(i)=DDW(mmsn(i)); 
+        end
+    end
+end
+DDDW= DDDW';
+%求解不同深度的流体速度和密度，数据转换成从井口到井底，状态随垂深变化
+[Vz,pz,Tz,rho0z,state_z,Tei]=cal_wellbore_state(pars,wellbore_state_dz,Ss,Zs,alphas,rt1);
+
+%求解系统的刚度质量阻尼矩阵
+%注意有限元模型单元坐标系X,Y为横向Z为轴向，单元坐标系下节点自由度顺序为：z,x,ry,y,rx
+[Mgg,Kgg,Cgg,Fgravg,transmat,nodes,A1,A2,le,I1,I2]=create_model(Vz,rho0z,state_z,pars,Ss,Xs,Ys,Zs,alphas,phis);
+%计算系统动响应
+%返回系统在全局坐标系下每个节点的五个自由度响应Ug,Vg,Ag，单元坐标系下节点的三个平动响应ux,uy,uz和时间序列
+
+                        %套管半径沿井深分布
+[Ug,Vg,Ag,ux,uy,uz,Nx,contact_force,tspan,Fv1]=newmark_compute(dt,time,Mgg,Kgg,Cgg,Fgravg,transmat,nodes,pars,Vz,rho0z,state_z,timevary_stiff_flag,flength_id,DDDW);
+for i=1:length(ux(:,1))
+    uuxx(i)=(ux(i,5000));
+end
+ss22=length(ux(:,1));
+ddep=0:(pars.LS/(ss22-1)):pars.LS;
+UXX=[ddep;uuxx]';
+csvwrite('振动位移随管长变化.csv',UXX);
+##### SOURCE END #####
+-->
+</body>
+</html>

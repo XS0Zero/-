@@ -1,15 +1,15 @@
 import matlab.engine
 
 
-# 第三模块matlab函数调用
+# 绗笁妯″潡matlab鍑芥暟璋冪敤
 def matlab_function():
     eng = matlab.engine.start_matlab()
     eng.cd('../matlab2')
     eng.mainfunc(nargout=0)
-    print("Test complete")
+    print("Compute complete")
     eng.quit()
     return True
 
 
-
-def
+if __name__ == '__main__':
+    matlab_function()

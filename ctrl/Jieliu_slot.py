@@ -4,8 +4,11 @@ import numpy as np
 
 import matlab_project.main
 
+result = None
+jieliu_parameter = [0]*12
 
 def on_compute_button_clicked(self):
+    global result
     print("Compute button clicked")
     Qg = self.QgEdit.toPlainText()
     Ql = self.QlEdit.toPlainText()
@@ -60,26 +63,50 @@ def on_compute_button_clicked(self):
         LL3[0, LL3_list.index(item)] = item
     print(LL3)
 
+    global jieliu_parameter
+
+    jieliu_parameter = [Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3]
+
     print(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3)
 
     result = matlab_project.main.compute(float(Qg), float(Ql), float(r), float(P1), float(Pflq), float(T1), float(D),
                                          int(n), LL, LL1, LL2, LL3, int(n1), int(n2), int(n3), int(n4))
     print(result)
     # return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4, Qd
-    self.d_label.setText(str(result[0]))  # round(result[0],2)
-    self.dd_label.setText(str(result[1]))
-    self.ddd_label.setText(str(result[2]))
-    self.T2_label.setText(str(result[3]))
-    self.T22_label.setText(str(result[4]))
-    self.T222_label.setText(str(result[5]))
-    self.P1jl.setText(str(result[6]))
-    self.P2jl.setText(str(result[7]))
-    self.P3jl.setText(str(result[8]))
+    self.d_label.setText(str(round(result[0], 2)))  # round(result[0],2)
+    self.dd_label.setText(str(round(result[1], 2)))
+    self.ddd_label.setText(str(round(result[2], 2)))
+    self.T2_label.setText(str(round(result[3], 2)))
+    self.T22_label.setText(str(round(result[4], 2)))
+    self.T222_label.setText(str(round(result[5], 2)))
+    self.P1jl.setText(str(round(result[6], 2)))
+    self.P2jl.setText(str(round(result[7], 2)))
+    self.P3jl.setText(str(round(result[8], 2)))
     self.P2.setText(str(result[9]))
     self.P22.setText(str(result[10]))
     self.P222.setText(str(result[11]))
-    self.Pctiz1.setText(str(result[12]))
-    self.Pctiz2.setText(str(result[13]))
-    self.Pctiz3.setText(str(result[14]))
-    self.Pctiz4.setText(str(result[15]))
+    self.Pctiz1.setText(str(np.round(np.sum(result[12]), 2)))
+    self.Pctiz2.setText(str(np.round(np.sum(result[13]), 2)))
+    self.Pctiz3.setText(str(np.round(np.sum(result[14]), 2)))
+    self.Pctiz4.setText(str(np.round(np.sum(result[15]), 2)))
     self.Qd.setText(str(result[16]))
+
+
+# 存储和读取参数
+def getparameter():
+    return jieliu_parameter
+
+
+def setparameter(par):
+    global jieliu_parameter
+    jieliu_parameter = par
+
+
+# 存储和读取结果
+def getresult():
+    return result
+
+
+def setresult(res):
+    global result
+    result = res

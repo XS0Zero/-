@@ -8,4 +8,7 @@
     <orderEntry type="jdk" jdkName="F:\Users\12875\anaconda3\envs\matlab" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PyDocumentationSettings">
+    <option name="renderExternalDocumentation" value="true" />
+  </component>
 </module>

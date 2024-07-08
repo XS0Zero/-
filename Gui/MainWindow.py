@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1094, 870)
+        MainWindow.resize(1099, 870)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -28,8 +28,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setObjectName("centralwidget")
-        self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.centralwidget)
-        self.verticalLayout_9.setObjectName("verticalLayout_9")
+        self.horizontalLayout_47 = QtWidgets.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout_47.setObjectName("horizontalLayout_47")
         self.widget_4 = QtWidgets.QWidget(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(1)
@@ -74,21 +74,59 @@ class Ui_MainWindow(object):
         self.gridLayout_6 = QtWidgets.QGridLayout(self.page)
         self.gridLayout_6.setObjectName("gridLayout_6")
         self.scrollArea = QtWidgets.QScrollArea(self.page)
+        self.scrollArea.setStyleSheet("QScrollArea{\n"
+"border: 0px solid;\n"
+"border-right-width: 1px;\n"
+"border-right-color: #dcdbdc;\n"
+"background-color: #f5f5f7;\n"
+"}\n"
+"QScrollBar:vertical {\n"
+"border: none;\n"
+"    background-color: rgb(255, 255, 255);\n"
+"width: 10px;\n"
+"margin: 0px 0 0px 0;\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"background: rgb(226, 246, 255);\n"
+"min-height: 20px;\n"
+"border-radius: 5px;\n"
+"border: none;\n"
+"}\n"
+"QScrollBar::add-line:vertical {\n"
+"border: 0px solid grey;\n"
+"background: #32CC99;\n"
+"height: 0px;\n"
+"subcontrol-position: bottom;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"QScrollBar::sub-line:vertical {\n"
+"border: 0px solid grey;\n"
+"background: #32CC99;\n"
+"height: 0px;\n"
+"subcontrol-position: top;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"background: none;\n"
+"width: 0px;\n"
+"height: 0px;\n"
+"}\n"
+"")
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1021, 1200))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -17, 1000, 1248))
         self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(1000, 1200))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.widget = QtWidgets.QWidget(self.scrollAreaWidgetContents)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.widget.sizePolicy().hasHeightForWidth())
         self.widget.setSizePolicy(sizePolicy)
-        self.widget.setMinimumSize(QtCore.QSize(960, 850))
+        self.widget.setMinimumSize(QtCore.QSize(960, 1000))
         self.widget.setAutoFillBackground(False)
         self.widget.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "")
@@ -103,13 +141,13 @@ class Ui_MainWindow(object):
         self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_15.setObjectName("frame_15")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_15)
-        self.verticalLayout_4.setContentsMargins(9, 9, 0, 9)
+        self.verticalLayout_4.setContentsMargins(9, 9, 9, 9)
         self.verticalLayout_4.setSpacing(1)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.label = QtWidgets.QLabel(self.frame_15)
         self.label.setMinimumSize(QtCore.QSize(0, 25))
         self.label.setMaximumSize(QtCore.QSize(100, 40))
-        self.label.setStyleSheet("font: 14pt \"华文宋体\";\n"
+        self.label.setStyleSheet("font: 14pt \"华文琥珀\";\n"
 "border:1px solid rgb(0,0,0);")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
@@ -133,13 +171,18 @@ class Ui_MainWindow(object):
         self.widget_2.setSizePolicy(sizePolicy)
         self.widget_2.setMinimumSize(QtCore.QSize(900, 0))
         self.widget_2.setMaximumSize(QtCore.QSize(16777215, 600))
+        self.widget_2.setStyleSheet("#widget_2{\n"
+"    border:1px dashed ;\n"
+"}\n"
+"")
         self.widget_2.setObjectName("widget_2")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget_2)
         self.verticalLayout_3.setContentsMargins(-1, 9, -1, -1)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label_2 = QtWidgets.QLabel(self.widget_2)
+        self.label_2.setMinimumSize(QtCore.QSize(0, 25))
         self.label_2.setMaximumSize(QtCore.QSize(100, 40))
-        self.label_2.setStyleSheet("font: 14pt \"华文宋体\";\n"
+        self.label_2.setStyleSheet("font: 14pt \"华文琥珀\";\n"
 "border:1px solid rgb(0,0,0);")
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
@@ -151,14 +194,28 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.widget_6.sizePolicy().hasHeightForWidth())
         self.widget_6.setSizePolicy(sizePolicy)
         self.widget_6.setMinimumSize(QtCore.QSize(800, 180))
+        self.widget_6.setStyleSheet("font: 14pt \"Agency FB\";")
         self.widget_6.setObjectName("widget_6")
-        self.formLayout_3 = QtWidgets.QFormLayout(self.widget_6)
-        self.formLayout_3.setLabelAlignment(QtCore.Qt.AlignCenter)
-        self.formLayout_3.setFormAlignment(QtCore.Qt.AlignCenter)
-        self.formLayout_3.setContentsMargins(-1, -1, -1, 9)
-        self.formLayout_3.setObjectName("formLayout_3")
-        self.frame = QtWidgets.QFrame(self.widget_6)
-        self.frame.setMaximumSize(QtCore.QSize(400, 45))
+        self.horizontalLayout_51 = QtWidgets.QHBoxLayout(self.widget_6)
+        self.horizontalLayout_51.setContentsMargins(-1, -1, -1, 9)
+        self.horizontalLayout_51.setObjectName("horizontalLayout_51")
+        self.frame_61 = QtWidgets.QFrame(self.widget_6)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_61.sizePolicy().hasHeightForWidth())
+        self.frame_61.setSizePolicy(sizePolicy)
+        self.frame_61.setMinimumSize(QtCore.QSize(0, 0))
+        self.frame_61.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_61.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_61.setObjectName("frame_61")
+        self.verticalLayout_22 = QtWidgets.QVBoxLayout(self.frame_61)
+        self.verticalLayout_22.setObjectName("verticalLayout_22")
+        self.frame = QtWidgets.QFrame(self.frame_61)
+        self.frame.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.frame.setStyleSheet("#frame{\n"
+"    border:1px inset\n"
+"}")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -170,38 +227,28 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_6.addWidget(self.label_3)
         self.QgEdit = QtWidgets.QTextEdit(self.frame)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.QgEdit.sizePolicy().hasHeightForWidth())
+        self.QgEdit.setSizePolicy(sizePolicy)
+        self.QgEdit.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.QgEdit.setObjectName("QgEdit")
         self.horizontalLayout_6.addWidget(self.QgEdit)
         self.label_4 = QtWidgets.QLabel(self.frame)
         self.label_4.setObjectName("label_4")
         self.horizontalLayout_6.addWidget(self.label_4)
-        self.formLayout_3.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.frame)
-        self.frame_2 = QtWidgets.QFrame(self.widget_6)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
-        self.frame_2.setSizePolicy(sizePolicy)
-        self.frame_2.setMaximumSize(QtCore.QSize(400, 45))
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.frame_2)
-        self.horizontalLayout_7.setContentsMargins(-1, 0, -1, 0)
-        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
-        self.label_5 = QtWidgets.QLabel(self.frame_2)
-        self.label_5.setStyleSheet("font: 16pt \"Agency FB\";")
-        self.label_5.setObjectName("label_5")
-        self.horizontalLayout_7.addWidget(self.label_5)
-        self.QlEdit = QtWidgets.QTextEdit(self.frame_2)
-        self.QlEdit.setObjectName("QlEdit")
-        self.horizontalLayout_7.addWidget(self.QlEdit)
-        self.label_6 = QtWidgets.QLabel(self.frame_2)
-        self.label_6.setObjectName("label_6")
-        self.horizontalLayout_7.addWidget(self.label_6)
-        self.formLayout_3.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.frame_2)
-        self.frame_3 = QtWidgets.QFrame(self.widget_6)
+        self.verticalLayout_22.addWidget(self.frame)
+        self.frame_3 = QtWidgets.QFrame(self.frame_61)
         self.frame_3.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.frame_3.setStyleSheet("#frame_3{\n"
+"    border:1px inset\n"
+"}")
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -213,30 +260,25 @@ class Ui_MainWindow(object):
         self.label_7.setObjectName("label_7")
         self.horizontalLayout_8.addWidget(self.label_7)
         self.rEdit = QtWidgets.QTextEdit(self.frame_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.rEdit.sizePolicy().hasHeightForWidth())
+        self.rEdit.setSizePolicy(sizePolicy)
+        self.rEdit.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.rEdit.setObjectName("rEdit")
         self.horizontalLayout_8.addWidget(self.rEdit)
-        self.formLayout_3.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.frame_3)
-        self.frame_4 = QtWidgets.QFrame(self.widget_6)
-        self.frame_4.setMaximumSize(QtCore.QSize(400, 45))
-        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_4.setObjectName("frame_4")
-        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.frame_4)
-        self.horizontalLayout_9.setContentsMargins(-1, 0, -1, 0)
-        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        self.label_8 = QtWidgets.QLabel(self.frame_4)
-        self.label_8.setStyleSheet("font: 16pt \"Agency FB\";")
-        self.label_8.setObjectName("label_8")
-        self.horizontalLayout_9.addWidget(self.label_8)
-        self.P1Edit = QtWidgets.QTextEdit(self.frame_4)
-        self.P1Edit.setObjectName("P1Edit")
-        self.horizontalLayout_9.addWidget(self.P1Edit)
-        self.label_9 = QtWidgets.QLabel(self.frame_4)
-        self.label_9.setObjectName("label_9")
-        self.horizontalLayout_9.addWidget(self.label_9)
-        self.formLayout_3.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.frame_4)
-        self.frame_5 = QtWidgets.QFrame(self.widget_6)
+        self.verticalLayout_22.addWidget(self.frame_3)
+        self.frame_5 = QtWidgets.QFrame(self.frame_61)
         self.frame_5.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.frame_5.setStyleSheet("#frame_5{\n"
+"    border:1px inset\n"
+"}")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -248,33 +290,28 @@ class Ui_MainWindow(object):
         self.label_10.setObjectName("label_10")
         self.horizontalLayout_10.addWidget(self.label_10)
         self.PflqEdit = QtWidgets.QTextEdit(self.frame_5)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.PflqEdit.sizePolicy().hasHeightForWidth())
+        self.PflqEdit.setSizePolicy(sizePolicy)
+        self.PflqEdit.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.PflqEdit.setObjectName("PflqEdit")
         self.horizontalLayout_10.addWidget(self.PflqEdit)
         self.label_11 = QtWidgets.QLabel(self.frame_5)
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_10.addWidget(self.label_11)
-        self.formLayout_3.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.frame_5)
-        self.frame_6 = QtWidgets.QFrame(self.widget_6)
-        self.frame_6.setMaximumSize(QtCore.QSize(400, 45))
-        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_6.setObjectName("frame_6")
-        self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.frame_6)
-        self.horizontalLayout_11.setContentsMargins(-1, 0, -1, 0)
-        self.horizontalLayout_11.setObjectName("horizontalLayout_11")
-        self.label_12 = QtWidgets.QLabel(self.frame_6)
-        self.label_12.setStyleSheet("font: 16pt \"Agency FB\";")
-        self.label_12.setObjectName("label_12")
-        self.horizontalLayout_11.addWidget(self.label_12)
-        self.T1Edit = QtWidgets.QTextEdit(self.frame_6)
-        self.T1Edit.setObjectName("T1Edit")
-        self.horizontalLayout_11.addWidget(self.T1Edit)
-        self.label_13 = QtWidgets.QLabel(self.frame_6)
-        self.label_13.setObjectName("label_13")
-        self.horizontalLayout_11.addWidget(self.label_13)
-        self.formLayout_3.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.frame_6)
-        self.frame_7 = QtWidgets.QFrame(self.widget_6)
+        self.verticalLayout_22.addWidget(self.frame_5)
+        self.frame_7 = QtWidgets.QFrame(self.frame_61)
         self.frame_7.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.frame_7.setStyleSheet("#frame_7{\n"
+"    border:1px inset\n"
+"}")
         self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
@@ -286,14 +323,129 @@ class Ui_MainWindow(object):
         self.label_14.setObjectName("label_14")
         self.horizontalLayout_12.addWidget(self.label_14)
         self.DEdit = QtWidgets.QTextEdit(self.frame_7)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.DEdit.sizePolicy().hasHeightForWidth())
+        self.DEdit.setSizePolicy(sizePolicy)
+        self.DEdit.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.DEdit.setObjectName("DEdit")
         self.horizontalLayout_12.addWidget(self.DEdit)
         self.label_15 = QtWidgets.QLabel(self.frame_7)
         self.label_15.setObjectName("label_15")
         self.horizontalLayout_12.addWidget(self.label_15)
-        self.formLayout_3.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.frame_7)
-        self.frame_8 = QtWidgets.QFrame(self.widget_6)
-        self.frame_8.setMaximumSize(QtCore.QSize(400, 45))
+        self.verticalLayout_22.addWidget(self.frame_7)
+        self.horizontalLayout_51.addWidget(self.frame_61)
+        self.frame_62 = QtWidgets.QFrame(self.widget_6)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_62.sizePolicy().hasHeightForWidth())
+        self.frame_62.setSizePolicy(sizePolicy)
+        self.frame_62.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_62.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_62.setObjectName("frame_62")
+        self.verticalLayout_23 = QtWidgets.QVBoxLayout(self.frame_62)
+        self.verticalLayout_23.setObjectName("verticalLayout_23")
+        self.frame_2 = QtWidgets.QFrame(self.frame_62)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
+        self.frame_2.setSizePolicy(sizePolicy)
+        self.frame_2.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.frame_2.setStyleSheet("#frame_2{\n"
+"    border:1px inset\n"
+"}")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout_7.setContentsMargins(-1, 0, -1, 0)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.label_5 = QtWidgets.QLabel(self.frame_2)
+        self.label_5.setStyleSheet("font: 16pt \"Agency FB\";")
+        self.label_5.setObjectName("label_5")
+        self.horizontalLayout_7.addWidget(self.label_5)
+        self.QlEdit = QtWidgets.QTextEdit(self.frame_2)
+        self.QlEdit.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
+        self.QlEdit.setObjectName("QlEdit")
+        self.horizontalLayout_7.addWidget(self.QlEdit)
+        self.label_6 = QtWidgets.QLabel(self.frame_2)
+        self.label_6.setObjectName("label_6")
+        self.horizontalLayout_7.addWidget(self.label_6)
+        self.verticalLayout_23.addWidget(self.frame_2)
+        self.frame_4 = QtWidgets.QFrame(self.frame_62)
+        self.frame_4.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.frame_4.setStyleSheet("#frame_4{\n"
+"    border:1px inset\n"
+"}")
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.frame_4)
+        self.horizontalLayout_9.setContentsMargins(-1, 0, -1, 0)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.label_8 = QtWidgets.QLabel(self.frame_4)
+        self.label_8.setStyleSheet("font: 16pt \"Agency FB\";")
+        self.label_8.setObjectName("label_8")
+        self.horizontalLayout_9.addWidget(self.label_8)
+        self.P1Edit = QtWidgets.QTextEdit(self.frame_4)
+        self.P1Edit.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
+        self.P1Edit.setObjectName("P1Edit")
+        self.horizontalLayout_9.addWidget(self.P1Edit)
+        self.label_9 = QtWidgets.QLabel(self.frame_4)
+        self.label_9.setObjectName("label_9")
+        self.horizontalLayout_9.addWidget(self.label_9)
+        self.verticalLayout_23.addWidget(self.frame_4)
+        self.frame_6 = QtWidgets.QFrame(self.frame_62)
+        self.frame_6.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.frame_6.setStyleSheet("#frame_6{\n"
+"    border:1px inset\n"
+"}")
+        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.frame_6)
+        self.horizontalLayout_11.setContentsMargins(-1, 0, -1, 0)
+        self.horizontalLayout_11.setObjectName("horizontalLayout_11")
+        self.label_12 = QtWidgets.QLabel(self.frame_6)
+        self.label_12.setStyleSheet("font: 16pt \"Agency FB\";")
+        self.label_12.setObjectName("label_12")
+        self.horizontalLayout_11.addWidget(self.label_12)
+        self.T1Edit = QtWidgets.QTextEdit(self.frame_6)
+        self.T1Edit.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
+        self.T1Edit.setObjectName("T1Edit")
+        self.horizontalLayout_11.addWidget(self.T1Edit)
+        self.label_13 = QtWidgets.QLabel(self.frame_6)
+        self.label_13.setObjectName("label_13")
+        self.horizontalLayout_11.addWidget(self.label_13)
+        self.verticalLayout_23.addWidget(self.frame_6)
+        self.frame_8 = QtWidgets.QFrame(self.frame_62)
+        self.frame_8.setMaximumSize(QtCore.QSize(16777215, 45))
+        self.frame_8.setStyleSheet("#frame_8{\n"
+"    border:1px inset\n"
+"}")
         self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
@@ -305,12 +457,19 @@ class Ui_MainWindow(object):
         self.label_16.setObjectName("label_16")
         self.horizontalLayout_13.addWidget(self.label_16)
         self.nEdit = QtWidgets.QTextEdit(self.frame_8)
+        self.nEdit.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.nEdit.setObjectName("nEdit")
         self.horizontalLayout_13.addWidget(self.nEdit)
         self.label_17 = QtWidgets.QLabel(self.frame_8)
         self.label_17.setObjectName("label_17")
         self.horizontalLayout_13.addWidget(self.label_17)
-        self.formLayout_3.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.frame_8)
+        self.verticalLayout_23.addWidget(self.frame_8)
+        self.horizontalLayout_51.addWidget(self.frame_62)
         self.verticalLayout_3.addWidget(self.widget_6)
         self.widget_7 = QtWidgets.QWidget(self.widget_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
@@ -319,6 +478,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.widget_7.sizePolicy().hasHeightForWidth())
         self.widget_7.setSizePolicy(sizePolicy)
         self.widget_7.setMinimumSize(QtCore.QSize(0, 180))
+        self.widget_7.setStyleSheet("font: 14pt \"Agency FB\";")
         self.widget_7.setObjectName("widget_7")
         self.horizontalLayout_37 = QtWidgets.QHBoxLayout(self.widget_7)
         self.horizontalLayout_37.setContentsMargins(-1, 1, -1, 1)
@@ -339,16 +499,29 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14.setObjectName("horizontalLayout_14")
         self.label_18 = QtWidgets.QLabel(self.frame_9)
         self.label_18.setStyleSheet("font: 15pt \"Agency FB\";")
+        self.label_18.setWordWrap(True)
         self.label_18.setObjectName("label_18")
         self.horizontalLayout_14.addWidget(self.label_18)
         self.widget_5 = QtWidgets.QWidget(self.frame_9)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.widget_5.sizePolicy().hasHeightForWidth())
         self.widget_5.setSizePolicy(sizePolicy)
-        self.widget_5.setMinimumSize(QtCore.QSize(300, 160))
+        self.widget_5.setMinimumSize(QtCore.QSize(0, 160))
         self.widget_5.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.widget_5.setStyleSheet("#frame_17{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_19{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_20{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_21{\n"
+"    border:1px inset\n"
+"}")
         self.widget_5.setObjectName("widget_5")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget_5)
         self.verticalLayout_2.setContentsMargins(-1, 0, -1, 0)
@@ -361,7 +534,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_19.sizePolicy().hasHeightForWidth())
         self.frame_19.setSizePolicy(sizePolicy)
         self.frame_19.setMinimumSize(QtCore.QSize(0, 25))
-        self.frame_19.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.frame_19.setMaximumSize(QtCore.QSize(16777215, 50))
         self.frame_19.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_19.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_19.setObjectName("frame_19")
@@ -372,11 +545,18 @@ class Ui_MainWindow(object):
         self.label_39 = QtWidgets.QLabel(self.frame_19)
         self.label_39.setMinimumSize(QtCore.QSize(0, 20))
         self.label_39.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.label_39.setStyleSheet("font: 12pt \"Agency FB\";")
         self.label_39.setObjectName("label_39")
         self.horizontalLayout_19.addWidget(self.label_39)
         self.LLEdit = QtWidgets.QTextEdit(self.frame_19)
-        self.LLEdit.setMinimumSize(QtCore.QSize(0, 25))
-        self.LLEdit.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.LLEdit.setMinimumSize(QtCore.QSize(0, 35))
+        self.LLEdit.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.LLEdit.setStyleSheet("font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.LLEdit.setObjectName("LLEdit")
         self.horizontalLayout_19.addWidget(self.LLEdit)
         self.verticalLayout_2.addWidget(self.frame_19)
@@ -387,7 +567,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_17.sizePolicy().hasHeightForWidth())
         self.frame_17.setSizePolicy(sizePolicy)
         self.frame_17.setMinimumSize(QtCore.QSize(0, 25))
-        self.frame_17.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.frame_17.setMaximumSize(QtCore.QSize(16777215, 50))
         self.frame_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_17.setObjectName("frame_17")
@@ -398,11 +578,18 @@ class Ui_MainWindow(object):
         self.label_35 = QtWidgets.QLabel(self.frame_17)
         self.label_35.setMinimumSize(QtCore.QSize(0, 20))
         self.label_35.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.label_35.setStyleSheet("font: 12pt \"Agency FB\";")
         self.label_35.setObjectName("label_35")
         self.horizontalLayout_15.addWidget(self.label_35)
         self.LL1Edit = QtWidgets.QTextEdit(self.frame_17)
-        self.LL1Edit.setMinimumSize(QtCore.QSize(0, 25))
-        self.LL1Edit.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.LL1Edit.setMinimumSize(QtCore.QSize(0, 35))
+        self.LL1Edit.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.LL1Edit.setStyleSheet("font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.LL1Edit.setObjectName("LL1Edit")
         self.horizontalLayout_15.addWidget(self.LL1Edit)
         self.verticalLayout_2.addWidget(self.frame_17)
@@ -413,7 +600,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_20.sizePolicy().hasHeightForWidth())
         self.frame_20.setSizePolicy(sizePolicy)
         self.frame_20.setMinimumSize(QtCore.QSize(0, 25))
-        self.frame_20.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.frame_20.setMaximumSize(QtCore.QSize(16777215, 50))
         self.frame_20.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_20.setObjectName("frame_20")
@@ -424,11 +611,18 @@ class Ui_MainWindow(object):
         self.label_40 = QtWidgets.QLabel(self.frame_20)
         self.label_40.setMinimumSize(QtCore.QSize(0, 20))
         self.label_40.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.label_40.setStyleSheet("font: 12pt \"Agency FB\";")
         self.label_40.setObjectName("label_40")
         self.horizontalLayout_20.addWidget(self.label_40)
         self.LL2Edit = QtWidgets.QTextEdit(self.frame_20)
-        self.LL2Edit.setMinimumSize(QtCore.QSize(0, 25))
-        self.LL2Edit.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.LL2Edit.setMinimumSize(QtCore.QSize(0, 35))
+        self.LL2Edit.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.LL2Edit.setStyleSheet("font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.LL2Edit.setObjectName("LL2Edit")
         self.horizontalLayout_20.addWidget(self.LL2Edit)
         self.verticalLayout_2.addWidget(self.frame_20)
@@ -439,7 +633,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_21.sizePolicy().hasHeightForWidth())
         self.frame_21.setSizePolicy(sizePolicy)
         self.frame_21.setMinimumSize(QtCore.QSize(0, 25))
-        self.frame_21.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.frame_21.setMaximumSize(QtCore.QSize(16777215, 50))
         self.frame_21.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_21.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_21.setObjectName("frame_21")
@@ -450,11 +644,18 @@ class Ui_MainWindow(object):
         self.label_41 = QtWidgets.QLabel(self.frame_21)
         self.label_41.setMinimumSize(QtCore.QSize(0, 20))
         self.label_41.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.label_41.setStyleSheet("font: 12pt \"Agency FB\";")
         self.label_41.setObjectName("label_41")
         self.horizontalLayout_21.addWidget(self.label_41)
         self.LL3Edit = QtWidgets.QTextEdit(self.frame_21)
-        self.LL3Edit.setMinimumSize(QtCore.QSize(0, 25))
-        self.LL3Edit.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.LL3Edit.setMinimumSize(QtCore.QSize(0, 35))
+        self.LL3Edit.setMaximumSize(QtCore.QSize(16777215, 35))
+        self.LL3Edit.setStyleSheet("font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;    ")
         self.LL3Edit.setObjectName("LL3Edit")
         self.horizontalLayout_21.addWidget(self.LL3Edit)
         self.verticalLayout_2.addWidget(self.frame_21)
@@ -467,8 +668,7 @@ class Ui_MainWindow(object):
         self.label_19.setStyleSheet("font: 14pt \"Agency FB\";")
         self.label_19.setObjectName("label_19")
         self.horizontalLayout_14.addWidget(self.label_19)
-        self.horizontalLayout_37.addWidget(self.frame_9)
-        self.frame_16 = QtWidgets.QFrame(self.widget_7)
+        self.frame_16 = QtWidgets.QFrame(self.frame_9)
         self.frame_16.setMaximumSize(QtCore.QSize(150, 300))
         self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -476,8 +676,13 @@ class Ui_MainWindow(object):
         self.gridLayout_3 = QtWidgets.QGridLayout(self.frame_16)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.pushButton = QtWidgets.QPushButton(self.frame_16)
-        self.pushButton.setMinimumSize(QtCore.QSize(75, 25))
-        self.pushButton.setMaximumSize(QtCore.QSize(100, 25))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy)
+        self.pushButton.setMinimumSize(QtCore.QSize(125, 25))
+        self.pushButton.setMaximumSize(QtCore.QSize(100, 50))
         self.pushButton.setStyleSheet("#pushButton{\n"
 "    \n"
 "    background-color: rgb(255, 255, 255);\n"
@@ -497,7 +702,8 @@ class Ui_MainWindow(object):
 "}")
         self.pushButton.setObjectName("pushButton")
         self.gridLayout_3.addWidget(self.pushButton, 0, 0, 1, 1)
-        self.horizontalLayout_37.addWidget(self.frame_16)
+        self.horizontalLayout_14.addWidget(self.frame_16)
+        self.horizontalLayout_37.addWidget(self.frame_9)
         self.verticalLayout_3.addWidget(self.widget_7)
         self.verticalLayout_5.addWidget(self.widget_2)
         self.line_2 = QtWidgets.QFrame(self.widget)
@@ -515,14 +721,18 @@ class Ui_MainWindow(object):
         self.widget_3.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.widget_3.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.widget_3.setAutoFillBackground(False)
+        self.widget_3.setStyleSheet("#widget_3{\n"
+"    border:1px dashed ;\n"
+"}")
         self.widget_3.setObjectName("widget_3")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget_3)
         self.verticalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.verticalLayout.setContentsMargins(-1, 0, -1, 0)
+        self.verticalLayout.setContentsMargins(-1, 9, -1, 9)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label_20 = QtWidgets.QLabel(self.widget_3)
+        self.label_20.setMinimumSize(QtCore.QSize(0, 25))
         self.label_20.setMaximumSize(QtCore.QSize(100, 40))
-        self.label_20.setStyleSheet("font: 14pt \"华文宋体\";\n"
+        self.label_20.setStyleSheet("font: 14pt \"华文琥珀\";\n"
 "border:1px solid rgb(0,0,0);")
         self.label_20.setAlignment(QtCore.Qt.AlignCenter)
         self.label_20.setObjectName("label_20")
@@ -534,6 +744,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.widget_8.sizePolicy().hasHeightForWidth())
         self.widget_8.setSizePolicy(sizePolicy)
         self.widget_8.setMinimumSize(QtCore.QSize(0, 100))
+        self.widget_8.setStyleSheet("font: 14pt \"宋体\";")
         self.widget_8.setObjectName("widget_8")
         self.formLayout_4 = QtWidgets.QFormLayout(self.widget_8)
         self.formLayout_4.setLabelAlignment(QtCore.Qt.AlignCenter)
@@ -590,6 +801,7 @@ class Ui_MainWindow(object):
         self.frame_14.setSizePolicy(sizePolicy)
         self.frame_14.setMinimumSize(QtCore.QSize(900, 0))
         self.frame_14.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame_14.setAcceptDrops(False)
         self.frame_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_14.setObjectName("frame_14")
@@ -601,7 +813,20 @@ class Ui_MainWindow(object):
         self.label_31.setStyleSheet("font: 16pt \"Agency FB\";")
         self.label_31.setObjectName("label_31")
         self.horizontalLayout_5.addWidget(self.label_31)
-        self.frame_33 = QtWidgets.QFrame(self.frame_14)
+        self.frame_64 = QtWidgets.QFrame(self.frame_14)
+        self.frame_64.setMinimumSize(QtCore.QSize(100, 0))
+        self.frame_64.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_64.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_64.setObjectName("frame_64")
+        self.verticalLayout_24 = QtWidgets.QVBoxLayout(self.frame_64)
+        self.verticalLayout_24.setObjectName("verticalLayout_24")
+        self.frame_65 = QtWidgets.QFrame(self.frame_64)
+        self.frame_65.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_65.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_65.setObjectName("frame_65")
+        self.horizontalLayout_52 = QtWidgets.QHBoxLayout(self.frame_65)
+        self.horizontalLayout_52.setObjectName("horizontalLayout_52")
+        self.frame_33 = QtWidgets.QFrame(self.frame_65)
         self.frame_33.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_33.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_33.setObjectName("frame_33")
@@ -614,7 +839,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_62.sizePolicy().hasHeightForWidth())
         self.label_62.setSizePolicy(sizePolicy)
-        self.label_62.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_62.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_62.setAlignment(QtCore.Qt.AlignCenter)
         self.label_62.setObjectName("label_62")
         self.horizontalLayout_32.addWidget(self.label_62)
         self.Pctiz1 = QtWidgets.QLabel(self.frame_33)
@@ -627,8 +853,8 @@ class Ui_MainWindow(object):
         self.label_33.setMaximumSize(QtCore.QSize(20, 16777215))
         self.label_33.setObjectName("label_33")
         self.horizontalLayout_32.addWidget(self.label_33)
-        self.horizontalLayout_5.addWidget(self.frame_33)
-        self.frame_34 = QtWidgets.QFrame(self.frame_14)
+        self.horizontalLayout_52.addWidget(self.frame_33)
+        self.frame_34 = QtWidgets.QFrame(self.frame_65)
         self.frame_34.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_34.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_34.setObjectName("frame_34")
@@ -641,7 +867,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_63.sizePolicy().hasHeightForWidth())
         self.label_63.setSizePolicy(sizePolicy)
-        self.label_63.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_63.setMaximumSize(QtCore.QSize(100, 16777215))
         self.label_63.setObjectName("label_63")
         self.horizontalLayout_33.addWidget(self.label_63)
         self.Pctiz2 = QtWidgets.QLabel(self.frame_34)
@@ -654,61 +880,71 @@ class Ui_MainWindow(object):
         self.label_64.setMaximumSize(QtCore.QSize(20, 16777215))
         self.label_64.setObjectName("label_64")
         self.horizontalLayout_33.addWidget(self.label_64)
-        self.horizontalLayout_5.addWidget(self.frame_34)
-        self.frame_35 = QtWidgets.QFrame(self.frame_14)
-        self.frame_35.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_35.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_35.setObjectName("frame_35")
-        self.horizontalLayout_34 = QtWidgets.QHBoxLayout(self.frame_35)
-        self.horizontalLayout_34.setContentsMargins(-1, 1, -1, 1)
-        self.horizontalLayout_34.setObjectName("horizontalLayout_34")
-        self.label_65 = QtWidgets.QLabel(self.frame_35)
+        self.horizontalLayout_52.addWidget(self.frame_34)
+        self.verticalLayout_24.addWidget(self.frame_65)
+        self.frame_67 = QtWidgets.QFrame(self.frame_64)
+        self.frame_67.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_67.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_67.setObjectName("frame_67")
+        self.horizontalLayout_54 = QtWidgets.QHBoxLayout(self.frame_67)
+        self.horizontalLayout_54.setObjectName("horizontalLayout_54")
+        self.frame_68 = QtWidgets.QFrame(self.frame_67)
+        self.frame_68.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_68.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_68.setObjectName("frame_68")
+        self.horizontalLayout_55 = QtWidgets.QHBoxLayout(self.frame_68)
+        self.horizontalLayout_55.setContentsMargins(-1, 1, -1, 1)
+        self.horizontalLayout_55.setObjectName("horizontalLayout_55")
+        self.label_83 = QtWidgets.QLabel(self.frame_68)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_65.sizePolicy().hasHeightForWidth())
-        self.label_65.setSizePolicy(sizePolicy)
-        self.label_65.setMaximumSize(QtCore.QSize(60, 16777215))
-        self.label_65.setObjectName("label_65")
-        self.horizontalLayout_34.addWidget(self.label_65)
-        self.Pctiz3 = QtWidgets.QLabel(self.frame_35)
-        self.Pctiz3.setStyleSheet("font: 11pt \"宋体\";\n"
-"color: rgb(165, 165, 165);\n"
-"border-bottom: 1px solid rgb(0,0,0);")
-        self.Pctiz3.setObjectName("Pctiz3")
-        self.horizontalLayout_34.addWidget(self.Pctiz3)
-        self.label_67 = QtWidgets.QLabel(self.frame_35)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_67.sizePolicy().hasHeightForWidth())
-        self.label_67.setSizePolicy(sizePolicy)
-        self.label_67.setMaximumSize(QtCore.QSize(20, 16777215))
-        self.label_67.setObjectName("label_67")
-        self.horizontalLayout_34.addWidget(self.label_67)
-        self.horizontalLayout_5.addWidget(self.frame_35)
-        self.frame_36 = QtWidgets.QFrame(self.frame_14)
-        self.frame_36.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_36.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_36.setObjectName("frame_36")
-        self.horizontalLayout_35 = QtWidgets.QHBoxLayout(self.frame_36)
-        self.horizontalLayout_35.setContentsMargins(-1, 1, -1, 1)
-        self.horizontalLayout_35.setObjectName("horizontalLayout_35")
-        self.label_68 = QtWidgets.QLabel(self.frame_36)
-        self.label_68.setMaximumSize(QtCore.QSize(50, 16777215))
-        self.label_68.setObjectName("label_68")
-        self.horizontalLayout_35.addWidget(self.label_68)
-        self.Pctiz4 = QtWidgets.QLabel(self.frame_36)
+        sizePolicy.setHeightForWidth(self.label_83.sizePolicy().hasHeightForWidth())
+        self.label_83.setSizePolicy(sizePolicy)
+        self.label_83.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_83.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_83.setObjectName("label_83")
+        self.horizontalLayout_55.addWidget(self.label_83)
+        self.Pctiz4 = QtWidgets.QLabel(self.frame_68)
         self.Pctiz4.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
         self.Pctiz4.setObjectName("Pctiz4")
-        self.horizontalLayout_35.addWidget(self.Pctiz4)
-        self.label_70 = QtWidgets.QLabel(self.frame_36)
-        self.label_70.setMaximumSize(QtCore.QSize(20, 16777215))
-        self.label_70.setObjectName("label_70")
-        self.horizontalLayout_35.addWidget(self.label_70)
-        self.horizontalLayout_5.addWidget(self.frame_36)
+        self.horizontalLayout_55.addWidget(self.Pctiz4)
+        self.label_84 = QtWidgets.QLabel(self.frame_68)
+        self.label_84.setMaximumSize(QtCore.QSize(20, 16777215))
+        self.label_84.setObjectName("label_84")
+        self.horizontalLayout_55.addWidget(self.label_84)
+        self.horizontalLayout_54.addWidget(self.frame_68)
+        self.frame_69 = QtWidgets.QFrame(self.frame_67)
+        self.frame_69.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_69.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_69.setObjectName("frame_69")
+        self.horizontalLayout_56 = QtWidgets.QHBoxLayout(self.frame_69)
+        self.horizontalLayout_56.setContentsMargins(-1, 1, -1, 1)
+        self.horizontalLayout_56.setObjectName("horizontalLayout_56")
+        self.label_85 = QtWidgets.QLabel(self.frame_69)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_85.sizePolicy().hasHeightForWidth())
+        self.label_85.setSizePolicy(sizePolicy)
+        self.label_85.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_85.setObjectName("label_85")
+        self.horizontalLayout_56.addWidget(self.label_85)
+        self.Pctiz3 = QtWidgets.QLabel(self.frame_69)
+        self.Pctiz3.setStyleSheet("font: 11pt \"宋体\";\n"
+"color: rgb(165, 165, 165);\n"
+"border-bottom: 1px solid rgb(0,0,0);")
+        self.Pctiz3.setObjectName("Pctiz3")
+        self.horizontalLayout_56.addWidget(self.Pctiz3)
+        self.label_86 = QtWidgets.QLabel(self.frame_69)
+        self.label_86.setMaximumSize(QtCore.QSize(20, 16777215))
+        self.label_86.setObjectName("label_86")
+        self.horizontalLayout_56.addWidget(self.label_86)
+        self.horizontalLayout_54.addWidget(self.frame_69)
+        self.verticalLayout_24.addWidget(self.frame_67)
+        self.horizontalLayout_5.addWidget(self.frame_64)
         self.formLayout_4.setWidget(4, QtWidgets.QFormLayout.SpanningRole, self.frame_14)
         self.frame_10 = QtWidgets.QFrame(self.widget_8)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
@@ -716,8 +952,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_10.sizePolicy().hasHeightForWidth())
         self.frame_10.setSizePolicy(sizePolicy)
-        self.frame_10.setMinimumSize(QtCore.QSize(900, 0))
-        self.frame_10.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame_10.setMinimumSize(QtCore.QSize(900, 75))
+        self.frame_10.setMaximumSize(QtCore.QSize(16777215, 75))
         self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_10.setObjectName("frame_10")
@@ -755,10 +991,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_38.sizePolicy().hasHeightForWidth())
         self.label_38.setSizePolicy(sizePolicy)
-        self.label_38.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_38.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_38.setObjectName("label_38")
         self.horizontalLayout_16.addWidget(self.label_38)
         self.d_label = QtWidgets.QLabel(self.frame_18)
+        self.d_label.setMinimumSize(QtCore.QSize(100, 0))
         self.d_label.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -794,10 +1031,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_42.sizePolicy().hasHeightForWidth())
         self.label_42.setSizePolicy(sizePolicy)
-        self.label_42.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_42.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_42.setObjectName("label_42")
         self.horizontalLayout_17.addWidget(self.label_42)
         self.dd_label = QtWidgets.QLabel(self.frame_22)
+        self.dd_label.setMinimumSize(QtCore.QSize(100, 0))
         self.dd_label.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -833,7 +1071,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_43.sizePolicy().hasHeightForWidth())
         self.label_43.setSizePolicy(sizePolicy)
-        self.label_43.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_43.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_43.setObjectName("label_43")
         self.horizontalLayout_18.addWidget(self.label_43)
         self.ddd_label = QtWidgets.QLabel(self.frame_23)
@@ -842,6 +1080,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.ddd_label.sizePolicy().hasHeightForWidth())
         self.ddd_label.setSizePolicy(sizePolicy)
+        self.ddd_label.setMinimumSize(QtCore.QSize(100, 0))
         self.ddd_label.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -859,8 +1098,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_11.sizePolicy().hasHeightForWidth())
         self.frame_11.setSizePolicy(sizePolicy)
-        self.frame_11.setMinimumSize(QtCore.QSize(900, 0))
-        self.frame_11.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame_11.setMinimumSize(QtCore.QSize(900, 75))
+        self.frame_11.setMaximumSize(QtCore.QSize(16777215, 75))
         self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_11.setObjectName("frame_11")
@@ -870,6 +1109,7 @@ class Ui_MainWindow(object):
         self.label_24.setMinimumSize(QtCore.QSize(150, 0))
         self.label_24.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_24.setStyleSheet("font: 16pt \"Agency FB\";")
+        self.label_24.setWordWrap(True)
         self.label_24.setObjectName("label_24")
         self.horizontalLayout_2.addWidget(self.label_24)
         self.frame_24 = QtWidgets.QFrame(self.frame_11)
@@ -897,10 +1137,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_44.sizePolicy().hasHeightForWidth())
         self.label_44.setSizePolicy(sizePolicy)
-        self.label_44.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_44.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_44.setObjectName("label_44")
         self.horizontalLayout_22.addWidget(self.label_44)
         self.T2_label = QtWidgets.QLabel(self.frame_24)
+        self.T2_label.setMinimumSize(QtCore.QSize(100, 0))
         self.T2_label.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -936,10 +1177,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_45.sizePolicy().hasHeightForWidth())
         self.label_45.setSizePolicy(sizePolicy)
-        self.label_45.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_45.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_45.setObjectName("label_45")
         self.horizontalLayout_23.addWidget(self.label_45)
         self.T22_label = QtWidgets.QLabel(self.frame_25)
+        self.T22_label.setMinimumSize(QtCore.QSize(100, 0))
         self.T22_label.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -975,10 +1217,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_47.sizePolicy().hasHeightForWidth())
         self.label_47.setSizePolicy(sizePolicy)
-        self.label_47.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_47.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_47.setObjectName("label_47")
         self.horizontalLayout_24.addWidget(self.label_47)
         self.T222_label = QtWidgets.QLabel(self.frame_26)
+        self.T222_label.setMinimumSize(QtCore.QSize(100, 0))
         self.T222_label.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -996,8 +1239,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
         self.frame_12.setSizePolicy(sizePolicy)
-        self.frame_12.setMinimumSize(QtCore.QSize(900, 0))
-        self.frame_12.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame_12.setMinimumSize(QtCore.QSize(900, 75))
+        self.frame_12.setMaximumSize(QtCore.QSize(16777215, 75))
         self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_12.setObjectName("frame_12")
@@ -1007,6 +1250,7 @@ class Ui_MainWindow(object):
         self.label_27.setMinimumSize(QtCore.QSize(150, 0))
         self.label_27.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_27.setStyleSheet("font: 16pt \"Agency FB\";")
+        self.label_27.setWordWrap(True)
         self.label_27.setObjectName("label_27")
         self.horizontalLayout_3.addWidget(self.label_27)
         self.frame_27 = QtWidgets.QFrame(self.frame_12)
@@ -1034,10 +1278,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_52.sizePolicy().hasHeightForWidth())
         self.label_52.setSizePolicy(sizePolicy)
-        self.label_52.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_52.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_52.setObjectName("label_52")
         self.horizontalLayout_25.addWidget(self.label_52)
         self.P1jl = QtWidgets.QLabel(self.frame_27)
+        self.P1jl.setMinimumSize(QtCore.QSize(100, 0))
         self.P1jl.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -1073,10 +1318,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_53.sizePolicy().hasHeightForWidth())
         self.label_53.setSizePolicy(sizePolicy)
-        self.label_53.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_53.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_53.setObjectName("label_53")
         self.horizontalLayout_26.addWidget(self.label_53)
         self.P2jl = QtWidgets.QLabel(self.frame_28)
+        self.P2jl.setMinimumSize(QtCore.QSize(100, 0))
         self.P2jl.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -1112,10 +1358,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_54.sizePolicy().hasHeightForWidth())
         self.label_54.setSizePolicy(sizePolicy)
-        self.label_54.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_54.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_54.setObjectName("label_54")
         self.horizontalLayout_27.addWidget(self.label_54)
         self.P3jl = QtWidgets.QLabel(self.frame_29)
+        self.P3jl.setMinimumSize(QtCore.QSize(100, 0))
         self.P3jl.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -1141,9 +1388,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_13)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label_30 = QtWidgets.QLabel(self.frame_13)
-        self.label_30.setMinimumSize(QtCore.QSize(150, 0))
+        self.label_30.setMinimumSize(QtCore.QSize(0, 0))
         self.label_30.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.label_30.setStyleSheet("font: 11pt \"Agency FB\";")
+        self.label_30.setStyleSheet("font: 16pt \"Agency FB\";")
+        self.label_30.setWordWrap(True)
         self.label_30.setObjectName("label_30")
         self.horizontalLayout_4.addWidget(self.label_30)
         self.frame_30 = QtWidgets.QFrame(self.frame_13)
@@ -1159,10 +1407,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_55.sizePolicy().hasHeightForWidth())
         self.label_55.setSizePolicy(sizePolicy)
-        self.label_55.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_55.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_55.setObjectName("label_55")
         self.horizontalLayout_28.addWidget(self.label_55)
         self.P2 = QtWidgets.QLabel(self.frame_30)
+        self.P2.setMinimumSize(QtCore.QSize(150, 0))
         self.P2.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -1182,10 +1431,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_56.sizePolicy().hasHeightForWidth())
         self.label_56.setSizePolicy(sizePolicy)
-        self.label_56.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_56.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_56.setObjectName("label_56")
         self.horizontalLayout_29.addWidget(self.label_56)
         self.P22 = QtWidgets.QLabel(self.frame_31)
+        self.P22.setMinimumSize(QtCore.QSize(150, 0))
         self.P22.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -1205,10 +1455,11 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label_60.sizePolicy().hasHeightForWidth())
         self.label_60.setSizePolicy(sizePolicy)
-        self.label_60.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.label_60.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.label_60.setObjectName("label_60")
         self.horizontalLayout_31.addWidget(self.label_60)
         self.P222 = QtWidgets.QLabel(self.frame_32)
+        self.P222.setMinimumSize(QtCore.QSize(150, 0))
         self.P222.setStyleSheet("font: 11pt \"宋体\";\n"
 "color: rgb(165, 165, 165);\n"
 "border-bottom: 1px solid rgb(0,0,0);")
@@ -1232,7 +1483,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_36 = QtWidgets.QHBoxLayout(self.widget_9)
         self.horizontalLayout_36.setObjectName("horizontalLayout_36")
         self.frame_37 = QtWidgets.QFrame(self.widget_9)
-        self.frame_37.setMaximumSize(QtCore.QSize(150, 16777215))
+        self.frame_37.setMinimumSize(QtCore.QSize(200, 0))
+        self.frame_37.setMaximumSize(QtCore.QSize(250, 16777215))
         self.frame_37.setFrameShape(QtWidgets.QFrame.Box)
         self.frame_37.setFrameShadow(QtWidgets.QFrame.Plain)
         self.frame_37.setLineWidth(2)
@@ -1241,28 +1493,100 @@ class Ui_MainWindow(object):
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.frame_37)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.addpipe2 = QtWidgets.QPushButton(self.frame_37)
-        self.addpipe2.setStyleSheet("background-color: rgb(85, 255, 0);")
+        self.addpipe2.setMinimumSize(QtCore.QSize(0, 35))
+        self.addpipe2.setStyleSheet("background-color: rgb(85, 255, 0);\n"
+"font: 14pt \"华文琥珀\";\n"
+"    border:1px solid rgb(0,0,0);\n"
+"    border-radius:8px;")
         self.addpipe2.setObjectName("addpipe2")
         self.verticalLayout_8.addWidget(self.addpipe2)
         self.addpipe3 = QtWidgets.QPushButton(self.frame_37)
-        self.addpipe3.setStyleSheet("background-color: rgb(255, 255, 0);")
+        self.addpipe3.setMinimumSize(QtCore.QSize(0, 35))
+        self.addpipe3.setStyleSheet("background-color: rgb(255, 255, 0);\n"
+"font: 14pt \"华文琥珀\";\n"
+"    border:1px solid rgb(0,0,0);\n"
+"    border-radius:8px;")
         self.addpipe3.setObjectName("addpipe3")
         self.verticalLayout_8.addWidget(self.addpipe3)
         self.addpipe1 = QtWidgets.QPushButton(self.frame_37)
-        self.addpipe1.setStyleSheet("background-color: rgb(0, 170, 255);")
+        self.addpipe1.setMinimumSize(QtCore.QSize(0, 35))
+        self.addpipe1.setStyleSheet("background-color: rgb(0, 170, 255);\n"
+"font: 14pt \"华文琥珀\";\n"
+"    border:1px solid rgb(0,0,0);\n"
+"    border-radius:8px;")
         self.addpipe1.setObjectName("addpipe1")
         self.verticalLayout_8.addWidget(self.addpipe1)
+        self.addpipe1_2 = QtWidgets.QPushButton(self.frame_37)
+        self.addpipe1_2.setMinimumSize(QtCore.QSize(0, 35))
+        self.addpipe1_2.setStyleSheet("background-color: rgb(191, 191, 191);\n"
+"font: 14pt \"华文琥珀\";\n"
+"    border:1px solid rgb(0,0,0);\n"
+"    border-radius:8px;")
+        self.addpipe1_2.setObjectName("addpipe1_2")
+        self.verticalLayout_8.addWidget(self.addpipe1_2)
         self.frame_39 = QtWidgets.QFrame(self.frame_37)
+        self.frame_39.setStyleSheet("#frame_39{\n"
+"    border:2px dashed ;\n"
+"    border-radius:15px\n"
+"}")
         self.frame_39.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_39.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_39.setObjectName("frame_39")
-        self.verticalLayout_8.addWidget(self.frame_39)
-        self.horizontalLayout_36.addWidget(self.frame_37)
-        self.frame_38 = QtWidgets.QFrame(self.widget_9)
-        self.frame_38.setFrameShape(QtWidgets.QFrame.Box)
+        self.verticalLayout_19 = QtWidgets.QVBoxLayout(self.frame_39)
+        self.verticalLayout_19.setObjectName("verticalLayout_19")
+        self.frame_38 = QtWidgets.QFrame(self.frame_39)
+        self.frame_38.setStyleSheet("font: 12pt \"宋体\";")
+        self.frame_38.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_38.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_38.setObjectName("frame_38")
-        self.horizontalLayout_36.addWidget(self.frame_38)
+        self.horizontalLayout_49 = QtWidgets.QHBoxLayout(self.frame_38)
+        self.horizontalLayout_49.setObjectName("horizontalLayout_49")
+        self.label_80 = QtWidgets.QLabel(self.frame_38)
+        self.label_80.setStyleSheet("font: 12pt \"宋体\";")
+        self.label_80.setObjectName("label_80")
+        self.horizontalLayout_49.addWidget(self.label_80)
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.frame_38)
+        self.lineEdit_5.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.horizontalLayout_49.addWidget(self.lineEdit_5)
+        self.label_65 = QtWidgets.QLabel(self.frame_38)
+        self.label_65.setObjectName("label_65")
+        self.horizontalLayout_49.addWidget(self.label_65)
+        self.verticalLayout_19.addWidget(self.frame_38)
+        self.frame_60 = QtWidgets.QFrame(self.frame_39)
+        self.frame_60.setStyleSheet("font: 12pt \"宋体\";")
+        self.frame_60.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_60.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_60.setObjectName("frame_60")
+        self.horizontalLayout_50 = QtWidgets.QHBoxLayout(self.frame_60)
+        self.horizontalLayout_50.setObjectName("horizontalLayout_50")
+        self.label_81 = QtWidgets.QLabel(self.frame_60)
+        self.label_81.setStyleSheet("font: 12pt \"宋体\";")
+        self.label_81.setObjectName("label_81")
+        self.horizontalLayout_50.addWidget(self.label_81)
+        self.lineEdit_6 = QtWidgets.QLineEdit(self.frame_60)
+        self.lineEdit_6.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_6.setObjectName("lineEdit_6")
+        self.horizontalLayout_50.addWidget(self.lineEdit_6)
+        self.label_67 = QtWidgets.QLabel(self.frame_60)
+        self.label_67.setObjectName("label_67")
+        self.horizontalLayout_50.addWidget(self.label_67)
+        self.verticalLayout_19.addWidget(self.frame_60)
+        self.verticalLayout_8.addWidget(self.frame_39, 0, QtCore.Qt.AlignTop)
+        self.horizontalLayout_36.addWidget(self.frame_37)
+        self.frame_Mapping = QtWidgets.QFrame(self.widget_9)
+        self.frame_Mapping.setStyleSheet("#frame_Mapping{\n"
+"    border:2px inset\n"
+"}")
+        self.frame_Mapping.setFrameShape(QtWidgets.QFrame.Box)
+        self.frame_Mapping.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_Mapping.setObjectName("frame_Mapping")
+        self.gridLayout = QtWidgets.QGridLayout(self.frame_Mapping)
+        self.gridLayout.setObjectName("gridLayout")
+        self.layout = QtWidgets.QVBoxLayout()
+        self.layout.setObjectName("layout")
+        self.gridLayout.addLayout(self.layout, 0, 0, 1, 1)
+        self.horizontalLayout_36.addWidget(self.frame_Mapping)
         self.verticalLayout_7.addWidget(self.widget_9)
         self.stackedWidget.addWidget(self.page_2)
         self.page_3 = QtWidgets.QWidget()
@@ -1270,12 +1594,52 @@ class Ui_MainWindow(object):
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.page_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
         self.scrollArea_2 = QtWidgets.QScrollArea(self.page_3)
-        self.scrollArea_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.scrollArea_2.setStyleSheet("\n"
+"QScrollArea_2{\n"
+"background-color: rgb(255, 255, 255);\n"
+"border: 0px solid;\n"
+"border-right-width: 1px;\n"
+"border-right-color: #dcdbdc;\n"
+"background-color: #f5f5f7;\n"
+"}\n"
+"QScrollBar:vertical {\n"
+"border: none;\n"
+"background: #f5f5f7;\n"
+"width: 10px;\n"
+"margin: 0px 0 0px 0;\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"background: Gainsboro;\n"
+"min-height: 20px;\n"
+"border-radius: 5px;\n"
+"border: none;\n"
+"}\n"
+"QScrollBar::add-line:vertical {\n"
+"border: 0px solid grey;\n"
+"background: #32CC99;\n"
+"height: 0px;\n"
+"subcontrol-position: bottom;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"QScrollBar::sub-line:vertical {\n"
+"border: 0px solid grey;\n"
+"background: #32CC99;\n"
+"height: 0px;\n"
+"subcontrol-position: top;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"background: none;\n"
+"width: 0px;\n"
+"height: 0px;\n"
+"}\n"
+"")
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1038, 791))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1010, 831))
+        self.scrollAreaWidgetContents_2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
         self.verticalLayout_12.setObjectName("verticalLayout_12")
@@ -1288,8 +1652,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.frame_40)
         self.verticalLayout_13.setObjectName("verticalLayout_13")
         self.label_26 = QtWidgets.QLabel(self.frame_40)
-        self.label_26.setMaximumSize(QtCore.QSize(100, 75))
-        self.label_26.setStyleSheet("font: 10pt \"宋体\";")
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_26.sizePolicy().hasHeightForWidth())
+        self.label_26.setSizePolicy(sizePolicy)
+        self.label_26.setMaximumSize(QtCore.QSize(175, 75))
+        self.label_26.setStyleSheet("font: 14pt \"华文琥珀\";")
         self.label_26.setFrameShape(QtWidgets.QFrame.Box)
         self.label_26.setFrameShadow(QtWidgets.QFrame.Plain)
         self.label_26.setAlignment(QtCore.Qt.AlignCenter)
@@ -1303,6 +1672,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.frame_41)
         self.verticalLayout_14.setObjectName("verticalLayout_14")
         self.frame_51 = QtWidgets.QFrame(self.frame_41)
+        self.frame_51.setStyleSheet("#frame_51{\n"
+"    border:1px dashed ;\n"
+"}")
         self.frame_51.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_51.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_51.setObjectName("frame_51")
@@ -1315,6 +1687,29 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_42.sizePolicy().hasHeightForWidth())
         self.frame_42.setSizePolicy(sizePolicy)
         self.frame_42.setMaximumSize(QtCore.QSize(500, 16777215))
+        self.frame_42.setStyleSheet("#frame_44{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_45{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_46{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_47{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_48{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_49{\n"
+"    border:1px inset\n"
+"}\n"
+"#frame_50{\n"
+"    border:1px inset\n"
+"}\n"
+"\n"
+"")
         self.frame_42.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_42.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_42.setObjectName("frame_42")
@@ -1331,6 +1726,7 @@ class Ui_MainWindow(object):
         self.frame_46.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_46.setObjectName("frame_46")
         self.horizontalLayout_39 = QtWidgets.QHBoxLayout(self.frame_46)
+        self.horizontalLayout_39.setContentsMargins(-1, -1, -1, 9)
         self.horizontalLayout_39.setObjectName("horizontalLayout_39")
         self.label_50 = QtWidgets.QLabel(self.frame_46)
         self.label_50.setStyleSheet("font: 14pt \"宋体\";")
@@ -1338,9 +1734,24 @@ class Ui_MainWindow(object):
         self.label_50.setTextFormat(QtCore.Qt.AutoText)
         self.label_50.setObjectName("label_50")
         self.horizontalLayout_39.addWidget(self.label_50)
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.frame_46)
-        self.lineEdit_3.setObjectName("lineEdit_3")
-        self.horizontalLayout_39.addWidget(self.lineEdit_3)
+        self.lineEdit_a1 = QtWidgets.QLineEdit(self.frame_46)
+        self.lineEdit_a1.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_a1.setStyleSheet("#lineEdit_a1{\n"
+"    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"}\n"
+"#lineEdit_a1:hover{\n"
+"    border-bottom: 3px solid #66A3FF;\n"
+"    }\n"
+"#lineEdit_a1:focus{\n"
+"    border-bottom: 3px solid #E680BD;\n"
+"    }")
+        self.lineEdit_a1.setObjectName("lineEdit_a1")
+        self.horizontalLayout_39.addWidget(self.lineEdit_a1)
         self.label_57 = QtWidgets.QLabel(self.frame_46)
         self.label_57.setObjectName("label_57")
         self.horizontalLayout_39.addWidget(self.label_57)
@@ -1356,6 +1767,7 @@ class Ui_MainWindow(object):
         self.frame_47.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_47.setObjectName("frame_47")
         self.horizontalLayout_40 = QtWidgets.QHBoxLayout(self.frame_47)
+        self.horizontalLayout_40.setContentsMargins(-1, -1, -1, 9)
         self.horizontalLayout_40.setObjectName("horizontalLayout_40")
         self.label_58 = QtWidgets.QLabel(self.frame_47)
         self.label_58.setStyleSheet("font: 14pt \"宋体\";")
@@ -1363,9 +1775,24 @@ class Ui_MainWindow(object):
         self.label_58.setTextFormat(QtCore.Qt.AutoText)
         self.label_58.setObjectName("label_58")
         self.horizontalLayout_40.addWidget(self.label_58)
-        self.lineEdit_4 = QtWidgets.QLineEdit(self.frame_47)
-        self.lineEdit_4.setObjectName("lineEdit_4")
-        self.horizontalLayout_40.addWidget(self.lineEdit_4)
+        self.lineEdit_a2 = QtWidgets.QLineEdit(self.frame_47)
+        self.lineEdit_a2.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_a2.setStyleSheet("#lineEdit_a2{\n"
+"    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"}\n"
+"#lineEdit_a2:hover{\n"
+"    border-bottom: 3px solid #66A3FF;\n"
+"    }\n"
+"#lineEdit_a2:focus{\n"
+"    border-bottom: 3px solid #E680BD;\n"
+"    }")
+        self.lineEdit_a2.setObjectName("lineEdit_a2")
+        self.horizontalLayout_40.addWidget(self.lineEdit_a2)
         self.label_59 = QtWidgets.QLabel(self.frame_47)
         self.label_59.setObjectName("label_59")
         self.horizontalLayout_40.addWidget(self.label_59)
@@ -1381,6 +1808,7 @@ class Ui_MainWindow(object):
         self.frame_44.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_44.setObjectName("frame_44")
         self.horizontalLayout_30 = QtWidgets.QHBoxLayout(self.frame_44)
+        self.horizontalLayout_30.setContentsMargins(-1, -1, -1, 9)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.label_29 = QtWidgets.QLabel(self.frame_44)
         self.label_29.setStyleSheet("font: 14pt \"宋体\";")
@@ -1388,9 +1816,24 @@ class Ui_MainWindow(object):
         self.label_29.setTextFormat(QtCore.Qt.AutoText)
         self.label_29.setObjectName("label_29")
         self.horizontalLayout_30.addWidget(self.label_29)
-        self.lineEdit = QtWidgets.QLineEdit(self.frame_44)
-        self.lineEdit.setObjectName("lineEdit")
-        self.horizontalLayout_30.addWidget(self.lineEdit)
+        self.lineEdit_a3 = QtWidgets.QLineEdit(self.frame_44)
+        self.lineEdit_a3.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_a3.setStyleSheet("#lineEdit_a3{\n"
+"    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"}\n"
+"#lineEdit_a3:hover{\n"
+"    border-bottom: 3px solid #66A3FF;\n"
+"    }\n"
+"#lineEdit_a3:focus{\n"
+"    border-bottom: 3px solid #E680BD;\n"
+"    }")
+        self.lineEdit_a3.setObjectName("lineEdit_a3")
+        self.horizontalLayout_30.addWidget(self.lineEdit_a3)
         self.label_32 = QtWidgets.QLabel(self.frame_44)
         self.label_32.setObjectName("label_32")
         self.horizontalLayout_30.addWidget(self.label_32)
@@ -1401,6 +1844,7 @@ class Ui_MainWindow(object):
         self.frame_48.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_48.setObjectName("frame_48")
         self.horizontalLayout_41 = QtWidgets.QHBoxLayout(self.frame_48)
+        self.horizontalLayout_41.setContentsMargins(-1, -1, -1, 9)
         self.horizontalLayout_41.setObjectName("horizontalLayout_41")
         self.label_61 = QtWidgets.QLabel(self.frame_48)
         self.label_61.setStyleSheet("font: 14pt \"宋体\";")
@@ -1408,19 +1852,36 @@ class Ui_MainWindow(object):
         self.label_61.setTextFormat(QtCore.Qt.AutoText)
         self.label_61.setObjectName("label_61")
         self.horizontalLayout_41.addWidget(self.label_61)
-        self.lineEdit_5 = QtWidgets.QLineEdit(self.frame_48)
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.horizontalLayout_41.addWidget(self.lineEdit_5)
+        self.lineEdit_a4 = QtWidgets.QLineEdit(self.frame_48)
+        self.lineEdit_a4.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_a4.setStyleSheet("#lineEdit_a4{\n"
+"    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"}\n"
+"#lineEdit_a4:hover{\n"
+"    border-bottom: 3px solid #66A3FF;\n"
+"    }\n"
+"#lineEdit_a4:focus{\n"
+"    border-bottom: 3px solid #E680BD;\n"
+"    }")
+        self.lineEdit_a4.setObjectName("lineEdit_a4")
+        self.horizontalLayout_41.addWidget(self.lineEdit_a4)
         self.label_66 = QtWidgets.QLabel(self.frame_48)
         self.label_66.setObjectName("label_66")
         self.horizontalLayout_41.addWidget(self.label_66)
         self.verticalLayout_15.addWidget(self.frame_48)
         self.frame_45 = QtWidgets.QFrame(self.frame_42)
         self.frame_45.setMaximumSize(QtCore.QSize(16777215, 75))
+        self.frame_45.setStyleSheet("padding:0")
         self.frame_45.setFrameShape(QtWidgets.QFrame.Box)
         self.frame_45.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_45.setObjectName("frame_45")
         self.horizontalLayout_38 = QtWidgets.QHBoxLayout(self.frame_45)
+        self.horizontalLayout_38.setContentsMargins(-1, -1, -1, 9)
         self.horizontalLayout_38.setObjectName("horizontalLayout_38")
         self.label_34 = QtWidgets.QLabel(self.frame_45)
         self.label_34.setStyleSheet("font: 14pt \"宋体\";")
@@ -1428,9 +1889,24 @@ class Ui_MainWindow(object):
         self.label_34.setTextFormat(QtCore.Qt.AutoText)
         self.label_34.setObjectName("label_34")
         self.horizontalLayout_38.addWidget(self.label_34)
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.frame_45)
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.horizontalLayout_38.addWidget(self.lineEdit_2)
+        self.lineEdit_a5 = QtWidgets.QLineEdit(self.frame_45)
+        self.lineEdit_a5.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_a5.setStyleSheet("#lineEdit_a5{\n"
+"    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"}\n"
+"#lineEdit_a5:hover{\n"
+"    border-bottom: 3px solid #66A3FF;\n"
+"    }\n"
+"#lineEdit_a5:focus{\n"
+"    border-bottom: 3px solid #E680BD;\n"
+"    }")
+        self.lineEdit_a5.setObjectName("lineEdit_a5")
+        self.horizontalLayout_38.addWidget(self.lineEdit_a5)
         self.label_37 = QtWidgets.QLabel(self.frame_45)
         self.label_37.setObjectName("label_37")
         self.horizontalLayout_38.addWidget(self.label_37)
@@ -1441,6 +1917,7 @@ class Ui_MainWindow(object):
         self.frame_49.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_49.setObjectName("frame_49")
         self.horizontalLayout_42 = QtWidgets.QHBoxLayout(self.frame_49)
+        self.horizontalLayout_42.setContentsMargins(-1, -1, -1, 9)
         self.horizontalLayout_42.setObjectName("horizontalLayout_42")
         self.label_69 = QtWidgets.QLabel(self.frame_49)
         self.label_69.setStyleSheet("font: 14pt \"宋体\";")
@@ -1448,9 +1925,24 @@ class Ui_MainWindow(object):
         self.label_69.setTextFormat(QtCore.Qt.AutoText)
         self.label_69.setObjectName("label_69")
         self.horizontalLayout_42.addWidget(self.label_69)
-        self.lineEdit_6 = QtWidgets.QLineEdit(self.frame_49)
-        self.lineEdit_6.setObjectName("lineEdit_6")
-        self.horizontalLayout_42.addWidget(self.lineEdit_6)
+        self.lineEdit_a6 = QtWidgets.QLineEdit(self.frame_49)
+        self.lineEdit_a6.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_a6.setStyleSheet("#lineEdit_a6{\n"
+"    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"}\n"
+"#lineEdit_a6:hover{\n"
+"    border-bottom: 3px solid #66A3FF;\n"
+"    }\n"
+"#lineEdit_a6:focus{\n"
+"    border-bottom: 3px solid #E680BD;\n"
+"    }")
+        self.lineEdit_a6.setObjectName("lineEdit_a6")
+        self.horizontalLayout_42.addWidget(self.lineEdit_a6)
         self.label_71 = QtWidgets.QLabel(self.frame_49)
         self.label_71.setObjectName("label_71")
         self.horizontalLayout_42.addWidget(self.label_71)
@@ -1461,6 +1953,7 @@ class Ui_MainWindow(object):
         self.frame_50.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_50.setObjectName("frame_50")
         self.horizontalLayout_43 = QtWidgets.QHBoxLayout(self.frame_50)
+        self.horizontalLayout_43.setContentsMargins(-1, -1, -1, 9)
         self.horizontalLayout_43.setObjectName("horizontalLayout_43")
         self.label_72 = QtWidgets.QLabel(self.frame_50)
         self.label_72.setStyleSheet("font: 14pt \"宋体\";")
@@ -1468,9 +1961,24 @@ class Ui_MainWindow(object):
         self.label_72.setTextFormat(QtCore.Qt.AutoText)
         self.label_72.setObjectName("label_72")
         self.horizontalLayout_43.addWidget(self.label_72)
-        self.lineEdit_7 = QtWidgets.QLineEdit(self.frame_50)
-        self.lineEdit_7.setObjectName("lineEdit_7")
-        self.horizontalLayout_43.addWidget(self.lineEdit_7)
+        self.lineEdit_a7 = QtWidgets.QLineEdit(self.frame_50)
+        self.lineEdit_a7.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_a7.setStyleSheet("#lineEdit_a7{\n"
+"    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border-bottom: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"}\n"
+"#lineEdit_a7:hover{\n"
+"    border-bottom: 3px solid #66A3FF;\n"
+"    }\n"
+"#lineEdit_a7:focus{\n"
+"    border-bottom: 3px solid #E680BD;\n"
+"    }")
+        self.lineEdit_a7.setObjectName("lineEdit_a7")
+        self.horizontalLayout_43.addWidget(self.lineEdit_a7)
         self.label_73 = QtWidgets.QLabel(self.frame_50)
         self.label_73.setObjectName("label_73")
         self.horizontalLayout_43.addWidget(self.label_73)
@@ -1511,58 +2019,240 @@ class Ui_MainWindow(object):
         self.horizontalLayout_45.setObjectName("horizontalLayout_45")
         self.lineEdit_8 = QtWidgets.QLineEdit(self.frame_55)
         self.lineEdit_8.setMinimumSize(QtCore.QSize(0, 50))
+        self.lineEdit_8.setStyleSheet("#lineEdit_8{\n"
+"    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"    \n"
+"    background-color: rgb(227, 227, 227);\n"
+"}\n"
+"#lineEdit_8:hover{\n"
+"    border: 3px solid #66A3FF;\n"
+"    }\n"
+"#lineEdit_8:focus{\n"
+"    border: 3px solid #E680BD;\n"
+"    }")
         self.lineEdit_8.setObjectName("lineEdit_8")
         self.horizontalLayout_45.addWidget(self.lineEdit_8)
-        self.pushButton_2 = QtWidgets.QPushButton(self.frame_55)
-        self.pushButton_2.setMinimumSize(QtCore.QSize(0, 35))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.horizontalLayout_45.addWidget(self.pushButton_2)
+        self.pushButton_add = QtWidgets.QPushButton(self.frame_55)
+        self.pushButton_add.setMinimumSize(QtCore.QSize(75, 35))
+        self.pushButton_add.setStyleSheet("#pushButton_add{\n"
+"    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"    color: rgb(0, 0, 0);\n"
+"    border:1px solid rgb(0,0,0);\n"
+"    border-radius:8px;\n"
+"    font: 14pt \"华文彩云\";\n"
+"}\n"
+"#pushButton_add:hover{\n"
+"    \n"
+"    background-color: rgb(158, 158, 158);\n"
+"    \n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"#pushButton_add:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
+        self.pushButton_add.setObjectName("pushButton_add")
+        self.horizontalLayout_45.addWidget(self.pushButton_add)
         self.verticalLayout_18.addWidget(self.frame_55)
         self.frame_56 = QtWidgets.QFrame(self.frame_54)
         self.frame_56.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_56.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_56.setObjectName("frame_56")
-        self.verticalLayout_19 = QtWidgets.QVBoxLayout(self.frame_56)
-        self.verticalLayout_19.setObjectName("verticalLayout_19")
+        self.horizontalLayout_48 = QtWidgets.QHBoxLayout(self.frame_56)
+        self.horizontalLayout_48.setObjectName("horizontalLayout_48")
         self.label_75 = QtWidgets.QLabel(self.frame_56)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_75.sizePolicy().hasHeightForWidth())
+        self.label_75.setSizePolicy(sizePolicy)
+        self.label_75.setMaximumSize(QtCore.QSize(400, 50))
+        self.label_75.setStyleSheet("    font: 12pt \"宋体\";\n"
+"    border:0px;       \n"
+"    margin-left:25px;    \n"
+"    margin-right:25px;        \n"
+"    border: 1px solid #B3B3B3;     \n"
+"    font-weight:bold;        \n"
+"    \n"
+"    background-color: rgb(227, 227, 227);")
         self.label_75.setText("")
+        self.label_75.setWordWrap(True)
         self.label_75.setObjectName("label_75")
-        self.verticalLayout_19.addWidget(self.label_75)
+        self.horizontalLayout_48.addWidget(self.label_75)
+        self.pushButton_delete = QtWidgets.QPushButton(self.frame_56)
+        self.pushButton_delete.setMinimumSize(QtCore.QSize(75, 35))
+        self.pushButton_delete.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.pushButton_delete.setStyleSheet("#pushButton_delete{\n"
+"    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"    color: rgb(0, 0, 0);\n"
+"    border:1px solid rgb(0,0,0);\n"
+"    border-radius:8px;\n"
+"    font: 14pt \"华文彩云\";\n"
+"}\n"
+"#pushButton_delete:hover{\n"
+"    \n"
+"    background-color: rgb(158, 158, 158);\n"
+"    \n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"#pushButton_delete:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
+        self.pushButton_delete.setObjectName("pushButton_delete")
+        self.horizontalLayout_48.addWidget(self.pushButton_delete)
         self.verticalLayout_18.addWidget(self.frame_56)
         self.verticalLayout_17.addWidget(self.frame_54)
         self.verticalLayout_16.addWidget(self.frame_53)
         self.horizontalLayout_44.addWidget(self.frame_52)
         self.verticalLayout_14.addWidget(self.frame_51)
         self.frame_43 = QtWidgets.QFrame(self.frame_41)
+        self.frame_43.setStyleSheet("#frame_43{\n"
+"    border:1px dashed ;\n"
+"}")
         self.frame_43.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_43.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_43.setObjectName("frame_43")
         self.verticalLayout_20 = QtWidgets.QVBoxLayout(self.frame_43)
         self.verticalLayout_20.setObjectName("verticalLayout_20")
-        self.tableWidget = QtWidgets.QTableWidget(self.frame_43)
-        self.tableWidget.setRowCount(2)
+        self.label_76 = QtWidgets.QLabel(self.frame_43)
+        self.label_76.setStyleSheet("font: 11pt \"楷体\";")
+        self.label_76.setObjectName("label_76")
+        self.verticalLayout_20.addWidget(self.label_76)
+        self.frame_57 = QtWidgets.QFrame(self.frame_43)
+        self.frame_57.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_57.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_57.setObjectName("frame_57")
+        self.horizontalLayout_46 = QtWidgets.QHBoxLayout(self.frame_57)
+        self.horizontalLayout_46.setObjectName("horizontalLayout_46")
+        self.tableWidget = QtWidgets.QTableWidget(self.frame_57)
+        self.tableWidget.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.tableWidget.setLineWidth(10)
+        self.tableWidget.setMidLineWidth(10)
+        self.tableWidget.setRowCount(0)
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setObjectName("tableWidget")
-        self.verticalLayout_20.addWidget(self.tableWidget)
+        item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setTextAlignment(QtCore.Qt.AlignCenter)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(150)
+        self.tableWidget.horizontalHeader().setMinimumSectionSize(50)
+        self.tableWidget.verticalHeader().setDefaultSectionSize(30)
+        self.tableWidget.verticalHeader().setMinimumSectionSize(25)
+        self.horizontalLayout_46.addWidget(self.tableWidget)
+        self.pushButton_3 = QtWidgets.QPushButton(self.frame_57)
+        self.pushButton_3.setMinimumSize(QtCore.QSize(75, 35))
+        self.pushButton_3.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.pushButton_3.setStyleSheet("#pushButton_3{\n"
+"    \n"
+"    background-color: rgb(255, 255, 255);\n"
+"    color: rgb(0, 0, 0);\n"
+"    border:1px solid rgb(0,0,0);\n"
+"    border-radius:8px;\n"
+"    font: 14pt \"华文彩云\";\n"
+"}\n"
+"#pushButton_3:hover{\n"
+"    \n"
+"    background-color: rgb(158, 158, 158);\n"
+"    \n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"#pushButton_3:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout_46.addWidget(self.pushButton_3)
+        self.verticalLayout_20.addWidget(self.frame_57)
         self.verticalLayout_14.addWidget(self.frame_43)
         self.verticalLayout_12.addWidget(self.frame_41)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
         self.verticalLayout_11.addWidget(self.scrollArea_2)
         self.stackedWidget.addWidget(self.page_3)
+        self.page_5 = QtWidgets.QWidget()
+        self.page_5.setObjectName("page_5")
+        self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.page_5)
+        self.verticalLayout_9.setObjectName("verticalLayout_9")
+        self.frame_59 = QtWidgets.QFrame(self.page_5)
+        self.frame_59.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.frame_59.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_59.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_59.setObjectName("frame_59")
+        self.listWidget = QtWidgets.QListWidget(self.frame_59)
+        self.listWidget.setEnabled(True)
+        self.listWidget.setGeometry(QtCore.QRect(380, 250, 361, 241))
+        self.listWidget.setStyleSheet("border-radius:25px;\n"
+"border:1px solid rgb(0,0,0);\n"
+"color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);")
+        self.listWidget.setObjectName("listWidget")
+        self.label_77 = QtWidgets.QLabel(self.frame_59)
+        self.label_77.setGeometry(QtCore.QRect(430, 410, 38, 44))
+        self.label_77.setStyleSheet("font: 14pt \"华文仿宋\";")
+        self.label_77.setObjectName("label_77")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.frame_59)
+        self.lineEdit_4.setGeometry(QtCore.QRect(490, 420, 211, 35))
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.label_78 = QtWidgets.QLabel(self.frame_59)
+        self.label_78.setGeometry(QtCore.QRect(430, 360, 38, 44))
+        self.label_78.setStyleSheet("font: 14pt \"华文仿宋\";")
+        self.label_78.setObjectName("label_78")
+        self.label_79 = QtWidgets.QLabel(self.frame_59)
+        self.label_79.setGeometry(QtCore.QRect(430, 310, 38, 44))
+        self.label_79.setStyleSheet("font: 14pt \"华文仿宋\";")
+        self.label_79.setObjectName("label_79")
+        self.buttonBox = QtWidgets.QDialogButtonBox(self.frame_59)
+        self.buttonBox.setGeometry(QtCore.QRect(330, 510, 400, 31))
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setObjectName("buttonBox")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.frame_59)
+        self.lineEdit_2.setGeometry(QtCore.QRect(490, 320, 211, 35))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.lineEdit = QtWidgets.QLineEdit(self.frame_59)
+        self.lineEdit.setGeometry(QtCore.QRect(490, 270, 211, 35))
+        self.lineEdit.setText("")
+        self.lineEdit.setObjectName("lineEdit")
+        self.label_82 = QtWidgets.QLabel(self.frame_59)
+        self.label_82.setGeometry(QtCore.QRect(430, 260, 38, 44))
+        self.label_82.setStyleSheet("font: 14pt \"华文仿宋\";")
+        self.label_82.setObjectName("label_82")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.frame_59)
+        self.lineEdit_3.setGeometry(QtCore.QRect(490, 370, 211, 35))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.verticalLayout_9.addWidget(self.frame_59)
+        self.stackedWidget.addWidget(self.page_5)
         self.verticalLayout_10.addWidget(self.stackedWidget)
-        self.verticalLayout_9.addWidget(self.widget_4)
+        self.horizontalLayout_47.addWidget(self.widget_4)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1094, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1099, 26))
         self.menubar.setObjectName("menubar")
-        self.menu_2 = QtWidgets.QMenu(self.menubar)
-        self.menu_2.setObjectName("menu_2")
         self.menu_3 = QtWidgets.QMenu(self.menubar)
         self.menu_3.setObjectName("menu_3")
-        self.menu_5 = QtWidgets.QMenu(self.menubar)
-        self.menu_5.setObjectName("menu_5")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
+        self.menu_savework = QtWidgets.QMenu(self.menubar)
+        self.menu_savework.setObjectName("menu_savework")
+        self.menu_5 = QtWidgets.QMenu(self.menubar)
+        self.menu_5.setObjectName("menu_5")
         MainWindow.setMenuBar(self.menubar)
         self.action1 = QtWidgets.QAction(MainWindow)
         self.action1.setObjectName("action1")
@@ -1585,8 +2275,10 @@ class Ui_MainWindow(object):
         self.menu.addAction(self.actionj)
         self.menu.addAction(self.actionp)
         self.menu.addAction(self.actiona)
+        self.menu.addSeparator()
         self.menu.addAction(self.actions)
-        self.menubar.addAction(self.menu_2.menuAction())
+        self.menu.addSeparator()
+        self.menubar.addAction(self.menu_savework.menuAction())
         self.menubar.addAction(self.menu_3.menuAction())
         self.menubar.addAction(self.menu.menuAction())
         self.menubar.addAction(self.menu_5.menuAction())
@@ -1602,17 +2294,17 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "参数输入"))
         self.label_3.setText(_translate("MainWindow", "预期产量"))
         self.label_4.setText(_translate("MainWindow", "m^3/d"))
-        self.label_5.setText(_translate("MainWindow", "排液量"))
-        self.label_6.setText(_translate("MainWindow", "m^3/d"))
         self.label_7.setText(_translate("MainWindow", "天然气相对密度"))
-        self.label_8.setText(_translate("MainWindow", "井口压力"))
-        self.label_9.setText(_translate("MainWindow", "MPa"))
         self.label_10.setText(_translate("MainWindow", "分离器处压力"))
         self.label_11.setText(_translate("MainWindow", "MPa"))
-        self.label_12.setText(_translate("MainWindow", "井口温度"))
-        self.label_13.setText(_translate("MainWindow", "℃"))
         self.label_14.setText(_translate("MainWindow", "管线内径"))
         self.label_15.setText(_translate("MainWindow", "m"))
+        self.label_5.setText(_translate("MainWindow", "排液量"))
+        self.label_6.setText(_translate("MainWindow", "m^3/d"))
+        self.label_8.setText(_translate("MainWindow", "井口压力"))
+        self.label_9.setText(_translate("MainWindow", "MPa"))
+        self.label_12.setText(_translate("MainWindow", "井口温度"))
+        self.label_13.setText(_translate("MainWindow", "℃"))
         self.label_16.setText(_translate("MainWindow", "弯头个数"))
         self.label_17.setText(_translate("MainWindow", "个"))
         self.label_18.setText(_translate("MainWindow", "每一级节流前的管线长度\n"
@@ -1635,12 +2327,12 @@ class Ui_MainWindow(object):
         self.label_63.setText(_translate("MainWindow", "Pctiz2"))
         self.Pctiz2.setText(_translate("MainWindow", "输出结果"))
         self.label_64.setText(_translate("MainWindow", "MPa"))
-        self.label_65.setText(_translate("MainWindow", "Pctiz3"))
-        self.Pctiz3.setText(_translate("MainWindow", "输出结果"))
-        self.label_67.setText(_translate("MainWindow", "MPa"))
-        self.label_68.setText(_translate("MainWindow", "Pctiz4"))
+        self.label_83.setText(_translate("MainWindow", "Pctiz3"))
         self.Pctiz4.setText(_translate("MainWindow", "输出结果"))
-        self.label_70.setText(_translate("MainWindow", "MPa"))
+        self.label_84.setText(_translate("MainWindow", "MPa"))
+        self.label_85.setText(_translate("MainWindow", "Pctiz4"))
+        self.Pctiz3.setText(_translate("MainWindow", "输出结果"))
+        self.label_86.setText(_translate("MainWindow", "MPa"))
         self.label_21.setText(_translate("MainWindow", "节流口径"))
         self.label_38.setText(_translate("MainWindow", "一级节流"))
         self.d_label.setText(_translate("MainWindow", "输出结果"))
@@ -1681,6 +2373,11 @@ class Ui_MainWindow(object):
         self.addpipe2.setText(_translate("MainWindow", "添加一级节流管道"))
         self.addpipe3.setText(_translate("MainWindow", "添加二级节流管道"))
         self.addpipe1.setText(_translate("MainWindow", "添加三级节流管道"))
+        self.addpipe1_2.setText(_translate("MainWindow", "添加节流阀"))
+        self.label_80.setText(_translate("MainWindow", "长度"))
+        self.label_65.setText(_translate("MainWindow", "m"))
+        self.label_81.setText(_translate("MainWindow", "宽度"))
+        self.label_67.setText(_translate("MainWindow", "m"))
         self.label_26.setText(_translate("MainWindow", "安全校核模块"))
         self.label_50.setText(_translate("MainWindow", "井口压力"))
         self.label_57.setText(_translate("MainWindow", "万m³/d"))
@@ -1697,11 +2394,23 @@ class Ui_MainWindow(object):
         self.label_72.setText(_translate("MainWindow", "管线重"))
         self.label_73.setText(_translate("MainWindow", "万m³/d"))
         self.label_74.setText(_translate("MainWindow", "基墩距离井口位置"))
-        self.pushButton_2.setText(_translate("MainWindow", "添加"))
-        self.menu_2.setTitle(_translate("MainWindow", "新建工程"))
+        self.lineEdit_8.setPlaceholderText(_translate("MainWindow", "基墩距离井口位置"))
+        self.pushButton_add.setText(_translate("MainWindow", "添加"))
+        self.pushButton_delete.setText(_translate("MainWindow", "撤回"))
+        self.label_76.setText(_translate("MainWindow", "振动位移随管长变化"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "沿管长距离(m)"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "振动位移(m)"))
+        self.pushButton_3.setText(_translate("MainWindow", "计算"))
+        self.label_77.setText(_translate("MainWindow", "工程"))
+        self.label_78.setText(_translate("MainWindow", "井号"))
+        self.label_79.setText(_translate("MainWindow", "区号"))
+        self.label_82.setText(_translate("MainWindow", "单位"))
         self.menu_3.setTitle(_translate("MainWindow", "打开工程"))
-        self.menu_5.setTitle(_translate("MainWindow", "退出"))
         self.menu.setTitle(_translate("MainWindow", "切换模块"))
+        self.menu_savework.setTitle(_translate("MainWindow", "保存工程"))
+        self.menu_5.setTitle(_translate("MainWindow", "退出"))
         self.action1.setText(_translate("MainWindow", "新建工程"))
         self.action2.setText(_translate("MainWindow", "打开工程"))
         self.actionexit.setText(_translate("MainWindow", "退出"))
