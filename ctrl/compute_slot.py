@@ -2,8 +2,11 @@ import os
 
 import matlab.engine
 import pandas as pd
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox
+from matplotlib import pyplot as plt
 from pandas.errors import EmptyDataError
+
+from data import result_form
 
 saved_data = []
 
@@ -53,16 +56,21 @@ def module3_compute(self):
         data[i] = getattr(self, f'lineEdit_a{i + 1}').text()
         if not check_input(data[i]):
             print("存在错误输入参数")
+            QMessageBox.information(self, "提示", "存在错误输入参数")
             flag = 1
             break
     index = 0
     for i in saved_data:
         if not check_input(i):
             print("存在错误输入参数")
+            QMessageBox.information(self, "提示", "存在错误输入参数")
             flag = 1
             break
         inputdata.iloc[7, index] = float(i)
         index += 1
+
+    result_form.moudle3_inform = data
+    result_form.moudle3_inform_2 = saved_data
 
     if flag == 0:
         for i in range(7):
@@ -71,10 +79,15 @@ def module3_compute(self):
         inputdata.to_csv(r'matlab2/输入数据.csv', index=False, header=False)
         print(inputdata)
         print("开始调用matlab函数")
+        # QMessageBox.information(self, "提示", "计算中，请稍后...")
         matlab_function()
         print("模块三计算完成")
+        QMessageBox.information(self, "提示", "模块三计算完成")
+        result_form.moudle3_flag = True
 
         df = pd.read_csv('matlab2/振动位移随管长变化.csv')
+
+        result_form.moudle3_result = df
         # 获取行数和列数
         rows, cols = df.shape
 
@@ -87,6 +100,16 @@ def module3_compute(self):
             for j in range(cols):
                 self.tableWidget.setItem(i, j, QTableWidgetItem(str(df.iloc[i, j])))
 
+        # 使用前两列数据生成图像
+        plt.switch_backend('Qt5Agg')
+        plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+        plt.rcParams['axes.unicode_minus'] = False
+        plt.plot(df.iloc[:, 0], df.iloc[:, 1])
+        plt.xlabel('管长')
+        plt.ylabel('振动位移')
+        plt.title('振动位移随管长变化')
+        plt.show()
+
 
 def matlab_function():
     eng = matlab.engine.start_matlab()
@@ -96,6 +119,19 @@ def matlab_function():
     eng.quit()
     return True
 
+
+def setParameters(self):
+    global saved_data
+    saved_data = result_form.moudle3_inform_2
+    self.label_75.setText(str(saved_data))
+    if result_form.moudle3_inform is not None:
+        self.lineEdit_a1.setText(result_form.moudle3_inform[0])
+        self.lineEdit_a2.setText(result_form.moudle3_inform[1])
+        self.lineEdit_a3.setText(result_form.moudle3_inform[2])
+        self.lineEdit_a4.setText(result_form.moudle3_inform[3])
+        self.lineEdit_a5.setText(result_form.moudle3_inform[4])
+        self.lineEdit_a6.setText(result_form.moudle3_inform[5])
+        self.lineEdit_a7.setText(result_form.moudle3_inform[6])
 
 if __name__ == '__main__':
     matlab_function()

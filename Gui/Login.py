@@ -17,9 +17,17 @@ class Ui_MainWindow(object):
         MainWindow.resize(600, 400)
         MainWindow.setMaximumSize(QtCore.QSize(600, 400))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setStyleSheet("#centralwidget{\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"")
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(250, 60, 321, 301))
+        self.widget.setStyleSheet("#widget{\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"}\n"
+"")
         self.widget.setObjectName("widget")
         self.listWidget = QtWidgets.QListWidget(self.widget)
         self.listWidget.setGeometry(QtCore.QRect(30, 10, 271, 201))

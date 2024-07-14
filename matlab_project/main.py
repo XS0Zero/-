@@ -1,6 +1,9 @@
 import numpy as np
 import math
+
+from data import result_form
 from matlab_project.BWRSV1 import BWRSV1_func
+from matlab_project.BWRSV2 import BWRSV2_func
 from matlab_project.JL3 import JL_func
 from matlab_project.G import G_func
 from matlab_project.MAXQd import MAXQd_func
@@ -43,6 +46,16 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     Pctiz3 = None
     Pctiz4 = None
 
+    T0 = T1 + 273.15
+
+    try:
+        len(r)
+        r = BWRSV2_func(P1, T0, r)
+        r = float(r[0])
+        r = round(r, 4)
+    except TypeError:
+        print("相对密度形式输入")
+
     if r >= 0.7:
         Pc = (4881 - 386.11 * r) / 1000  # 压力,MPa
         Tc = 92 + 176.67 * r  # 温度,℃
@@ -64,9 +77,9 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     # LL[0,1] = LL[0,1] + Lep
     # LL[0,2] = 5  # 前面数字代表弯头前的管线长度，弯头的摩阻统一为Lep
 
-    T0 = T1 + 273.15
-    den0 = BWRSV1_func(P1, T0)[2]
-    Z0 = BWRSV1_func(P1, T0)[0]
+    BWRSV1 = BWRSV1_func(P1, T0)
+    den0 = BWRSV1[2]
+    Z0 = BWRSV1[0]
     Bg = 3.447e-4 * Z0 * T0 / P1
     V0 = 4 * Qg * Bg / 86400 / math.pi / D ** 2
     # V0 = (Qg * T0 * 0.404 * Z0) / (8.64 * 293 * P1 * 3.1415926 * (D * 100)**2)
@@ -78,11 +91,16 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     P2, T2, d, Qg1, Z1 = JL_func(P1, T1, Qg, r, k, R, Pc, Tc, Pci, Tci)
     Twash = T2 + 273.15
 
-    Z2 = BWRSV1_func(P2, Twash)[0]  # 一级节流后的压缩因子
-    den = BWRSV1_func(P2, Twash)[2]
+    BWRSV1 = BWRSV1_func(P2, Twash)
+    Z2 = BWRSV1[0]  # 一级节流后的压缩因子
+    den = BWRSV1[2]
     pm = (3484.48 * den * P2) / (Z2 * Twash) / 1000  # 一级节流前气体混合物密度 g/cm^3
     Vc = (Qg1 * Twash * 0.404 * Z2) / (8.64 * 293 * P2 * 3.1415926 * (d * 0.1) ** 2)  # 一级节流嘴流速 m/s
     Ve = c / den ** 0.5  # 临界冲蚀速率 m/s
+
+    result_form.Vc = Vc
+    result_form.Ve = Ve
+
     G1, OW1, Wr1, __ = G_func(Qg, Ql, T1, T2, P1, P2, r)
     # plt.plot(P2, T2, color='blue', marker='.', markersize=16)
     # plt.text(P2, T2, '一级节流')
@@ -126,6 +144,10 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     pmm = (3484.48 * denn * P22) / (Z22 * Twash2) / 1000  # 二级节流前气体混合物密度 kg/m^3
     Vcc = (Qg11 * Twash2 * 0.404 * Z22) / (8.64 * 293 * P22 * 3.1415926 * (dd * 0.1) ** 2)  # 一级节流嘴流速 m/s
     Vee = c / (denn) ** 0.5  # 临界冲蚀速率 m/s
+
+    result_form.Vcc = Vcc
+    result_form.Vee = Vee
+
     G2, OW2, Wr2, __ = G_func(Qg, Ql, T11, T22, P11, P22, r)
 
     # plt.plot(P22, T22, color='red', marker='<', markersize=8)
@@ -169,6 +191,10 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     pmmm = (3484.48 * dennn * P222) / (Z222 * Twash3) / 1000  # 二级节流前气体混合物密度 kg/m^3
     Vccc = (Qg111 * Twash3 * 0.404 * Z222) / (8.64 * 293 * P222 * 3.1415926 * (ddd * 0.1) ** 2)  # 一级节流嘴流速 m/s
     Veee = c / (dennn) ** 0.5  # 临界冲蚀速率 m/s
+
+    result_form.Vccc = Vccc
+    result_form.Veee = Veee
+
     G3 = G_func(Qg, Ql, T111, T222, P111, P222, r)[0]
 
     plt.plot(P2, T2, color='blue', marker='.', markersize=16)

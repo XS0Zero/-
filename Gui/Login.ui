@@ -47,6 +47,12 @@ border-radius:15px;</string>
      <height>301</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#widget{
+	background-color: rgba(255, 255, 255, 0);
+}
+</string>
+   </property>
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
