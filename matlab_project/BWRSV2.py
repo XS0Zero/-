@@ -74,7 +74,7 @@ def BWRSV2_func(P, T ,z0):
 
         Ro[kk + 1] = (Ro[kk - 1] * FRo[kk] - Ro[kk] * FRo[kk - 1]) / (FRo[kk] - FRo[kk - 1])
 
-    # º∆À„∆‰À˚ŒÔ¿Ì¡ø
+    # ËÆ°ÁÆóÂÖ∂‰ªñÁâ©ÁêÜÈáè
     z1 = 1 + ((B0 * R0 * T - A0 - C0 / T ** 2 + D0 / T ** 3 - E0 / T ** 4) * Ro[kk + 1] ** 2 +
               (b * R0 * T - a - d / T) * Ro[kk + 1] ** 3 + alpha * (a + d / T) * Ro[kk + 1] ** 6 +
               c * Ro[kk + 1] ** 3 / T ** 2 * (1 + gama * Ro[kk + 1] ** 2) * np.exp(-gama * Ro[kk + 1] ** 2)) / (

@@ -1,7 +1,9 @@
 import os
+import time
 
 import matlab.engine
 import pandas as pd
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox
 from matplotlib import pyplot as plt
 from pandas.errors import EmptyDataError
@@ -43,6 +45,10 @@ def module3_compute(self):
     print(inputdata)
     print(inputdata.iloc[:, 0])
 
+    def message():
+        self.message.signal.connect(lambda: self.box("提示", "计算中，请稍后..."))
+        self.message.start()
+
     def check_input(input_value):
         try:
             float(input_value)
@@ -78,8 +84,22 @@ def module3_compute(self):
 
         inputdata.to_csv(r'matlab2/输入数据.csv', index=False, header=False)
         print(inputdata)
+        # self.msg = QMessageBox()
+        # # 设置非模态
+        # self.msg.setWindowModality(Qt.NonModal)
+        # # 设置弹窗标题和内容
+        # self.msg.setWindowTitle('提示')
+        # self.msg.setText('计算中，请稍后...')
+        # # 设置弹窗的按钮为OK，StandardButtons采用位标记，可以用与运算添加其他想要的按钮
+        # self.msg.setStandardButtons(QMessageBox.Ok)
+        # # 显示窗口
+        # self.msg.show()
+        # time.sleep(1)
         print("开始调用matlab函数")
+
+        # message()
         # QMessageBox.information(self, "提示", "计算中，请稍后...")
+
         matlab_function()
         print("模块三计算完成")
         QMessageBox.information(self, "提示", "模块三计算完成")

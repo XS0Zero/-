@@ -11,7 +11,7 @@ import os
 import sys
 
 from PyQt5 import QtWidgets, QtGui
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QThread, pyqtSignal
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow, QDialog, QTableWidgetItem, QAction, QMessageBox
 from qt_material import apply_stylesheet
@@ -53,6 +53,10 @@ class MainWindow(QMainWindow, MainWindow):
         _self = self
         self.setupUi(self)
         self.setWindowTitle("超高压地面测试流程综合分析软件")
+
+        self.message = message(self)
+
+
         self.pushButton.clicked.connect(lambda: on_compute_button_clicked(self))
         # self.menu_2.triggered.connect(lambda: change_page(self, 5))
         # self.menu_2.addAction(lambda: change_page(self, 5))
@@ -88,19 +92,21 @@ class MainWindow(QMainWindow, MainWindow):
         self.actionp.triggered.connect(lambda: change_page(self, 2))
         self.actiona.triggered.connect(lambda: change_page(self, 3))
         self.actions.triggered.connect(self.show_result)
-        self.setinit()
+
+        # self.setinit()
+
         self.pushButton_3.clicked.connect(lambda: module3_compute(self))
         self.pushButton_add.clicked.connect(lambda: add_a(self))
         self.pushButton_delete.clicked.connect(lambda: delete_a(self))
         self.buttonBox.accepted.connect(self.startProject)
-        self.addpipe2.clicked.connect(lambda: add_label(self,"#4ce500",25,100))
-        self.addpipe3.clicked.connect(lambda: add_label(self, "#f3f300",25,100))
-        self.addpipe1.clicked.connect(lambda: add_label(self, "#00aaff",25,100))
+        self.addpipe2.clicked.connect(lambda: add_label(self, "#4ce500", 25, 100))
+        self.addpipe3.clicked.connect(lambda: add_label(self, "#f3f300", 25, 100))
+        self.addpipe1.clicked.connect(lambda: add_label(self, "#00aaff", 25, 100))
         self.addpipe1_2.clicked.connect(lambda: add_label(self, "#bfbfbf", 30, 30))
-        self.addpipe1_3.clicked.connect(lambda: add_image_label(self, "falan.png"))
-        self.addpipe1_4.clicked.connect(lambda: add_image_label(self, "zhijiaojietou.png"))
-        self.addpipe1_5.clicked.connect(lambda: add_image_label(self, "gudingdian.png"))
-        self.addpipe1_6.clicked.connect(lambda: add_image_label(self, "zhenfa.png"))
+        self.addpipe1_3.clicked.connect(lambda: add_image_label(self, "resource/falan.png"))
+        self.addpipe1_4.clicked.connect(lambda: add_image_label(self, "resource/zhijiaojietou.png"))
+        self.addpipe1_5.clicked.connect(lambda: add_image_label(self, "resource/gudingdian.png"))
+        self.addpipe1_6.clicked.connect(lambda: add_image_label(self, "resource/zhenfa.png"))
 
         self.pushButton_2.clicked.connect(self.saveimage)
         self.pushButton_5.clicked.connect(lambda: rotate_label())
@@ -108,6 +114,8 @@ class MainWindow(QMainWindow, MainWindow):
 
         self.pushButton_7.clicked.connect(lambda: show_moulde3_image(self))
 
+    def box(self, title, text):
+        QMessageBox.information(self, title, text, QMessageBox.Ok)
 
     def menu_2_triggered(self):
         print("menu_2 triggered")
@@ -137,7 +145,6 @@ class MainWindow(QMainWindow, MainWindow):
 
         # 弃置滚动栏样式
         # self.addScrollBarStyle()
-
 
     def addScrollBarStyle(self):
         # 1.新建一个名字叫textEdit_send_sbar的滚动条
@@ -211,7 +218,6 @@ class MainWindow(QMainWindow, MainWindow):
         except Exception as e:
             QMessageBox.information(self, "提示", "请输入正确信息")
 
-
     def show_result(self):
         init_result(self)
         change_page(self, 0)
@@ -233,6 +239,15 @@ class MainWindow(QMainWindow, MainWindow):
 #     dialog.show()
 
 
+class message(QThread):
+    signal = pyqtSignal()
+
+    def __init__(self, Window):
+        super(message, self).__init__()
+        self.window = Window
+
+    def run(self):
+        self.signal.emit()
 
 
 if __name__ == '__main__':
@@ -241,7 +256,7 @@ if __name__ == '__main__':
     window = Login_window()
     # window = MainWindow()
     Main_window = MainWindow()
-    ico_path = os.path.join(os.path.dirname(__file__), 'logo.ico')
+    ico_path = os.path.join(os.path.dirname(__file__), 'resource/logo.ico')
     icon = QtGui.QIcon()
     icon.addPixmap(QtGui.QPixmap(ico_path), QtGui.QIcon.Normal, QtGui.QIcon.Off)
     window.setWindowIcon(icon)

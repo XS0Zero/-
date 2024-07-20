@@ -96,7 +96,7 @@ def open_project(self,path):
         moudle3_inform_2 = None
 
     try:
-        moudle3_result = pd.read_csv(io.StringIO(df['moudle3_result'][0]),sep='\s+',header=False)
+        moudle3_result = pd.read_csv(io.StringIO(df['moudle3_result'][0]),sep='\s+',header=None)
     except (ValueError, SyntaxError):
         moudle3_result = None
 

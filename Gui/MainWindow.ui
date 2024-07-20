@@ -7648,7 +7648,7 @@ height: 0px;
                            <item>
                             <widget class="QLabel" name="label_59">
                              <property name="text">
-                              <string>万m³/d</string>
+                              <string>MPa</string>
                              </property>
                             </widget>
                            </item>
@@ -7724,7 +7724,7 @@ height: 0px;
                            <item>
                             <widget class="QLabel" name="label_32">
                              <property name="text">
-                              <string>万m³/d</string>
+                              <string>MPa</string>
                              </property>
                             </widget>
                            </item>
@@ -7794,7 +7794,7 @@ height: 0px;
                            <item>
                             <widget class="QLabel" name="label_66">
                              <property name="text">
-                              <string>万m³/d</string>
+                              <string>m</string>
                              </property>
                             </widget>
                            </item>
@@ -7867,7 +7867,7 @@ height: 0px;
                            <item>
                             <widget class="QLabel" name="label_37">
                              <property name="text">
-                              <string>万m³/d</string>
+                              <string>m</string>
                              </property>
                             </widget>
                            </item>
@@ -7937,7 +7937,7 @@ height: 0px;
                            <item>
                             <widget class="QLabel" name="label_71">
                              <property name="text">
-                              <string>万m³/d</string>
+                              <string>m</string>
                              </property>
                             </widget>
                            </item>
@@ -8007,7 +8007,7 @@ height: 0px;
                            <item>
                             <widget class="QLabel" name="label_73">
                              <property name="text">
-                              <string>万m³/d</string>
+                              <string>kg/m</string>
                              </property>
                             </widget>
                            </item>

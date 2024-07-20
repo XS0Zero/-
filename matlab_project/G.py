@@ -1,11 +1,9 @@
 import numpy as np
 import tkinter as tk
-from tkinter import messagebox
 import pandas as pd
 import matplotlib as mpl
 mpl.use('TkAgg')
 import matplotlib.pyplot as plt
-from matplotlib.font_manager import FontProperties
 def G_func(Qg,Ql,T1,T2,P1,P2,r):
         # 转换温度为开尔文单位
         T2 = T2 + 273.15
@@ -33,7 +31,7 @@ def G_func(Qg,Ql,T1,T2,P1,P2,r):
             #messagebox.showerror("错误提示", "相对密度数值不正确")
         # 从 Excel 文件中读取数据
         else:
-            data = pd.read_excel('水合物参数.xlsx',header=None)
+            data = pd.read_excel('resource/水合物参数.xlsx',header=None)
 
         # 提取数据
         Ss = data.iloc[:, 1]  # 第2列数据

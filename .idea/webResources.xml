@@ -6,6 +6,8 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/venv" />
+            <path value="file://$PROJECT_DIR$/resource" />
+            <path value="file://$PROJECT_DIR$/matlab2" />
           </resourceRoots>
         </entryData>
       </entry>

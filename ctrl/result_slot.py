@@ -1,5 +1,9 @@
 import numpy as np
 import pandas as pd
+import sys
+
+sys.setrecursionlimit(2000)
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QGraphicsScene, QGraphicsView
@@ -84,10 +88,10 @@ def init_result(self):
         self.tableWidget_3.setRowCount(3)
         self.tableWidget_3.setColumnCount(3)
 
-        self.tableWidget_3.setItem(0, 0, QTableWidgetItem(str(result_form.Vc)))
-        self.tableWidget_3.setItem(0, 1, QTableWidgetItem(str(result_form.Ve)))
+        self.tableWidget_3.setItem(0, 0, QTableWidgetItem(str(round(result_form.Vc, 2))))
+        self.tableWidget_3.setItem(0, 1, QTableWidgetItem(str(round(result_form.Ve, 2))))
         if result_form.Vc > result_form.Ve:
-            if result_form.Vc - result_form.Ve> 80:
+            if result_form.Vc - result_form.Ve > 80:
                 self.tableWidget_3.setItem(0, 2, QTableWidgetItem("严重冲蚀"))
             else:
                 if result_form.Vc - result_form.Ve > 30:
@@ -97,10 +101,10 @@ def init_result(self):
         else:
             self.tableWidget_3.setItem(0, 2, QTableWidgetItem("无冲蚀"))
     if result_form.Vcc is not None:
-        self.tableWidget_3.setItem(1, 0, QTableWidgetItem(str(result_form.Vcc)))
-        self.tableWidget_3.setItem(1, 1, QTableWidgetItem(str(result_form.Vee)))
+        self.tableWidget_3.setItem(1, 0, QTableWidgetItem(str(round(result_form.Vcc, 2))))
+        self.tableWidget_3.setItem(1, 1, QTableWidgetItem(str(round(result_form.Vee, 2))))
         if result_form.Vcc > result_form.Vee:
-            if result_form.Vcc - result_form.Vee> 80:
+            if result_form.Vcc - result_form.Vee > 80:
                 self.tableWidget_3.setItem(1, 2, QTableWidgetItem("严重冲蚀"))
             else:
                 if result_form.Vcc - result_form.Vee > 30:
@@ -110,10 +114,10 @@ def init_result(self):
         else:
             self.tableWidget_3.setItem(1, 2, QTableWidgetItem("无冲蚀"))
     if result_form.Vccc is not None:
-        self.tableWidget_3.setItem(2, 0, QTableWidgetItem(str(result_form.Vccc)))
-        self.tableWidget_3.setItem(2, 1, QTableWidgetItem(str(result_form.Veee)))
+        self.tableWidget_3.setItem(2, 0, QTableWidgetItem(str(round(result_form.Vccc, 2))))
+        self.tableWidget_3.setItem(2, 1, QTableWidgetItem(str(round(result_form.Veee, 2))))
         if result_form.Vccc > result_form.Veee:
-            if result_form.Vccc - result_form.Veee> 80:
+            if result_form.Vccc - result_form.Veee > 80:
                 self.tableWidget_3.setItem(2, 2, QTableWidgetItem("严重冲蚀"))
             else:
                 if result_form.Vccc - result_form.Veee > 30:

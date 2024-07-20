@@ -7,7 +7,7 @@ from PyQt5.QtCore import Qt
 array = []
 def getUserInfo():
     print("当前工作目录：%s" % os.getcwd())
-    data = pd.read_csv(r'user.csv', sep=',', header=0)
+    data = pd.read_csv(r'resource/user.csv', sep=',', header=0)
     global array
     array = data.values[0::, 0::]  # 读取全部行，全部列
     print(array)

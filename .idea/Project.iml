@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/Python" />
+      <excludeFolder url="file://$MODULE_DIR$/dist" />
     </content>
     <orderEntry type="jdk" jdkName="F:\Users\12875\anaconda3\envs\matlab" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
