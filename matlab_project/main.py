@@ -102,6 +102,7 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     result_form.Ve = Ve
 
     G1, OW1, Wr1, __ = G_func(Qg, Ql, T1, T2, P1, P2, r)
+    result_form.G1 = G1
     # plt.plot(P2, T2, color='blue', marker='.', markersize=16)
     # plt.text(P2, T2, '一级节流')
 
@@ -149,7 +150,7 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     result_form.Vee = Vee
 
     G2, OW2, Wr2, __ = G_func(Qg, Ql, T11, T22, P11, P22, r)
-
+    result_form.G2 = G2
     # plt.plot(P22, T22, color='red', marker='<', markersize=8)
     # plt.text(P22, T22, '二级节流')
 
@@ -196,6 +197,13 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     result_form.Veee = Veee
 
     G3 = G_func(Qg, Ql, T111, T222, P111, P222, r)[0]
+    result_form.G3 = G3
+    result_form.P2 = P2
+    result_form.P22 = P22
+    result_form.P222 = P222
+    result_form.T2 = T2
+    result_form.T22 = T22
+    result_form.T222 = T222
 
     plt.plot(P2, T2, color='blue', marker='.', markersize=16)
     # plt.text(P2, T2, '一级节流')

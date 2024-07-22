@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget, QPushBut
 _self = None
 _self_label = None
 
+
 class DraggableLabel(QLabel):
     w = 0
     h = 0
@@ -71,7 +72,7 @@ class DraggableLabel(QLabel):
 
 def add_label(self, color, height, width):
     new_label = DraggableLabel()
-    new_label.setStyleSheet("background-color: " + color + ";border: 2px inset black;")
+    new_label.setStyleSheet("background-color: " + color + ";color:" + color + ";border: 2px inset black;")
     new_label.h = height
     new_label.w = width
     new_label.setFixedHeight(height)
@@ -92,6 +93,7 @@ def rotate_label():
         else:
             rotate_label_image()
 
+
 def rotate_label_image():
     transform = QTransform()
     transform.rotate(90)
@@ -99,14 +101,17 @@ def rotate_label_image():
     rotated_pix = pix.transformed(transform)
     _self_label.setPixmap(rotated_pix)
 
+
 def change_label_size():
     if _self_label is not None:
-            width = _self.lineEdit_5.text()
-            height = _self.lineEdit_6.text()
-            _self_label.setFixedHeight(int(height))
-            _self_label.setFixedWidth(int(width))
-            _self_label.w = int(width)
-            _self_label.h = int(height)
+        width = _self.lineEdit_5.text()
+        height = _self.lineEdit_6.text()
+        _self_label.setFixedHeight(int(height))
+        _self_label.setFixedWidth(int(width))
+        _self_label.w = int(width)
+        _self_label.h = int(height)
+
+
 #
 # if __name__ == '__main__':
 #     app = QApplication(sys.argv)
@@ -115,7 +120,7 @@ def change_label_size():
 
 
 # 添加几种图标的label
-def add_image_label(self,image):
+def add_image_label(self, image):
     # image = 'logo.png'
     pix = QPixmap(image)
     new_label = DraggableLabel()

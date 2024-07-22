@@ -1,7 +1,7 @@
 import os
+import subprocess
 import time
 
-import matlab.engine
 import pandas as pd
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox
@@ -82,7 +82,7 @@ def module3_compute(self):
         for i in range(7):
             inputdata.iloc[i, 0] = float(data[i])
 
-        inputdata.to_csv(r'matlab2/输入数据.csv', index=False, header=False)
+        inputdata.to_csv(r'输入数据.csv', index=False, header=False)
         print(inputdata)
         # self.msg = QMessageBox()
         # # 设置非模态
@@ -100,12 +100,18 @@ def module3_compute(self):
         # message()
         # QMessageBox.information(self, "提示", "计算中，请稍后...")
 
-        matlab_function()
+
+        myPopenObj = subprocess.Popen("../matlab2/test.exe")
+        try:
+            myPopenObj.wait(timeout=1200)
+        except Exception as e:
+            print("===== process timeout ======")
+            myPopenObj.kill()
         print("模块三计算完成")
         QMessageBox.information(self, "提示", "模块三计算完成")
         result_form.moudle3_flag = True
 
-        df = pd.read_csv('matlab2/振动位移随管长变化.csv')
+        df = pd.read_csv('振动位移随管长变化.csv')
 
         result_form.moudle3_result = df
         # 获取行数和列数

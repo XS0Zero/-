@@ -2,6 +2,9 @@ import numpy as np
 import tkinter as tk
 import pandas as pd
 import matplotlib as mpl
+
+from data import result_form
+
 mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 def G_func(Qg,Ql,T1,T2,P1,P2,r):
@@ -49,6 +52,9 @@ def G_func(Qg,Ql,T1,T2,P1,P2,r):
         # 生成压力-温度数据
         Px1 = np.arange(0, 140, 0.0005)
         Tx1 = (np.where(Px1>0,np.log10(Px1),-np.inf) + 1.0055) / 0.0541 - B
+
+        result_form.Px1.append(Px1)
+        result_form.Tx1.append(Tx1)
 
         # 绘制图像
 

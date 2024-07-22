@@ -19,7 +19,7 @@ from qt_material import apply_stylesheet
 import data.result_form
 from Gui.Login import Ui_MainWindow as Login_window
 from Gui.MainWindow import Ui_MainWindow as MainWindow
-from Gui.NewWork import NewWork_Dialog
+from Gui.NewProject import Ui_Newproject_Dialog
 from ctrl.Jieliu_slot import on_compute_button_clicked
 
 from ctrl.Login_slot import getUserInfo, on_login_button_clicked, on_exit_button_clicked
@@ -28,7 +28,7 @@ from ctrl.menu_slot import change_page, save_project, load_project
 from ctrl.mappint_slot import add_label, rotate_label, change_label_size, add_image_label
 import pandas as pd
 
-from ctrl.result_slot import init_result, show_moulde3_image
+from ctrl.result_slot import init_result, show_moulde3_image, show_moulde1_image
 from data import result_form
 from utils.image_utils import png_to_base64
 
@@ -47,6 +47,8 @@ class Login_window(QMainWindow, Login_window):
             on_login_button_clicked(self, window, Main_window)
 
 
+
+
 class MainWindow(QMainWindow, MainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -56,30 +58,29 @@ class MainWindow(QMainWindow, MainWindow):
 
         self.message = message(self)
 
-
         self.pushButton.clicked.connect(lambda: on_compute_button_clicked(self))
         # self.menu_2.triggered.connect(lambda: change_page(self, 5))
         # self.menu_2.addAction(lambda: change_page(self, 5))
-        self.menu_2_action = QAction()
-        self.menu_2_action.setCheckable(False)
-        self.menu_2_action.setObjectName('menu_2_action')
-        self.menu_2_action.triggered.connect(lambda: change_page(_self, 4))
-        self.menu_2_action.setText('新建工程')
-        self.menubar.addAction(self.menu_2_action)
-
-        self.menu_3_action = QAction()
-        self.menu_3_action.setCheckable(False)
-        self.menu_3_action.setObjectName('menu_3_action')
-        self.menu_3_action.triggered.connect(lambda: save_project(_self))
-        self.menu_3_action.setText('保存工程')
-        self.menubar.addAction(self.menu_3_action)
-
-        self.menu_4_action = QAction()
-        self.menu_4_action.setCheckable(False)
-        self.menu_4_action.setObjectName('menu_2_action')
-        self.menu_4_action.triggered.connect(lambda: load_project(_self))
-        self.menu_4_action.setText('打开工程')
-        self.menubar.addAction(self.menu_4_action)
+        # self.menu_2_action = QAction()
+        # self.menu_2_action.setCheckable(False)
+        # self.menu_2_action.setObjectName('menu_2_action')
+        # self.menu_2_action.triggered.connect(lambda: newProject(_self))
+        # self.menu_2_action.setText('新建工程')
+        # self.menubar.addAction(self.menu_2_action)
+        #
+        # self.menu_3_action = QAction()
+        # self.menu_3_action.setCheckable(False)
+        # self.menu_3_action.setObjectName('menu_3_action')
+        # self.menu_3_action.triggered.connect(lambda: save_project(_self))
+        # self.menu_3_action.setText('保存工程')
+        # self.menubar.addAction(self.menu_3_action)
+        #
+        # self.menu_4_action = QAction()
+        # self.menu_4_action.setCheckable(False)
+        # self.menu_4_action.setObjectName('menu_2_action')
+        # self.menu_4_action.triggered.connect(lambda: load_project(_self))
+        # self.menu_4_action.setText('打开工程')
+        # self.menubar.addAction(self.menu_4_action)
 
         self.menu_5_action = QAction()
         self.menu_5_action.setCheckable(False)
@@ -92,17 +93,17 @@ class MainWindow(QMainWindow, MainWindow):
         self.actionp.triggered.connect(lambda: change_page(self, 2))
         self.actiona.triggered.connect(lambda: change_page(self, 3))
         self.actions.triggered.connect(self.show_result)
+        self.action_3.triggered.connect(lambda: newProject(_self))
+        self.action_4.triggered.connect(lambda: load_project(_self))
+        self.action_5.triggered.connect(lambda: save_project(_self))
+
 
         # self.setinit()
 
         self.pushButton_3.clicked.connect(lambda: module3_compute(self))
         self.pushButton_add.clicked.connect(lambda: add_a(self))
         self.pushButton_delete.clicked.connect(lambda: delete_a(self))
-        self.buttonBox.accepted.connect(self.startProject)
-        self.addpipe2.clicked.connect(lambda: add_label(self, "#4ce500", 25, 100))
-        self.addpipe3.clicked.connect(lambda: add_label(self, "#f3f300", 25, 100))
-        self.addpipe1.clicked.connect(lambda: add_label(self, "#00aaff", 25, 100))
-        self.addpipe1_2.clicked.connect(lambda: add_label(self, "#bfbfbf", 30, 30))
+        self.addpipe2.clicked.connect(lambda: add_label(self, "#ffffff", 10, 100))
         self.addpipe1_3.clicked.connect(lambda: add_image_label(self, "resource/falan.png"))
         self.addpipe1_4.clicked.connect(lambda: add_image_label(self, "resource/zhijiaojietou.png"))
         self.addpipe1_5.clicked.connect(lambda: add_image_label(self, "resource/gudingdian.png"))
@@ -111,7 +112,7 @@ class MainWindow(QMainWindow, MainWindow):
         self.pushButton_2.clicked.connect(self.saveimage)
         self.pushButton_5.clicked.connect(lambda: rotate_label())
         self.pushButton_4.clicked.connect(lambda: change_label_size())
-
+        self.pushButton_6.clicked.connect(lambda: show_moulde1_image(self))
         self.pushButton_7.clicked.connect(lambda: show_moulde3_image(self))
 
     def box(self, title, text):
@@ -221,6 +222,44 @@ class MainWindow(QMainWindow, MainWindow):
     def show_result(self):
         init_result(self)
         change_page(self, 0)
+
+
+class NewProject_Dialog(QDialog, Ui_Newproject_Dialog):
+    _self = None
+    def __init__(self):
+        super(NewProject_Dialog, self).__init__()
+        self.setupUi(self)
+        self.setWindowTitle("新建工程")
+        self.setWindowModality(Qt.ApplicationModal)
+        self.pushButton.clicked.connect(lambda: self.save_project_inform())
+        self.pushButton_2.clicked.connect(lambda: self.close())
+
+    def set_parent(self,_self):
+        self._self = _self
+    def save_project_inform(self):
+        try:
+            project_inform = [self.lineEdit.text(), self.lineEdit_2.text(), self.lineEdit_3.text(),
+                              self.lineEdit_4.text()]
+            print(project_inform)
+            flag = 1
+            for i in project_inform:
+                if i == '':
+                    QMessageBox.information(self, "提示", "请输入完整信息")
+                    flag = 0
+                    break
+        except Exception :
+            print("请输入正确信息")
+            QMessageBox.information(self, "提示", "请输入正确工程信息")
+        if flag == 1:
+            data.result_form.Project_inform = project_inform
+            self.close()
+            change_page(self._self, 1)
+
+
+def newProject(self):
+    dialog = NewProject_Dialog()
+    dialog.set_parent(self)
+    dialog.exec_()
 
 
 # class NewWork_Dialog(QDialog, NewWork_Dialog):

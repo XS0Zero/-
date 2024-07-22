@@ -2,10 +2,13 @@ import numpy as np
 import pandas as pd
 import sys
 
+from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
+from matplotlib.figure import Figure
+
 sys.setrecursionlimit(2000)
 
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QGraphicsScene, QGraphicsView
 from matplotlib import pyplot as plt
 
@@ -38,8 +41,8 @@ def init_result(self):
         self.P1jl_3.setText(result[6])
         self.P2jl_3.setText(result[7])
         self.P3jl_3.setText(result[8])
-        self.P2_3.setText(result[9])
-        self.P22_3.setText(result[10])
+        # self.P2_3.setText(result[9])
+        # self.P22_3.setText(result[10])
         self.P222_3.setText(result[11])
         self.Pctiz1_3.setText(result[12])
         self.Pctiz2_3.setText(result[13])
@@ -62,7 +65,7 @@ def init_result(self):
             for j in range(cols):
                 self.tableWidget_2.setItem(i, j, QTableWidgetItem(str(df.iloc[i, j])))
 
-    if result_form.image_base64:
+    if result_form.image_base64 is not None:
         # 将base64编码的图像转换为QImage对象
         base64_to_image(result_form.image_base64, "mapping.png")
         # 将QImage对象转换为QPixmap对象
@@ -142,3 +145,43 @@ def show_moulde3_image(self):
         plt.show()
     else:
         QMessageBox.information(self, "错误", "未有数据输入，请先输入数据并计算")
+
+def show_moulde1_image(self):
+    if result_form.P2:
+        plt.rcParams['font.sans-serif'] = ['SimHei']  # 指定默认字体
+        plt.rcParams['axes.unicode_minus'] = False
+        F1 = MyFigure(width=5, height=4, dpi=100)
+        F1.axes1 = F1.fig.add_subplot(111)
+        F1.axes1.plot(result_form.Px1[0], result_form.Tx1[0], 'r')
+        F1.axes1.set_xlabel('压力 (MPa)', fontsize=11)
+        F1.axes1.set_ylabel('温度 (℃)', fontsize=11)
+        F1.axes1.set_title('水合物相平衡曲线')
+        F1.axes1.plot(result_form.P2, result_form.T2, color='blue', marker='.', markersize=16)
+        F1.axes1.plot(result_form.P22, result_form.T22, color='red', marker='<', markersize=8)
+        F1.axes1.plot(result_form.P222, result_form.T222, color='green', marker='*', markersize=8)
+        F1.axes1.text(result_form.P2, result_form.T2, '一级节流')
+        F1.axes1.text(result_form.P22, result_form.T22, '二级节流')
+        F1.axes1.text(result_form.P222, result_form.T222, '三级节流')
+        width, height = self.graphicsView_2.width(), self.graphicsView_2.height()
+        F1.resize(width, height)
+        self.scene = QGraphicsScene()  # 创建一个场景
+        self.scene.addWidget(F1)  # 将图形元素添加到场景中
+        self.graphicsView_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.graphicsView_2.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.graphicsView_2.setScene(self.scene)  # 将创建添加到图形视图显示窗口
+    else:
+        QMessageBox.information(self, "错误", "未有数据输入，请先输入数据并计算")
+
+
+# 重写一个matplotlib图像绘制类
+class MyFigure(FigureCanvasQTAgg):
+    def __init__(self, width=5, height=4, dpi=100):
+        # 1、创建一个绘制窗口Figure对象
+        self.fig = Figure(figsize=(width, height), dpi=dpi)
+        # 2、在父类中激活Figure窗口,同时继承父类属性
+        super(MyFigure, self).__init__(self.fig)
+
+    # 这里就是绘制图像、示例
+    def plotSin(self, x, y):
+        self.axes0 = self.fig.add_subplot(111)
+        self.axes0.plot(x, y)
