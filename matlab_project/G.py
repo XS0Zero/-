@@ -5,7 +5,7 @@ import matplotlib as mpl
 
 from data import result_form
 
-mpl.use('TkAgg')
+mpl.use('Qt5Agg')
 import matplotlib.pyplot as plt
 def G_func(Qg,Ql,T1,T2,P1,P2,r):
         # 转换温度为开尔文单位
@@ -29,8 +29,10 @@ def G_func(Qg,Ql,T1,T2,P1,P2,r):
         # 检查相对密度是否在合理范围内
         if r > 1 or r < 0.4:
             # 弹出错误对话框
+            print("相对密度数值不正确")
             root = tk.Tk()
             root.withdraw()
+            return None
             #messagebox.showerror("错误提示", "相对密度数值不正确")
         # 从 Excel 文件中读取数据
         else:

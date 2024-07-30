@@ -103,7 +103,7 @@
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>4</number>
          </property>
          <widget class="QWidget" name="page_4">
           <layout class="QVBoxLayout" name="verticalLayout_38">
@@ -156,9 +156,9 @@ height: 0px;
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>0</y>
-                <width>1064</width>
-                <height>2206</height>
+                <y>-420</y>
+                <width>1080</width>
+                <height>2151</height>
                </rect>
               </property>
               <property name="minimumSize">
@@ -556,6 +556,12 @@ border:1px solid rgb(0,0,0);</string>
                         </property>
                         <item>
                          <widget class="QLabel" name="label_197">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="minimumSize">
                            <size>
                             <width>170</width>
@@ -564,7 +570,7 @@ border:1px solid rgb(0,0,0);</string>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>150</width>
+                            <width>300</width>
                             <height>16777215</height>
                            </size>
                           </property>
@@ -609,7 +615,7 @@ border:1px solid rgb(0,0,0);</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_198">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -624,7 +630,7 @@ border:1px solid rgb(0,0,0);</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>一级节流</string>
@@ -731,7 +737,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_200">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -746,7 +752,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>二级节流</string>
@@ -846,7 +852,7 @@ background-color: rgb(255, 255, 255);</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_202">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -861,7 +867,7 @@ background-color: rgb(255, 255, 255);</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>三级节流</string>
@@ -966,6 +972,12 @@ background-color: rgb(255, 255, 255);</string>
                        <layout class="QHBoxLayout" name="horizontalLayout_154">
                         <item>
                          <widget class="QLabel" name="label_204">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="minimumSize">
                            <size>
                             <width>170</width>
@@ -974,7 +986,7 @@ background-color: rgb(255, 255, 255);</string>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>150</width>
+                            <width>300</width>
                             <height>16777215</height>
                            </size>
                           </property>
@@ -1025,7 +1037,7 @@ background-color: rgb(255, 255, 255);</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_205">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1040,7 +1052,7 @@ background-color: rgb(255, 255, 255);</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>一级节流</string>
@@ -1134,7 +1146,7 @@ background-color: rgb(255, 255, 255);</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_207">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1149,7 +1161,7 @@ background-color: rgb(255, 255, 255);</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>二级节流</string>
@@ -1243,7 +1255,7 @@ background-color: rgb(255, 255, 255);</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_209">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1258,7 +1270,7 @@ background-color: rgb(255, 255, 255);</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>三级节流</string>
@@ -1354,6 +1366,12 @@ background-color: rgb(255, 255, 255);</string>
                        <layout class="QHBoxLayout" name="horizontalLayout_158">
                         <item>
                          <widget class="QLabel" name="label_211">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="minimumSize">
                            <size>
                             <width>170</width>
@@ -1362,7 +1380,7 @@ background-color: rgb(255, 255, 255);</string>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>150</width>
+                            <width>300</width>
                             <height>16777215</height>
                            </size>
                           </property>
@@ -1410,7 +1428,7 @@ background-color: rgb(255, 255, 255);</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_212">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1425,7 +1443,7 @@ background-color: rgb(255, 255, 255);</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>一级节流</string>
@@ -1519,7 +1537,7 @@ background-color: rgb(255, 255, 255);</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_214">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1534,7 +1552,7 @@ background-color: rgb(255, 255, 255);</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>二级节流</string>
@@ -1628,7 +1646,7 @@ background-color: rgb(255, 255, 255);</string>
                            <property name="bottomMargin">
                             <number>4</number>
                            </property>
-                           <item>
+                           <item alignment="Qt::AlignRight">
                             <widget class="QLabel" name="label_216">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1643,7 +1661,7 @@ background-color: rgb(255, 255, 255);</string>
                               </size>
                              </property>
                              <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                              <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                              </property>
                              <property name="text">
                               <string>三级节流</string>
@@ -1739,6 +1757,12 @@ background-color: rgb(255, 255, 255);</string>
                        <layout class="QHBoxLayout" name="horizontalLayout_162">
                         <item>
                          <widget class="QLabel" name="label_218">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="minimumSize">
                            <size>
                             <width>170</width>
@@ -1747,7 +1771,7 @@ background-color: rgb(255, 255, 255);</string>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>150</width>
+                            <width>300</width>
                             <height>16777215</height>
                            </size>
                           </property>
@@ -1777,31 +1801,6 @@ background-color: rgb(255, 255, 255);</string>
                            <property name="bottomMargin">
                             <number>1</number>
                            </property>
-                           <item>
-                            <widget class="QLabel" name="label_221">
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>16777215</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                             </property>
-                             <property name="text">
-                              <string>三级节流</string>
-                             </property>
-                             <property name="alignment">
-                              <set>Qt::AlignCenter</set>
-                             </property>
-                            </widget>
-                           </item>
                            <item>
                             <widget class="QLabel" name="P222_3">
                              <property name="minimumSize">
@@ -1833,11 +1832,88 @@ border:1px inset;
 background-color: rgb(255, 255, 255);</string>
                              </property>
                              <property name="text">
-                              <string>输出结果</string>
+                              <string>能否满足预期产量</string>
                              </property>
                             </widget>
                            </item>
                           </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_179">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>900</width>
+                         <height>75</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border:0px</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_163">
+                        <item>
+                         <widget class="QLabel" name="label_219">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>170</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>300</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">font: 20pt &quot;黑体&quot;; </string>
+                          </property>
+                          <property name="text">
+                           <string>水合物抑制剂</string>
+                          </property>
+                          <property name="wordWrap">
+                           <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_100">
+                          <property name="styleSheet">
+                           <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
                          </widget>
                         </item>
                        </layout>
@@ -1878,6 +1954,12 @@ background-color: rgb(255, 255, 255);</string>
                        <layout class="QHBoxLayout" name="horizontalLayout_143">
                         <item>
                          <widget class="QLabel" name="label_188">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="minimumSize">
                            <size>
                             <width>170</width>
@@ -1886,7 +1968,7 @@ background-color: rgb(255, 255, 255);</string>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>150</width>
+                            <width>300</width>
                             <height>16777215</height>
                            </size>
                           </property>
@@ -1982,7 +2064,7 @@ background-color: rgb(255, 255, 255);</string>
                                     </size>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                    <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                    </property>
                                    <property name="text">
                                     <string>一级节流前摩阻</string>
@@ -2091,7 +2173,7 @@ background-color: rgb(255, 255, 255);</string>
                                     </size>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                    <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                    </property>
                                    <property name="text">
                                     <string>二级节流前摩阻</string>
@@ -2218,7 +2300,7 @@ background-color: rgb(255, 255, 255);</string>
                                     </size>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                    <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                    </property>
                                    <property name="text">
                                     <string>三级节流前摩阻</string>
@@ -2324,7 +2406,7 @@ background-color: rgb(255, 255, 255);</string>
                                     </size>
                                    </property>
                                    <property name="styleSheet">
-                                    <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                    <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                    </property>
                                    <property name="text">
                                     <string>三级节流后摩阻</string>
@@ -2426,9 +2508,15 @@ background-color: rgb(255, 255, 255);</string>
                        <layout class="QHBoxLayout" name="horizontalLayout_141">
                         <item>
                          <widget class="QLabel" name="label_185">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="minimumSize">
                            <size>
-                            <width>170</width>
+                            <width>0</width>
                             <height>0</height>
                            </size>
                           </property>
@@ -2451,9 +2539,15 @@ background-color: rgb(255, 255, 255);</string>
                         </item>
                         <item>
                          <widget class="QFrame" name="frame_157">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="maximumSize">
                            <size>
-                            <width>400</width>
+                            <width>16777215</width>
                             <height>16777215</height>
                            </size>
                           </property>
@@ -2470,6 +2564,12 @@ background-color: rgb(255, 255, 255);</string>
                               <size>
                                <width>0</width>
                                <height>30</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>250</width>
+                               <height>16777215</height>
                               </size>
                              </property>
                              <property name="font">
@@ -2500,6 +2600,9 @@ background-color: rgb(255, 255, 255);</string>
                                <width>100</width>
                                <height>16777215</height>
                               </size>
+                             </property>
+                             <property name="focusPolicy">
+                              <enum>Qt::NoFocus</enum>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
@@ -2675,22 +2778,41 @@ border:1px solid rgb(0,0,0);</string>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_46">
                         <item>
-                         <widget class="QGraphicsView" name="graphicsView"/>
+                         <widget class="QGraphicsView" name="graphicsView">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>2</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>600</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                         </widget>
                         </item>
                        </layout>
                       </widget>
                      </item>
                      <item>
                       <widget class="QFrame" name="frame_190">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>1</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>321</width>
+                         <width>350</width>
                          <height>0</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>321</width>
+                         <width>16777215</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -2981,9 +3103,9 @@ height: 0px;
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>-879</y>
-                <width>1053</width>
-                <height>1661</height>
+                <y>-787</y>
+                <width>1081</width>
+                <height>1722</height>
                </rect>
               </property>
               <property name="minimumSize">
@@ -4049,7 +4171,6 @@ background-color: rgb(255, 255, 255);
                              </property>
                              <property name="styleSheet">
                               <string notr="true">#frame{
-	border:1px inset
 }</string>
                              </property>
                              <property name="frameShape">
@@ -4133,7 +4254,6 @@ background-color: rgb(255, 255, 255);</string>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">#frame_5{
-	border:1px inset
 }</string>
                              </property>
                              <property name="frameShape">
@@ -4217,7 +4337,6 @@ background-color: rgb(255, 255, 255);</string>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">#frame_7{
-	border:1px inset
 }</string>
                              </property>
                              <property name="frameShape">
@@ -4291,6 +4410,90 @@ background-color: rgb(255, 255, 255);</string>
                              </layout>
                             </widget>
                            </item>
+                           <item>
+                            <widget class="QFrame" name="frame_59">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>45</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">#frame_7{
+	border:1px inset
+}</string>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_65">
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_90">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>150</width>
+                                  <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>放喷管线的长度</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="LEdit">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="label_91">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>70</width>
+                                  <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>m</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
                           </layout>
                          </widget>
                         </item>
@@ -4325,7 +4528,6 @@ background-color: rgb(255, 255, 255);</string>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">#frame_2{
-	border:1px inset
 }</string>
                              </property>
                              <property name="frameShape">
@@ -4403,7 +4605,6 @@ background-color: rgb(255, 255, 255);</string>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">#frame_4{
-	border:1px inset
 }</string>
                              </property>
                              <property name="frameShape">
@@ -4481,7 +4682,6 @@ background-color: rgb(255, 255, 255);</string>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">#frame_6{
-	border:1px inset
 }</string>
                              </property>
                              <property name="frameShape">
@@ -4559,7 +4759,6 @@ background-color: rgb(255, 255, 255);</string>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">#frame_8{
-	border:1px inset
 }</string>
                              </property>
                              <property name="frameShape">
@@ -4587,7 +4786,7 @@ background-color: rgb(255, 255, 255);</string>
                                  <string notr="true">font: 14pt &quot;黑体&quot;;</string>
                                 </property>
                                 <property name="text">
-                                 <string>弯头个数</string>
+                                 <string>总弯头个数</string>
                                 </property>
                                </widget>
                               </item>
@@ -4644,7 +4843,7 @@ background-color: rgb(255, 255, 255);</string>
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
-                         <height>180</height>
+                         <height>75</height>
                         </size>
                        </property>
                        <property name="styleSheet">
@@ -4660,22 +4859,10 @@ background-color: rgb(255, 255, 255);
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="QFrame" name="frame_9">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>900</width>
-                            <height>160</height>
-                           </size>
-                          </property>
+                         <widget class="QFrame" name="frame_16">
                           <property name="maximumSize">
                            <size>
-                            <width>16777215</width>
+                            <width>150</width>
                             <height>300</height>
                            </size>
                           </property>
@@ -4685,495 +4872,30 @@ background-color: rgb(255, 255, 255);
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_14">
-                           <property name="topMargin">
-                            <number>1</number>
-                           </property>
-                           <property name="bottomMargin">
-                            <number>1</number>
-                           </property>
-                           <item>
-                            <widget class="QLabel" name="label_18">
-                             <property name="styleSheet">
-                              <string notr="true">font: 15pt &quot;Agency FB&quot;;</string>
-                             </property>
-                             <property name="text">
-                              <string>每一级节流前的管线长度
-(每个弯头前的管线长度用逗号分割)</string>
-                             </property>
-                             <property name="wordWrap">
-                              <bool>true</bool>
-                             </property>
-                            </widget>
-                           </item>
-                           <item alignment="Qt::AlignHCenter">
-                            <widget class="QWidget" name="widget_5" native="true">
+                          <layout class="QGridLayout" name="gridLayout_3">
+                           <item row="0" column="0">
+                            <widget class="QPushButton" name="pushButton">
                              <property name="sizePolicy">
-                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
                                <horstretch>0</horstretch>
                                <verstretch>0</verstretch>
                               </sizepolicy>
                              </property>
                              <property name="minimumSize">
                               <size>
-                               <width>0</width>
-                               <height>200</height>
+                               <width>125</width>
+                               <height>25</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>16777215</width>
-                               <height>16777215</height>
+                               <width>100</width>
+                               <height>50</height>
                               </size>
                              </property>
-                             <property name="font">
-                              <font>
-                               <family>宋体</family>
-                               <pointsize>14</pointsize>
-                               <weight>50</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                              </font>
-                             </property>
                              <property name="styleSheet">
-                              <string notr="true">#frame_17{
-	border:1px inset
-}
-#frame_19{
-	border:1px inset
-}
-#frame_20{
-	border:1px inset
-}
-#frame_21{
-	border:1px inset
-}</string>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_2">
-                              <property name="spacing">
-                               <number>2</number>
-                              </property>
-                              <property name="topMargin">
-                               <number>0</number>
-                              </property>
-                              <property name="bottomMargin">
-                               <number>0</number>
-                              </property>
-                              <item>
-                               <widget class="QFrame" name="frame_19">
-                                <property name="sizePolicy">
-                                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                  <horstretch>0</horstretch>
-                                  <verstretch>0</verstretch>
-                                 </sizepolicy>
-                                </property>
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>25</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_19">
-                                 <property name="spacing">
-                                  <number>6</number>
-                                 </property>
-                                 <property name="topMargin">
-                                  <number>0</number>
-                                 </property>
-                                 <property name="bottomMargin">
-                                  <number>1</number>
-                                 </property>
-                                 <item>
-                                  <widget class="QLabel" name="label_39">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>一级节流前</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QTextEdit" name="LLEdit">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>35</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>50</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font: 75 12pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                   </property>
-                                   <property name="verticalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                                   </property>
-                                   <property name="horizontalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="frame_17">
-                                <property name="sizePolicy">
-                                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                  <horstretch>0</horstretch>
-                                  <verstretch>0</verstretch>
-                                 </sizepolicy>
-                                </property>
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>25</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_15">
-                                 <property name="spacing">
-                                  <number>6</number>
-                                 </property>
-                                 <property name="topMargin">
-                                  <number>0</number>
-                                 </property>
-                                 <property name="bottomMargin">
-                                  <number>1</number>
-                                 </property>
-                                 <item>
-                                  <widget class="QLabel" name="label_35">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>二级节流前</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QTextEdit" name="LL1Edit">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>35</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>50</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font: 75 12pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                   </property>
-                                   <property name="verticalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                                   </property>
-                                   <property name="horizontalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="frame_20">
-                                <property name="sizePolicy">
-                                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                  <horstretch>0</horstretch>
-                                  <verstretch>0</verstretch>
-                                 </sizepolicy>
-                                </property>
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>25</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_20">
-                                 <property name="spacing">
-                                  <number>6</number>
-                                 </property>
-                                 <property name="topMargin">
-                                  <number>0</number>
-                                 </property>
-                                 <property name="bottomMargin">
-                                  <number>1</number>
-                                 </property>
-                                 <item>
-                                  <widget class="QLabel" name="label_40">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>三级节流前</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QTextEdit" name="LL2Edit">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>35</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>50</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font: 75 12pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                   </property>
-                                   <property name="verticalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                                   </property>
-                                   <property name="horizontalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="frame_21">
-                                <property name="sizePolicy">
-                                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                  <horstretch>0</horstretch>
-                                  <verstretch>0</verstretch>
-                                 </sizepolicy>
-                                </property>
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>25</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_21">
-                                 <property name="spacing">
-                                  <number>6</number>
-                                 </property>
-                                 <property name="topMargin">
-                                  <number>0</number>
-                                 </property>
-                                 <property name="bottomMargin">
-                                  <number>1</number>
-                                 </property>
-                                 <item>
-                                  <widget class="QLabel" name="label_41">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>20</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                   </property>
-                                   <property name="text">
-                                    <string>三级节流到分离器前</string>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QTextEdit" name="LL3Edit">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>35</height>
-                                    </size>
-                                   </property>
-                                   <property name="maximumSize">
-                                    <size>
-                                     <width>16777215</width>
-                                     <height>50</height>
-                                    </size>
-                                   </property>
-                                   <property name="styleSheet">
-                                    <string notr="true">font: 75 11pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                   </property>
-                                   <property name="verticalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                                   </property>
-                                   <property name="horizontalScrollBarPolicy">
-                                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                                   </property>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                             </layout>
-                             <zorder>frame_17</zorder>
-                             <zorder>frame_20</zorder>
-                             <zorder>frame_21</zorder>
-                             <zorder>frame_19</zorder>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLabel" name="label_19">
-                             <property name="styleSheet">
-                              <string notr="true">font: 14pt &quot;Agency FB&quot;;</string>
-                             </property>
-                             <property name="text">
-                              <string>m</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_16">
-                             <property name="maximumSize">
-                              <size>
-                               <width>150</width>
-                               <height>300</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QGridLayout" name="gridLayout_3">
-                              <item row="0" column="0">
-                               <widget class="QPushButton" name="pushButton">
-                                <property name="sizePolicy">
-                                 <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-                                  <horstretch>0</horstretch>
-                                  <verstretch>0</verstretch>
-                                 </sizepolicy>
-                                </property>
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>125</width>
-                                  <height>25</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>100</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">#pushButton{
-	
+                              <string notr="true">#pushButton{
+	font: 14pt &quot;宋体&quot;; 
 	background-color: rgb(255, 255, 255);
 	color: rgb(0, 0, 0);
 	border:1px solid rgb(0,0,0);
@@ -5189,13 +4911,10 @@ background-color: rgb(255, 255, 255);</string>
 	padding-top:5px;
 	padding-left:5px;
 }</string>
-                                </property>
-                                <property name="text">
-                                 <string>开始计算</string>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
+                             </property>
+                             <property name="text">
+                              <string>开始计算</string>
+                             </property>
                             </widget>
                            </item>
                           </layout>
@@ -5308,559 +5027,6 @@ background-color: rgb(255, 255, 255);
                         <property name="formAlignment">
                          <set>Qt::AlignCenter</set>
                         </property>
-                        <item row="6" column="0">
-                         <widget class="QFrame" name="frame_58">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>900</width>
-                            <height>0</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>16777215</height>
-                           </size>
-                          </property>
-                          <property name="frameShape">
-                           <enum>QFrame::StyledPanel</enum>
-                          </property>
-                          <property name="frameShadow">
-                           <enum>QFrame::Raised</enum>
-                          </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_62">
-                           <item>
-                            <widget class="QLabel" name="label_121">
-                             <property name="minimumSize">
-                              <size>
-                               <width>150</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>16777215</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">font: 20pt &quot;黑体&quot;; </string>
-                             </property>
-                             <property name="text">
-                              <string>极限处理产量</string>
-                             </property>
-                             <property name="alignment">
-                              <set>Qt::AlignCenter</set>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_63">
-                             <property name="maximumSize">
-                              <size>
-                               <width>400</width>
-                               <height>16777215</height>
-                              </size>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QHBoxLayout" name="horizontalLayout_63">
-                              <item>
-                               <widget class="QLabel" name="Qd">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>50</height>
-                                 </size>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                </property>
-                                <property name="text">
-                                 <string>输出结果</string>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QLabel" name="label_124">
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>100</width>
-                                  <height>16777215</height>
-                                 </size>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">
-font: 12pt &quot;Times New Roman&quot;;</string>
-                                </property>
-                                <property name="text">
-                                 <string>万m³/d</string>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                          </layout>
-                         </widget>
-                        </item>
-                        <item row="4" column="0" colspan="2">
-                         <widget class="QFrame" name="frame_14">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>900</width>
-                            <height>0</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>16777215</height>
-                           </size>
-                          </property>
-                          <property name="acceptDrops">
-                           <bool>false</bool>
-                          </property>
-                          <property name="frameShape">
-                           <enum>QFrame::StyledPanel</enum>
-                          </property>
-                          <property name="frameShadow">
-                           <enum>QFrame::Raised</enum>
-                          </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_5">
-                           <item>
-                            <widget class="QLabel" name="label_31">
-                             <property name="minimumSize">
-                              <size>
-                               <width>170</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>16777215</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">font: 20pt &quot;黑体&quot;; </string>
-                             </property>
-                             <property name="text">
-                              <string>管线摩阻</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="frame_64">
-                             <property name="minimumSize">
-                              <size>
-                               <width>100</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">
-border:0;
-</string>
-                             </property>
-                             <property name="frameShape">
-                              <enum>QFrame::StyledPanel</enum>
-                             </property>
-                             <property name="frameShadow">
-                              <enum>QFrame::Raised</enum>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_24">
-                              <item>
-                               <widget class="QFrame" name="frame_65">
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_52">
-                                 <property name="bottomMargin">
-                                  <number>9</number>
-                                 </property>
-                                 <item>
-                                  <widget class="QFrame" name="frame_33">
-                                   <property name="minimumSize">
-                                    <size>
-                                     <width>0</width>
-                                     <height>30</height>
-                                    </size>
-                                   </property>
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_32">
-                                    <property name="topMargin">
-                                     <number>1</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>1</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QLabel" name="label_62">
-                                      <property name="sizePolicy">
-                                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                       </sizepolicy>
-                                      </property>
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>200</width>
-                                        <height>0</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>一级节流前摩阻</string>
-                                      </property>
-                                      <property name="alignment">
-                                       <set>Qt::AlignCenter</set>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QLabel" name="Pctiz1">
-                                      <property name="styleSheet">
-                                       <string notr="true">font: 75 12pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>输出结果</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QLabel" name="label_33">
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>45</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">
-font: 12pt &quot;Times New Roman&quot;;</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>MPa</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QFrame" name="frame_34">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_33">
-                                    <property name="topMargin">
-                                     <number>1</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>1</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QLabel" name="label_63">
-                                      <property name="sizePolicy">
-                                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                       </sizepolicy>
-                                      </property>
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>200</width>
-                                        <height>0</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>二级节流前摩阻</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QLabel" name="Pctiz2">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>0</width>
-                                        <height>30</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">font: 75 12pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>输出结果</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QLabel" name="label_64">
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>45</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">
-font: 12pt &quot;Times New Roman&quot;;</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>MPa</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QFrame" name="frame_67">
-                                <property name="frameShape">
-                                 <enum>QFrame::StyledPanel</enum>
-                                </property>
-                                <property name="frameShadow">
-                                 <enum>QFrame::Raised</enum>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_54">
-                                 <item>
-                                  <widget class="QFrame" name="frame_68">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_55">
-                                    <property name="topMargin">
-                                     <number>1</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>1</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QLabel" name="label_83">
-                                      <property name="sizePolicy">
-                                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                       </sizepolicy>
-                                      </property>
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>200</width>
-                                        <height>0</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>三级节流前摩阻</string>
-                                      </property>
-                                      <property name="alignment">
-                                       <set>Qt::AlignCenter</set>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QLabel" name="Pctiz4">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>0</width>
-                                        <height>30</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">font: 75 12pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>输出结果</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QLabel" name="label_84">
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>45</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">
-font: 12pt &quot;Times New Roman&quot;;</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>MPa</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </widget>
-                                 </item>
-                                 <item>
-                                  <widget class="QFrame" name="frame_69">
-                                   <property name="frameShape">
-                                    <enum>QFrame::StyledPanel</enum>
-                                   </property>
-                                   <property name="frameShadow">
-                                    <enum>QFrame::Raised</enum>
-                                   </property>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_56">
-                                    <property name="topMargin">
-                                     <number>1</number>
-                                    </property>
-                                    <property name="bottomMargin">
-                                     <number>1</number>
-                                    </property>
-                                    <item>
-                                     <widget class="QLabel" name="label_85">
-                                      <property name="sizePolicy">
-                                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                       </sizepolicy>
-                                      </property>
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>200</width>
-                                        <height>0</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>三级节流后摩阻</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QLabel" name="Pctiz3">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>0</width>
-                                        <height>30</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">font: 75 12pt &quot;宋体&quot;;
-border-bottom: 1px solid rgb(0,0,0);
-
-border:1px inset;
-background-color: rgb(255, 255, 255);</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>输出结果</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item>
-                                     <widget class="QLabel" name="label_86">
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>45</width>
-                                        <height>16777215</height>
-                                       </size>
-                                      </property>
-                                      <property name="styleSheet">
-                                       <string notr="true">
-font: 12pt &quot;Times New Roman&quot;;</string>
-                                      </property>
-                                      <property name="text">
-                                       <string>MPa</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </widget>
-                                 </item>
-                                </layout>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                          </layout>
-                         </widget>
-                        </item>
                         <item row="0" column="0" colspan="2">
                          <widget class="QFrame" name="frame_10">
                           <property name="sizePolicy">
@@ -5899,6 +5065,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                            </property>
                            <item>
                             <widget class="QLabel" name="label_21">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>170</width>
@@ -5907,7 +5079,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>170</width>
+                               <width>300</width>
                                <height>16777215</height>
                               </size>
                              </property>
@@ -5955,7 +5127,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_38">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -5976,7 +5148,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>一级节流</string>
@@ -5992,6 +5164,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -6071,7 +5249,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_42">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -6092,7 +5270,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>二级节流</string>
@@ -6105,6 +5283,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -6181,7 +5365,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_43">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -6202,7 +5386,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>三级节流</string>
@@ -6221,6 +5405,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -6299,6 +5489,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                            </property>
                            <item>
                             <widget class="QLabel" name="label_24">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>170</width>
@@ -6307,7 +5503,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>170</width>
+                               <width>300</width>
                                <height>16777215</height>
                               </size>
                              </property>
@@ -6361,7 +5557,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_44">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -6382,7 +5578,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>一级节流</string>
@@ -6395,6 +5591,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -6471,7 +5673,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_45">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -6492,7 +5694,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>二级节流</string>
@@ -6505,6 +5707,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -6581,7 +5789,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_47">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -6602,7 +5810,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>三级节流</string>
@@ -6615,6 +5823,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -6693,6 +5907,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                            </property>
                            <item>
                             <widget class="QLabel" name="label_27">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>170</width>
@@ -6701,7 +5921,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>170</width>
+                               <width>300</width>
                                <height>16777215</height>
                               </size>
                              </property>
@@ -6752,7 +5972,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_52">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -6773,7 +5993,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>一级节流</string>
@@ -6786,6 +6006,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -6862,7 +6088,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_53">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -6883,7 +6109,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>二级节流</string>
@@ -6896,6 +6122,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -6972,7 +6204,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>4</number>
                               </property>
-                              <item>
+                              <item alignment="Qt::AlignRight">
                                <widget class="QLabel" name="label_54">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -6993,7 +6225,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
                                  <string>三级节流</string>
@@ -7006,6 +6238,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                  <size>
                                   <width>90</width>
                                   <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>55</height>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
@@ -7084,6 +6322,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                            </property>
                            <item>
                             <widget class="QLabel" name="label_30">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>170</width>
@@ -7092,7 +6336,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>170</width>
+                               <width>300</width>
                                <height>16777215</height>
                               </size>
                              </property>
@@ -7122,37 +6366,6 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                               <property name="bottomMargin">
                                <number>1</number>
                               </property>
-                              <item>
-                               <widget class="QLabel" name="label_60">
-                                <property name="sizePolicy">
-                                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                  <horstretch>0</horstretch>
-                                  <verstretch>0</verstretch>
-                                 </sizepolicy>
-                                </property>
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>100</width>
-                                  <height>0</height>
-                                 </size>
-                                </property>
-                                <property name="maximumSize">
-                                 <size>
-                                  <width>16777215</width>
-                                  <height>16777215</height>
-                                 </size>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true">font: 14pt &quot;黑体&quot;;</string>
-                                </property>
-                                <property name="text">
-                                 <string>三级节流</string>
-                                </property>
-                                <property name="alignment">
-                                 <set>Qt::AlignCenter</set>
-                                </property>
-                               </widget>
-                              </item>
                               <item>
                                <widget class="QLabel" name="P222">
                                 <property name="minimumSize">
@@ -7205,12 +6418,1398 @@ background-color: rgb(255, 255, 255);</string>
                           <layout class="QHBoxLayout" name="horizontalLayout_29">
                            <item>
                             <widget class="QLabel" name="label_55">
+                             <property name="maximumSize">
+                              <size>
+                               <width>300</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
                              <property name="styleSheet">
                               <string notr="true">font: 20pt &quot;黑体&quot;; </string>
                              </property>
                              <property name="text">
                               <string>水合物抑制剂</string>
                              </property>
+                            </widget>
+                           </item>
+                           <item alignment="Qt::AlignHCenter">
+                            <widget class="QLabel" name="label_56">
+                             <property name="text">
+                              <string/>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="6" column="0" colspan="2">
+                         <widget class="QFrame" name="frame_58">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>900</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_62">
+                           <item>
+                            <widget class="QLabel" name="label_121">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>150</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">font: 20pt &quot;黑体&quot;; </string>
+                             </property>
+                             <property name="text">
+                              <string>极限处理产量</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_63">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>400</width>
+                               <height>16777215</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_63">
+                              <item>
+                               <widget class="QLabel" name="Qd">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                                <property name="text">
+                                 <string>输出结果</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="label_124">
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>100</width>
+                                  <height>16777215</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">
+font: 12pt &quot;Times New Roman&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>万m³/d</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="Line" name="line_3">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_10" native="true">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>300</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">#widget_10{
+	border:1px dashed ;
+	background-color: rgb(255, 255, 255);
+}
+</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_9">
+                     <item>
+                      <widget class="QFrame" name="frame_9">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>900</width>
+                         <height>160</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>300</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(255, 255, 255);</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_14">
+                        <property name="topMargin">
+                         <number>1</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>1</number>
+                        </property>
+                        <item>
+                         <widget class="QLabel" name="label_18">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">font: 20pt &quot;黑体&quot;; </string>
+                          </property>
+                          <property name="text">
+                           <string>每一级节流前的管线总长度</string>
+                          </property>
+                          <property name="wordWrap">
+                           <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item alignment="Qt::AlignHCenter">
+                         <widget class="QWidget" name="widget_5" native="true">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>2</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>200</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>宋体</family>
+                            <pointsize>14</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_2">
+                           <property name="spacing">
+                            <number>2</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_19">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>25</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_19">
+                              <property name="spacing">
+                               <number>6</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>1</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_39">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>一级节流前</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="LLEdit">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>75</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="label_19">
+                                <property name="styleSheet">
+                                 <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>m</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_17">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>25</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_15">
+                              <property name="spacing">
+                               <number>6</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>1</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_35">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>二级节流前</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="LL1Edit">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>75</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="label_60">
+                                <property name="styleSheet">
+                                 <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>m</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_20">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>25</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_20">
+                              <property name="spacing">
+                               <number>6</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>1</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_40">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>三级节流前</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="LL2Edit">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>75</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="label_77">
+                                <property name="styleSheet">
+                                 <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>m</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_21">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>25</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_21">
+                              <property name="spacing">
+                               <number>6</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>1</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_41">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>三级节流到分离器前</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QTextEdit" name="LL3Edit">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>75</width>
+                                  <height>50</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 11pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                                <property name="verticalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                                <property name="horizontalScrollBarPolicy">
+                                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="label_78">
+                                <property name="styleSheet">
+                                 <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>m</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                          <zorder>frame_17</zorder>
+                          <zorder>frame_20</zorder>
+                          <zorder>frame_21</zorder>
+                          <zorder>frame_19</zorder>
+                         </widget>
+                        </item>
+                        <item alignment="Qt::AlignLeft">
+                         <widget class="QFrame" name="frame_77">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>70</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_25">
+                           <item>
+                            <widget class="QFrame" name="frame_78">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_66">
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_92">
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>弯头个数</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLineEdit" name="nEdit_2">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>75</width>
+                                  <height>16777215</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_79">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_67">
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_93">
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>弯头个数</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLineEdit" name="nEdit_3">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>75</width>
+                                  <height>16777215</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_81">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_68">
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_94">
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>弯头个数</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLineEdit" name="nEdit_4">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>75</width>
+                                  <height>16777215</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_80">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_69">
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="label_95">
+                                <property name="styleSheet">
+                                 <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                </property>
+                                <property name="text">
+                                 <string>弯头个数</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLineEdit" name="nEdit_5">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>35</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>75</width>
+                                  <height>16777215</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item alignment="Qt::AlignHCenter">
+                      <widget class="QPushButton" name="pushButton_8">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>125</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>125</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">#pushButton_8{
+	font: 14pt &quot;宋体&quot;; 
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border:1px solid rgb(0,0,0);
+	border-radius:8px;
+}
+#pushButton_8:hover{
+	
+	background-color: rgb(158, 158, 158);
+	
+	color: rgb(255, 255, 255);
+}
+#pushButton_8:pressed{
+	padding-top:5px;
+	padding-left:5px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>摩阻计算</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_14">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>900</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="acceptDrops">
+                        <bool>false</bool>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(255, 255, 255);</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_5">
+                        <item>
+                         <widget class="QLabel" name="label_31">
+                          <property name="minimumSize">
+                           <size>
+                            <width>170</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">font: 20pt &quot;黑体&quot;; </string>
+                          </property>
+                          <property name="text">
+                           <string>管线摩阻</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_64">
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">
+border:0;
+</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_24">
+                           <item>
+                            <widget class="QFrame" name="frame_65">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_52">
+                              <property name="bottomMargin">
+                               <number>9</number>
+                              </property>
+                              <item>
+                               <widget class="QFrame" name="frame_33">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>30</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_32">
+                                 <property name="topMargin">
+                                  <number>1</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>1</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QLabel" name="label_62">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>0</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>一级节流前摩阻</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLabel" name="Pctiz1">
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>输出结果</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLabel" name="label_33">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>45</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">
+font: 12pt &quot;Times New Roman&quot;;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>MPa</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame_34">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_33">
+                                 <property name="topMargin">
+                                  <number>1</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>1</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QLabel" name="label_63">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>0</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>二级节流前摩阻</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLabel" name="Pctiz2">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>输出结果</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLabel" name="label_64">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>45</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">
+font: 12pt &quot;Times New Roman&quot;;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>MPa</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_67">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_54">
+                              <item>
+                               <widget class="QFrame" name="frame_68">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_55">
+                                 <property name="topMargin">
+                                  <number>1</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>1</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QLabel" name="label_83">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>0</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>三级节流前摩阻</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLabel" name="Pctiz4">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>输出结果</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLabel" name="label_84">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>45</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">
+font: 12pt &quot;Times New Roman&quot;;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>MPa</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="frame_69">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_56">
+                                 <property name="topMargin">
+                                  <number>1</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>1</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QLabel" name="label_85">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>200</width>
+                                     <height>0</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>16777215</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 14pt &quot;宋体&quot;;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>三级节流后摩阻</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLabel" name="Pctiz3">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">font: 75 12pt &quot;宋体&quot;;
+border-bottom: 1px solid rgb(0,0,0);
+
+border:1px inset;
+background-color: rgb(255, 255, 255);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>输出结果</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLabel" name="label_86">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>45</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">
+font: 12pt &quot;Times New Roman&quot;;</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>MPa</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
                             </widget>
                            </item>
                           </layout>
@@ -7358,7 +7957,7 @@ font: 14pt &quot;华文琥珀&quot;;
 	border-radius:8px;</string>
                    </property>
                    <property name="text">
-                    <string>添加针阀</string>
+                    <string>添加井口</string>
                    </property>
                   </widget>
                  </item>
@@ -7412,7 +8011,7 @@ font: 14pt &quot;华文琥珀&quot;;
                        <item>
                         <widget class="QLabel" name="label_65">
                          <property name="text">
-                          <string>m</string>
+                          <string>cm</string>
                          </property>
                         </widget>
                        </item>
@@ -7454,7 +8053,7 @@ font: 14pt &quot;华文琥珀&quot;;
                        <item>
                         <widget class="QLabel" name="label_67">
                          <property name="text">
-                          <string>m</string>
+                          <string>mm</string>
                          </property>
                         </widget>
                        </item>
@@ -7524,6 +8123,18 @@ background-color: rgb(238, 238, 238);</string>
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item row="0" column="0">
                   <layout class="QVBoxLayout" name="layout"/>
                  </item>
@@ -7592,8 +8203,8 @@ height: 0px;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>1085</width>
-                <height>776</height>
+                <width>1097</width>
+                <height>793</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -7792,6 +8403,9 @@ height: 0px;
                            </item>
                            <item>
                             <widget class="QLabel" name="label_57">
+                             <property name="styleSheet">
+                              <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                             </property>
                              <property name="text">
                               <string>MPa</string>
                              </property>
@@ -7868,6 +8482,9 @@ height: 0px;
                            </item>
                            <item>
                             <widget class="QLabel" name="label_59">
+                             <property name="styleSheet">
+                              <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                             </property>
                              <property name="text">
                               <string>MPa</string>
                              </property>
@@ -7944,6 +8561,9 @@ height: 0px;
                            </item>
                            <item>
                             <widget class="QLabel" name="label_32">
+                             <property name="styleSheet">
+                              <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                             </property>
                              <property name="text">
                               <string>万m³/d</string>
                              </property>
@@ -7979,7 +8599,7 @@ height: 0px;
                               <enum>QFrame::NoFrame</enum>
                              </property>
                              <property name="text">
-                              <string>管内径</string>
+                              <string>地面测试管线长度</string>
                              </property>
                              <property name="textFormat">
                               <enum>Qt::AutoText</enum>
@@ -8014,6 +8634,9 @@ height: 0px;
                            </item>
                            <item>
                             <widget class="QLabel" name="label_66">
+                             <property name="styleSheet">
+                              <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                             </property>
                              <property name="text">
                               <string>m</string>
                              </property>
@@ -8052,7 +8675,7 @@ height: 0px;
                               <enum>QFrame::NoFrame</enum>
                              </property>
                              <property name="text">
-                              <string>地面测试管线长度</string>
+                              <string>管内径</string>
                              </property>
                              <property name="textFormat">
                               <enum>Qt::AutoText</enum>
@@ -8087,6 +8710,9 @@ height: 0px;
                            </item>
                            <item>
                             <widget class="QLabel" name="label_37">
+                             <property name="styleSheet">
+                              <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                             </property>
                              <property name="text">
                               <string>m</string>
                              </property>
@@ -8157,6 +8783,9 @@ height: 0px;
                            </item>
                            <item>
                             <widget class="QLabel" name="label_71">
+                             <property name="styleSheet">
+                              <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                             </property>
                              <property name="text">
                               <string>m</string>
                              </property>
@@ -8227,6 +8856,9 @@ height: 0px;
                            </item>
                            <item>
                             <widget class="QLabel" name="label_73">
+                             <property name="styleSheet">
+                              <string notr="true">font: 16pt &quot;Times New Roman&quot;;</string>
+                             </property>
                              <property name="text">
                               <string>kg/m</string>
                              </property>
@@ -8643,17 +9275,27 @@ height: 0px;
      <x>0</x>
      <y>0</y>
      <width>1153</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="font">
     <font>
      <family>黑体</family>
-     <pointsize>12</pointsize>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(178, 178, 178);
+font: 11pt &quot;黑体&quot;;
 </string>
    </property>
    <widget class="QMenu" name="menu_2">

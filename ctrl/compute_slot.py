@@ -39,7 +39,7 @@ def module3_compute(self):
     print("模块三开始计算")
     print("当前工作目录：%s" % os.getcwd())
     try:
-        inputdata = pd.read_csv(r'matlab2/输入数据.csv', sep=',', header=None)
+        inputdata = pd.read_csv(r'输入数据.csv', sep=',', header=None)
     except EmptyDataError:
         inputdata = pd.DataFrame(index=range(8), columns=range(6))
     print(inputdata)
@@ -100,8 +100,7 @@ def module3_compute(self):
         # message()
         # QMessageBox.information(self, "提示", "计算中，请稍后...")
 
-
-        myPopenObj = subprocess.Popen("../matlab2/test.exe")
+        myPopenObj = subprocess.Popen("matlab2/test.exe")
         try:
             myPopenObj.wait(timeout=1200)
         except Exception as e:
@@ -137,13 +136,13 @@ def module3_compute(self):
         plt.show()
 
 
-def matlab_function():
-    eng = matlab.engine.start_matlab()
-    eng.cd('matlab2')
-    eng.mainfunc(nargout=0)
-    print("Compute complete")
-    eng.quit()
-    return True
+# def matlab_function():
+#     eng = matlab.engine.start_matlab()
+#     eng.cd('matlab2')
+#     eng.mainfunc(nargout=0)
+#     print("Compute complete")
+#     eng.quit()
+#     return True
 
 
 def setParameters(self):
@@ -158,6 +157,12 @@ def setParameters(self):
         self.lineEdit_a5.setText(result_form.moudle3_inform[4])
         self.lineEdit_a6.setText(result_form.moudle3_inform[5])
         self.lineEdit_a7.setText(result_form.moudle3_inform[6])
+
+
+def getParameters(self):
+    data = [self.lineEdit_a1.text(), self.lineEdit_a2.text(), self.lineEdit_a3.text(), self.lineEdit_a4.text(),
+            self.lineEdit_a5.text(), self.lineEdit_a6.text(), self.lineEdit_a7.text()]
+    return data
 
 if __name__ == '__main__':
     matlab_function()

@@ -20,7 +20,8 @@ import data.result_form
 from Gui.Login import Ui_MainWindow as Login_window
 from Gui.MainWindow import Ui_MainWindow as MainWindow
 from Gui.NewProject import Ui_Newproject_Dialog
-from ctrl.Jieliu_slot import on_compute_button_clicked
+from ctrl import mappint_slot
+from ctrl.Jieliu_slot import on_compute_button_clicked, compute_pctiz
 
 from ctrl.Login_slot import getUserInfo, on_login_button_clicked, on_exit_button_clicked
 from ctrl.compute_slot import module3_compute, add_a, delete_a
@@ -56,38 +57,50 @@ class MainWindow(QMainWindow, MainWindow):
         self.setupUi(self)
         self.setWindowTitle("超高压地面测试流程综合分析软件")
 
+        ico_path = os.path.join(os.path.dirname(__file__), 'resource/logo.ico')
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(ico_path), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.setWindowIcon(icon)
         self.message = message(self)
 
         self.pushButton.clicked.connect(lambda: on_compute_button_clicked(self))
+
         # self.menu_2.triggered.connect(lambda: change_page(self, 5))
         # self.menu_2.addAction(lambda: change_page(self, 5))
-        # self.menu_2_action = QAction()
-        # self.menu_2_action.setCheckable(False)
-        # self.menu_2_action.setObjectName('menu_2_action')
-        # self.menu_2_action.triggered.connect(lambda: newProject(_self))
-        # self.menu_2_action.setText('新建工程')
-        # self.menubar.addAction(self.menu_2_action)
-        #
-        # self.menu_3_action = QAction()
-        # self.menu_3_action.setCheckable(False)
-        # self.menu_3_action.setObjectName('menu_3_action')
-        # self.menu_3_action.triggered.connect(lambda: save_project(_self))
-        # self.menu_3_action.setText('保存工程')
-        # self.menubar.addAction(self.menu_3_action)
-        #
-        # self.menu_4_action = QAction()
-        # self.menu_4_action.setCheckable(False)
-        # self.menu_4_action.setObjectName('menu_2_action')
-        # self.menu_4_action.triggered.connect(lambda: load_project(_self))
-        # self.menu_4_action.setText('打开工程')
-        # self.menubar.addAction(self.menu_4_action)
+        self.menu_2_action = QAction()
+        self.menu_2_action.setCheckable(False)
+        self.menu_2_action.setObjectName('menu_2_action')
+        self.menu_2_action.triggered.connect(lambda: change_page(self, 1))
+        self.menu_2_action.setText('节流模块及极限处理产量')
+        self.menubar.addAction(self.menu_2_action)
+
+        self.menu_3_action = QAction()
+        self.menu_3_action.setCheckable(False)
+        self.menu_3_action.setObjectName('menu_3_action')
+        self.menu_3_action.triggered.connect(lambda: change_page(self, 2))
+        self.menu_3_action.setText('管道绘图')
+        self.menubar.addAction(self.menu_3_action)
+
+        self.menu_4_action = QAction()
+        self.menu_4_action.setCheckable(False)
+        self.menu_4_action.setObjectName('menu_4_action')
+        self.menu_4_action.triggered.connect(lambda: change_page(self, 3))
+        self.menu_4_action.setText('安全校核模块')
+        self.menubar.addAction(self.menu_4_action)
 
         self.menu_5_action = QAction()
         self.menu_5_action.setCheckable(False)
-        self.menu_5_action.setObjectName('menu_2_action')
-        self.menu_5_action.triggered.connect(self.close)
-        self.menu_5_action.setText('退出')
+        self.menu_5_action.setObjectName('menu_5_action')
+        self.menu_5_action.triggered.connect(self.show_result)
+        self.menu_5_action.setText('报表展示')
         self.menubar.addAction(self.menu_5_action)
+
+        self.menu_6_action = QAction()
+        self.menu_6_action.setCheckable(False)
+        self.menu_6_action.setObjectName('menu_6_action')
+        self.menu_6_action.triggered.connect(self.close)
+        self.menu_6_action.setText('退出')
+        self.menubar.addAction(self.menu_6_action)
 
         self.actionj.triggered.connect(lambda: change_page(self, 1))
         self.actionp.triggered.connect(lambda: change_page(self, 2))
@@ -103,17 +116,21 @@ class MainWindow(QMainWindow, MainWindow):
         self.pushButton_3.clicked.connect(lambda: module3_compute(self))
         self.pushButton_add.clicked.connect(lambda: add_a(self))
         self.pushButton_delete.clicked.connect(lambda: delete_a(self))
-        self.addpipe2.clicked.connect(lambda: add_label(self, "#ffffff", 10, 100))
+        self.addpipe2.clicked.connect(lambda: add_label(self, "#000000", 5, 300))
         self.addpipe1_3.clicked.connect(lambda: add_image_label(self, "resource/falan.png"))
-        self.addpipe1_4.clicked.connect(lambda: add_image_label(self, "resource/zhijiaojietou.png"))
+        self.addpipe1_4.clicked.connect(lambda: add_image_label(self, "resource/wantou.png"))
         self.addpipe1_5.clicked.connect(lambda: add_image_label(self, "resource/gudingdian.png"))
-        self.addpipe1_6.clicked.connect(lambda: add_image_label(self, "resource/zhenfa.png"))
+        self.addpipe1_6.clicked.connect(lambda: add_image_label(self, "resource/jingkou.png"))
 
         self.pushButton_2.clicked.connect(self.saveimage)
         self.pushButton_5.clicked.connect(lambda: rotate_label())
         self.pushButton_4.clicked.connect(lambda: change_label_size())
         self.pushButton_6.clicked.connect(lambda: show_moulde1_image(self))
         self.pushButton_7.clicked.connect(lambda: show_moulde3_image(self))
+
+        self.pushButton_8.clicked.connect(lambda: compute_pctiz(self))
+
+        mappint_slot.init_background(self)
 
     def box(self, title, text):
         QMessageBox.information(self, title, text, QMessageBox.Ok)
@@ -201,6 +218,7 @@ class MainWindow(QMainWindow, MainWindow):
         pixmap = QApplication.primaryScreen().grabWindow(self.winId())
         pixmap.save('mapping.png', 'png')
         result_form.image_base64 = png_to_base64('mapping.png')
+        QMessageBox.information(self, "提示", "保存成功")
 
     def startProject(self):
 
@@ -257,6 +275,7 @@ class NewProject_Dialog(QDialog, Ui_Newproject_Dialog):
 
 
 def newProject(self):
+    result_form.clearData(self)
     dialog = NewProject_Dialog()
     dialog.set_parent(self)
     dialog.exec_()
@@ -299,6 +318,7 @@ if __name__ == '__main__':
     icon = QtGui.QIcon()
     icon.addPixmap(QtGui.QPixmap(ico_path), QtGui.QIcon.Normal, QtGui.QIcon.Off)
     window.setWindowIcon(icon)
+    MainWindow().setWindowIcon(icon)
     apply_stylesheet(app, theme='light_blue.xml')
     window.show()
     sys.exit(app.exec_())

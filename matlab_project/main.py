@@ -68,11 +68,12 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     # n1 = 2  # 弯头个数
     # LL = np.zeros((1,n1+1))
     Lep = 30 * D * 1
-    for i in range(n1):
-        if (i != n1):
-            LL[0, i] = LL[0, i] + Lep
-        else:
-            LL[0, i] = LL[0, i]
+    # for i in range(n1):
+    #     if (i != n1):
+    #         LL[0, i] = LL[0, i] + Lep
+    #     else:
+    #         LL[0, i] = LL[0, i]
+    LL = LL + n1 * Lep
     # LL[0,0] = LL[0,0] + Lep
     # LL[0,1] = LL[0,1] + Lep
     # LL[0,2] = 5  # 前面数字代表弯头前的管线长度，弯头的摩阻统一为Lep
@@ -93,37 +94,36 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     BWRSV1 = BWRSV1_func(P2, Twash)
     Z2 = BWRSV1[0]  # 一级节流后的压缩因子
-    den = BWRSV1[2]
+
+    den = BWRSV1[0]
+
     pm = (3484.48 * den * P2) / (Z2 * Twash) / 1000  # 一级节流前气体混合物密度 g/cm^3
-    Vc = (Qg1 * Twash * 0.404 * Z2) / (8.64 * 293 * P2 * 3.1415926 * (d * 0.1) ** 2)  # 一级节流嘴流速 m/s
+    Vc = (Qg1 * Twash * 0.404 * Z2) / (8.64 * 293 * P2 * math.pi * (d * 0.1) ** 2)  # 一级节流嘴流速 m/s
     Ve = c / den ** 0.5  # 临界冲蚀速率 m/s
 
     result_form.Vc = Vc
     result_form.Ve = Ve
 
-    G1, OW1, Wr1, __ = G_func(Qg, Ql, T1, T2, P1, P2, r)
+    result = G_func(Qg, Ql, T1, T2, P1, P2, r)
+    if result is None:
+        return None
+    G1, OW1, Wr1, __ = result
+
     result_form.G1 = G1
     # plt.plot(P2, T2, color='blue', marker='.', markersize=16)
     # plt.text(P2, T2, '一级节流')
 
     #######二级节流前摩阻计算#######
 
-    # n2 = 2  # 弯头个数
-    # LL1 = np.zeros(n2 + 1)
     Lep = 30 * D * 1
-    # LL1[0] = 1 + Lep
-    # LL1[1] = 2 + Lep
-    # LL1[2] = 2
 
-    for i in range(n2):
-        if (i != n2):
-            LL1[0, i] = LL1[0, i] + Lep
-        else:
-            LL1[0, i] = LL1[0, i]
+    LL1 = LL1 + n2 * Lep
 
     P20, Pctiz2 = Mz_func(Vc, LL1, D, den, P2)
     P2 = P20
     P1j1 = P2 + np.sum(Pctiz2)  # 一级节流后压力，MPa
+    result_form.P2 = P2
+    result_form.T2 = T2
 
     if P2 > Pflq:
         P11 = P2  # 一级节流后压力（减掉摩阻）
@@ -133,23 +133,28 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
         n0 = n - n1 - n2
         Qd = MAXQd_func(den, P2, k, n0, D)  # 二级节流后极限处理产量
         P2_bool = '满足产量要求'
-        return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4,
+        return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4, Qd
         raise ValueError('程序已完成,需要一级节流')
 
     #######二级节流#######
     T11 = T2  # 一级节流后温度
     P22, T22, dd, Qg11, __ = JL_func(P11, T11, Qg, r, k, R, Pc, Tc, Pci, Tci)
     Twash2 = T22 + 273.15  # 二级节流后温度，K
-    denn = BWRSV1_func(P22, Twash2)[2]  # 二级节流后的压缩因子
+
+    denn = BWRSV1_func(P22, Twash2)[0]  # 二级节流后的压缩因子
+
     Z22 = BWRSV1_func(P22, Twash2)[0]
     pmm = (3484.48 * denn * P22) / (Z22 * Twash2) / 1000  # 二级节流前气体混合物密度 kg/m^3
-    Vcc = (Qg11 * Twash2 * 0.404 * Z22) / (8.64 * 293 * P22 * 3.1415926 * (dd * 0.1) ** 2)  # 一级节流嘴流速 m/s
+    Vcc = (Qg11 * Twash2 * 0.404 * Z22) / (8.64 * 293 * P22 * math.pi * (dd * 0.1) ** 2)  # 一级节流嘴流速 m/s
     Vee = c / (denn) ** 0.5  # 临界冲蚀速率 m/s
 
     result_form.Vcc = Vcc
     result_form.Vee = Vee
 
-    G2, OW2, Wr2, __ = G_func(Qg, Ql, T11, T22, P11, P22, r)
+    result = G_func(Qg, Ql, T11, T22, P11, P22, r)
+    if result is None:
+        return None
+    G2, OW2, Wr2, __ = result
     result_form.G2 = G2
     # plt.plot(P22, T22, color='red', marker='<', markersize=8)
     # plt.text(P22, T22, '二级节流')
@@ -159,19 +164,13 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     # LL2 = np.zeros(n3 + 1)
     Lep = 30 * D * 1
 
-    # LL2[0] = 1 + Lep
-    # LL2[1] = 2 + Lep
-    # LL2[2] = 2
-
-    for i in range(n3):
-        if (i != n3):
-            LL2[0, i] = LL2[0, i] + Lep
-        else:
-            LL2[0, i] = LL2[0, i]
+    LL2 = LL2 + n3 * Lep
 
     P30, Pctiz3 = Mz_func(Vcc, LL2, D, denn, P22)
     P22 = P30
     P1j2 = P22 + np.sum(Pctiz3)  # 三级节流前压力 ?
+    result_form.P22 = P22
+    result_form.T22 = T22
     if P22 > Pflq:
         P111 = P22  # 二级节流后压力（减掉摩阻后）
         P22_bool = '不满足产量要求'
@@ -180,14 +179,16 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
         n00 = n - n1 - n2 - n3
         Qd = MAXQd_func(denn, P22, k, n00, D)  # 二级节流后极限处理产量
         P22_bool = '满足产量要求'
-        return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4,
+        return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4, Qd
         raise ValueError('程序已完成，需要二级节流')
 
     #######三级节流#######
     T111 = T22  # 二级节流后温度
     P222, T222, ddd, Qg111, __ = JL_func(P111, T111, Qg, r, k, R, Pc, Tc, Pci, Tci)
     Twash3 = T222 + 273.15  # 二级节流后温度，K
-    dennn = BWRSV1_func(P222, Twash3)[2]  # 二级节流后的压缩因子
+
+    # matlab中代码使用的den值为Z2的值，或许正确值为dennn = BWRSV1_func(P222, Twash3)[2]
+    dennn = BWRSV1_func(P222, Twash3)[0]  # 二级节流后的压缩因子
     Z222 = BWRSV1_func(P222, Twash3)[0]
     pmmm = (3484.48 * dennn * P222) / (Z222 * Twash3) / 1000  # 二级节流前气体混合物密度 kg/m^3
     Vccc = (Qg111 * Twash3 * 0.404 * Z222) / (8.64 * 293 * P222 * 3.1415926 * (ddd * 0.1) ** 2)  # 一级节流嘴流速 m/s
@@ -195,25 +196,12 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     result_form.Vccc = Vccc
     result_form.Veee = Veee
-
-    G3 = G_func(Qg, Ql, T111, T222, P111, P222, r)[0]
-    result_form.G3 = G3
-    result_form.P2 = P2
-    result_form.P22 = P22
     result_form.P222 = P222
-    result_form.T2 = T2
-    result_form.T22 = T22
     result_form.T222 = T222
-
-    plt.plot(P2, T2, color='blue', marker='.', markersize=16)
-    # plt.text(P2, T2, '一级节流')
-    plt.plot(P22, T22, color='red', marker='<', markersize=8)
-    # plt.text(P22, T22, '二级节流')
-    plt.plot(P222, T222, color='green', marker='*', markersize=8)
-    plt.text(P2, T2, '一级节流')
-    plt.text(P22, T22, '二级节流')
-    plt.text(P222, T222, '三级节流')
-    plt.show()
+    G3 = G_func(Qg, Ql, T111, T222, P111, P222, r)[0]
+    if G3 is None:
+        return None
+    result_form.G3 = G3
 
     #######三级节流后摩阻计算#######
     # n4 = 2  # 到分离器前弯头个数
@@ -224,11 +212,13 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     # LL3[1] = 2 + Lep
     # LL3[2] = 2  # 前面数字代表分离器前管线每个弯头前的长度
 
-    for i in range(n4):
-        if (i != n4):
-            LL3[0, i] = LL3[0, i] + Lep
-        else:
-            LL3[0, i] = LL3[0, i]
+    # for i in range(n4):
+    #     if (i != n4):
+    #         LL3[0, i] = LL3[0, i] + Lep
+    #     else:
+    #         LL3[0, i] = LL3[0, i]
+
+    LL3 = LL3 + n4 * Lep
 
     P40, Pctiz4 = Mz_func(Vccc, LL3, D, dennn, P222)
     P222 = P40
@@ -237,15 +227,13 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     if P222 > Pflq:
         P1111 = P222  # 三级节流后压力
         Qd = MAXQd_func(dennn, Pflq, k, n, D)  # 三级节流后极限处理产量
-        P222_bool='不能满足产量要求'
+        P222_bool = '不能满足产量要求'
         return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4, Qd
         raise Exception('程序已完成，不能满足产量要求')
     elif P222 <= Pflq:
         GG = G1 + G2 + G3
         n000 = n - n1 - n2 - n3 - n4
         Qd = MAXQd_func(dennn, P222, k, n000, D)
-        P222_bool='满足产量要求'
+        P222_bool = '满足产量要求'
         return d, dd, ddd, T2, T22, T222, P1j1, P1j2, P1j3, P2_bool, P22_bool, P222_bool, Pctiz1, Pctiz2, Pctiz3, Pctiz4, Qd
         raise Exception('程序已完成，需要三级节流')
-
-

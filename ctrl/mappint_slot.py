@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPixmap, QTransform
-from PyQt5.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget, QPushButton, QFrame, QLayout
+from PyQt5.QtGui import QPixmap, QTransform, QImage, QPainter, QPen
+from PyQt5.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget, QPushButton, QFrame, QLayout, QSizePolicy
 
 # import main
 
@@ -40,9 +40,24 @@ class DraggableLabel(QLabel):
 
     def mouseMoveEvent(self, event):
         if event.buttons() == Qt.LeftButton and self.offset is not None:
-            self.move(self.pos() + event.pos())
-            self.offset = event.pos()
+            # self.move(self.pos() + event.pos())
+            # self.offset = event.pos()
             # print("Label position when dragged:", self.pos())
+            x, y = event.pos().x(), event.pos().y()
+            offset_x, offset_y = self.offset.x(), self.offset.y()
+            new_x, new_y = x - offset_x, y - offset_y
+
+            # 将移动差值调整为25的整数倍
+            new_x = new_x - (new_x % 10)
+            new_y = new_y - (new_y % 10)
+
+            self.move(self.x() + new_x, self.y() + new_y)
+
+    def init(self,h,w):
+        self.resize(h,w)
+        global _self_label
+        _self_label = self
+        change_label_size()
 
 
 # class MyApp(QWidget):
@@ -72,15 +87,19 @@ class DraggableLabel(QLabel):
 
 def add_label(self, color, height, width):
     new_label = DraggableLabel()
+    new_label.resize(width, height)
+    new_label.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
     new_label.setStyleSheet("background-color: " + color + ";color:" + color + ";border: 2px inset black;")
     new_label.h = height
     new_label.w = width
-    new_label.setFixedHeight(height)
-    new_label.setFixedWidth(width)
     self.layout.addWidget(new_label)
+    new_label.setFixedSize(width, height)
     self.update()
     global _self
     _self = self
+    # _self.lineEdit_5.setText(str(width))
+    # _self.lineEdit_6.setText(str(height))
+    # new_label.init(width, height)
 
 
 def rotate_label():
@@ -88,8 +107,7 @@ def rotate_label():
         if _self_label.image_flag == 0:
             height = _self_label.size().height()
             width = _self_label.size().width()
-            _self_label.setFixedHeight(width)
-            _self_label.setFixedWidth(height)
+            _self_label.setFixedSize(height, width)
         else:
             rotate_label_image()
 
@@ -106,8 +124,7 @@ def change_label_size():
     if _self_label is not None:
         width = _self.lineEdit_5.text()
         height = _self.lineEdit_6.text()
-        _self_label.setFixedHeight(int(height))
-        _self_label.setFixedWidth(int(width))
+        _self_label.setFixedSize(int(width), int(height))
         _self_label.w = int(width)
         _self_label.h = int(height)
 
@@ -126,14 +143,40 @@ def add_image_label(self, image):
     new_label = DraggableLabel()
     new_label.setPixmap(pix)
     new_label.setScaledContents(True)
-    new_label.setStyleSheet("border: 0px")
+    new_label.setStyleSheet("border: 0px; background-color: transparent;")
     new_label.image = image
     new_label.image_flag = 1
-    new_label.h = 35
-    new_label.w = 35
-    new_label.setFixedHeight(35)
-    new_label.setFixedWidth(35)
+    new_label.h = 60
+    new_label.w = 60
+    new_label.setFixedHeight(60)
+    new_label.setFixedWidth(60)
     self.layout.addWidget(new_label)
     self.update()
     global _self
     _self = self
+
+
+def init_background(self):
+    frame = self.frame_Mapping
+
+    def newpaintEvent(self, frame):
+        def paintEvent(event):
+            painter = QPainter(frame)
+            painter.setRenderHint(QPainter.Antialiasing, True)
+
+            # 设置网格线的颜色和宽度
+            pen = QPen(Qt.lightGray , 1, Qt.SolidLine)
+
+            # 绘制网格线
+            grid_size = 10  # 网格大小为 10px
+            for x in range(0, frame.width(), grid_size):
+                painter.setPen(pen)
+                painter.drawLine(x, 0, x, frame.height())
+
+            for y in range(0, frame.height(), grid_size):
+                painter.setPen(pen)
+                painter.drawLine(0, y, frame.width(), y)
+
+        return paintEvent
+
+    frame.paintEvent = newpaintEvent(self,frame)
