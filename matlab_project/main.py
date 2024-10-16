@@ -6,6 +6,7 @@ from matlab_project.BWRSV1 import BWRSV1_func
 from matlab_project.BWRSV2 import BWRSV2_func
 from matlab_project.JL3 import JL_func
 from matlab_project.G import G_func
+from matlab_project.JL4 import JL4
 from matlab_project.MAXQd import MAXQd_func
 import matplotlib.pyplot as plt
 import matlab_project.BWRSV1 as BWRSV1
@@ -52,7 +53,7 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
         len(r)
         r = BWRSV2_func(P1, T0, r)
         r = float(r[0])
-        r = round(r, 4)
+        r = round(r, 2)
     except TypeError:
         print("相对密度形式输入")
 
@@ -89,7 +90,11 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     #######一级节流#######
 
-    P2, T2, d, Qg1, Z1 = JL_func(P1, T1, Qg, r, k, R, Pc, Tc, Pci, Tci)
+    if Pflq < P1 < 9:
+        P2, T2, d, Qg1, Z1 = JL4(P1, T1, Qg, r, k, R, Pc, Tc, Pci, Tci, Pflq)
+    else:
+        P2, T2, d, Qg1, Z1 = JL_func(P1, T1, Qg, r, k, R, Pc, Tc, Pci, Tci)
+
     Twash = T2 + 273.15
 
     BWRSV1 = BWRSV1_func(P2, Twash)
@@ -138,7 +143,11 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     #######二级节流#######
     T11 = T2  # 一级节流后温度
-    P22, T22, dd, Qg11, __ = JL_func(P11, T11, Qg, r, k, R, Pc, Tc, Pci, Tci)
+
+    if Pflq < P11 < 9:
+        P22, T22, dd, Qg11, __ = JL4(P11, T11, Qg, r, k, R, Pc, Tc, Pci, Tci, Pflq)
+    else:
+        P22, T22, dd, Qg11, __ = JL_func(P11, T11, Qg, r, k, R, Pc, Tc, Pci, Tci)
     Twash2 = T22 + 273.15  # 二级节流后温度，K
 
     denn = BWRSV1_func(P22, Twash2)[0]  # 二级节流后的压缩因子
@@ -184,7 +193,10 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     #######三级节流#######
     T111 = T22  # 二级节流后温度
-    P222, T222, ddd, Qg111, __ = JL_func(P111, T111, Qg, r, k, R, Pc, Tc, Pci, Tci)
+    if Pflq < P111 < 9:
+        P222, T222, ddd, Qg111, __ = JL4(P111, T111, Qg, r, k, R, Pc, Tc, Pci, Tci, Pflq)
+    else:
+        P222, T222, ddd, Qg111, __ = JL_func(P111, T111, Qg, r, k, R, Pc, Tc, Pci, Tci)
     Twash3 = T222 + 273.15  # 二级节流后温度，K
 
     # matlab中代码使用的den值为Z2的值，或许正确值为dennn = BWRSV1_func(P222, Twash3)[2]
