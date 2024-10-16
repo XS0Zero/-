@@ -60,13 +60,13 @@ def G_func(Qg,Ql,T1,T2,P1,P2,r):
 
         # 绘制图像
 
-        plt.switch_backend('Qt5Agg')
-        plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
-        plt.rcParams['axes.unicode_minus'] = False  # 用来正常显
-        plt.plot(Px1, Tx1, 'r')
-        plt.xlabel('压力 (MPa)', fontsize=11)
-        plt.ylabel('温度 (℃)', fontsize=11)
-        plt.title('水合物相平衡曲线')
+        # plt.switch_backend('Qt5Agg')
+        # plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+        # plt.rcParams['axes.unicode_minus'] = False  # 用来正常显
+        # plt.plot(Px1, Tx1, 'r')
+        # plt.xlabel('压力 (MPa)', fontsize=11)
+        # plt.ylabel('温度 (℃)', fontsize=11)
+        # plt.title('水合物相平衡曲线')
 
         if P2 < Px:
             #tk.messagebox.showinfo('模拟结果',"不会生成水合物")

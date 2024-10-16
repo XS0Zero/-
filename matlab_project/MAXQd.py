@@ -8,7 +8,7 @@ def MAXQd_func(den, Pflq, k, n, D):
     R0 = 478.33  # 天然气气体常数
     T0 = 293.15  # 滞止温度
     Pa = 101325  # 假定的末端压力
-    # den = r * 1.2 # den = 0.72 # 标态下的天然气密度
+    den = den * 1.2 # den = 0.72 # 标态下的天然气密度
     Vlj = 398.14  # 临界流速
     # n = 5 # 弯头数
 
@@ -42,6 +42,6 @@ def MAXQd_func(den, Pflq, k, n, D):
         if Qd > Qd2:
             break
 
-    # Qd = Qd * (10 ** 4)
+    Qd = Qd * (10 ** 4)
 
     return Qd

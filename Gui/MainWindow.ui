@@ -156,9 +156,9 @@ height: 0px;
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>-420</y>
+                <y>0</y>
                 <width>1080</width>
-                <height>2151</height>
+                <height>2677</height>
                </rect>
               </property>
               <property name="minimumSize">
@@ -2764,60 +2764,184 @@ border:1px solid rgb(0,0,0);</string>
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_173">
+                    <layout class="QVBoxLayout" name="verticalLayout_29">
                      <item>
-                      <widget class="QFrame" name="frame_191">
-                       <property name="styleSheet">
-                        <string notr="true">border:0px</string>
-                       </property>
+                      <widget class="QFrame" name="frame_83">
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
                        </property>
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_46">
+                       <layout class="QHBoxLayout" name="horizontalLayout_64">
                         <item>
-                         <widget class="QGraphicsView" name="graphicsView">
+                         <widget class="QFrame" name="frame_191">
+                          <property name="styleSheet">
+                           <string notr="true">border:0px</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_46">
+                           <item>
+                            <widget class="QGraphicsView" name="graphicsView">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>2</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>600</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_190">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                            <horstretch>2</horstretch>
+                            <horstretch>1</horstretch>
                             <verstretch>0</verstretch>
                            </sizepolicy>
                           </property>
                           <property name="minimumSize">
                            <size>
-                            <width>600</width>
+                            <width>350</width>
                             <height>0</height>
                            </size>
                           </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_45">
+                           <item>
+                            <widget class="QLabel" name="label_229">
+                             <property name="styleSheet">
+                              <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+                             </property>
+                             <property name="text">
+                              <string>振动位移随管长变化</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QTableWidget" name="tableWidget_2">
+                             <property name="layoutDirection">
+                              <enum>Qt::LeftToRight</enum>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">font: 10pt &quot;黑体&quot;;</string>
+                             </property>
+                             <property name="lineWidth">
+                              <number>10</number>
+                             </property>
+                             <property name="midLineWidth">
+                              <number>10</number>
+                             </property>
+                             <property name="rowCount">
+                              <number>0</number>
+                             </property>
+                             <property name="columnCount">
+                              <number>2</number>
+                             </property>
+                             <attribute name="horizontalHeaderCascadingSectionResizes">
+                              <bool>false</bool>
+                             </attribute>
+                             <attribute name="horizontalHeaderMinimumSectionSize">
+                              <number>50</number>
+                             </attribute>
+                             <attribute name="horizontalHeaderDefaultSectionSize">
+                              <number>150</number>
+                             </attribute>
+                             <attribute name="verticalHeaderMinimumSectionSize">
+                              <number>25</number>
+                             </attribute>
+                             <attribute name="verticalHeaderDefaultSectionSize">
+                              <number>30</number>
+                             </attribute>
+                             <column>
+                              <property name="text">
+                               <string>沿管长距离(m)</string>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>12</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="textAlignment">
+                               <set>AlignCenter</set>
+                              </property>
+                             </column>
+                             <column>
+                              <property name="text">
+                               <string>振动位移(m)</string>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>12</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="textAlignment">
+                               <set>AlignCenter</set>
+                              </property>
+                             </column>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_7">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">font: 14pt &quot;黑体&quot;;
+background-color: rgb(238, 238, 238);</string>
+                             </property>
+                             <property name="text">
+                              <string>生成折线图</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
                          </widget>
                         </item>
                        </layout>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QFrame" name="frame_190">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>1</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
+                      <widget class="QFrame" name="frame_84">
                        <property name="minimumSize">
                         <size>
-                         <width>350</width>
-                         <height>0</height>
+                         <width>0</width>
+                         <height>500</height>
                         </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true"/>
                        </property>
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
@@ -2825,100 +2949,9 @@ border:1px solid rgb(0,0,0);</string>
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_45">
+                       <layout class="QVBoxLayout" name="verticalLayout_30">
                         <item>
-                         <widget class="QLabel" name="label_229">
-                          <property name="styleSheet">
-                           <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>振动位移随管长变化</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QTableWidget" name="tableWidget_2">
-                          <property name="layoutDirection">
-                           <enum>Qt::LeftToRight</enum>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">font: 10pt &quot;黑体&quot;;</string>
-                          </property>
-                          <property name="lineWidth">
-                           <number>10</number>
-                          </property>
-                          <property name="midLineWidth">
-                           <number>10</number>
-                          </property>
-                          <property name="rowCount">
-                           <number>0</number>
-                          </property>
-                          <property name="columnCount">
-                           <number>2</number>
-                          </property>
-                          <attribute name="horizontalHeaderCascadingSectionResizes">
-                           <bool>false</bool>
-                          </attribute>
-                          <attribute name="horizontalHeaderMinimumSectionSize">
-                           <number>50</number>
-                          </attribute>
-                          <attribute name="horizontalHeaderDefaultSectionSize">
-                           <number>150</number>
-                          </attribute>
-                          <attribute name="verticalHeaderMinimumSectionSize">
-                           <number>25</number>
-                          </attribute>
-                          <attribute name="verticalHeaderDefaultSectionSize">
-                           <number>30</number>
-                          </attribute>
-                          <column>
-                           <property name="text">
-                            <string>沿管长距离(m)</string>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <pointsize>12</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
-                           </property>
-                           <property name="textAlignment">
-                            <set>AlignCenter</set>
-                           </property>
-                          </column>
-                          <column>
-                           <property name="text">
-                            <string>振动位移(m)</string>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <pointsize>12</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
-                           </property>
-                           <property name="textAlignment">
-                            <set>AlignCenter</set>
-                           </property>
-                          </column>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="pushButton_7">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>40</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">font: 14pt &quot;黑体&quot;;
-background-color: rgb(238, 238, 238);</string>
-                          </property>
-                          <property name="text">
-                           <string>生成折线图</string>
-                          </property>
-                         </widget>
+                         <widget class="QGraphicsView" name="graphicsView_4"/>
                         </item>
                        </layout>
                       </widget>
@@ -3103,9 +3136,9 @@ height: 0px;
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>-787</y>
+                <y>0</y>
                 <width>1081</width>
-                <height>1722</height>
+                <height>2228</height>
                </rect>
               </property>
               <property name="minimumSize">
@@ -3343,7 +3376,8 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
                               </property>
                               <property name="verticalScrollBarPolicy">
                                <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -3458,7 +3492,8 @@ background-color: rgb(255, 255, 255);</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                     <property name="dragEnabled">
                                      <bool>false</bool>
@@ -3530,7 +3565,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3599,7 +3635,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3668,7 +3705,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3737,7 +3775,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3824,7 +3863,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3893,7 +3933,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3962,7 +4003,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -4031,7 +4073,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -4100,7 +4143,8 @@ border:1px inset;</string>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">background-color: rgb(255, 255, 255);
-border:1px inset;</string>
+border:1px inset;
+color: rgb(0, 0, 0);</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -4215,7 +4259,9 @@ background-color: rgb(255, 255, 255);
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4298,7 +4344,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4381,7 +4429,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4465,7 +4515,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4566,7 +4618,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4643,7 +4697,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4720,7 +4776,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -4797,7 +4855,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -6442,7 +6502,7 @@ background-color: rgb(255, 255, 255);</string>
                           </layout>
                          </widget>
                         </item>
-                        <item row="6" column="0" colspan="2">
+                        <item row="7" column="0" colspan="2">
                          <widget class="QFrame" name="frame_58">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -6559,6 +6619,63 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                </widget>
                               </item>
                              </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="6" column="0" colspan="2">
+                         <widget class="QFrame" name="frame_82">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>900</width>
+                            <height>500</height>
+                           </size>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_28">
+                           <item>
+                            <widget class="QLabel" name="label_79">
+                             <property name="styleSheet">
+                              <string notr="true">font: 20pt &quot;黑体&quot;; </string>
+                             </property>
+                             <property name="text">
+                              <string>水合物生成曲线</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_9">
+                             <property name="text">
+                              <string>刷新</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QGraphicsView" name="graphicsView_3">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>1</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>900</width>
+                               <height>0</height>
+                              </size>
+                             </property>
                             </widget>
                            </item>
                           </layout>
@@ -6767,7 +6884,9 @@ font: 12pt &quot;Times New Roman&quot;;</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -6867,7 +6986,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -6967,7 +7088,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -7044,7 +7167,7 @@ background-color: rgb(255, 255, 255);</string>
                                  <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                 </property>
                                 <property name="text">
-                                 <string>三级节流到分离器前</string>
+                                 <string>最后一级节流到分离器前</string>
                                 </property>
                                </widget>
                               </item>
@@ -7063,11 +7186,13 @@ background-color: rgb(255, 255, 255);</string>
                                  </size>
                                 </property>
                                 <property name="styleSheet">
-                                 <string notr="true">font: 75 11pt &quot;宋体&quot;;
+                                 <string notr="true">font: 75 12pt &quot;宋体&quot;;
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                 <property name="verticalScrollBarPolicy">
                                  <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -7162,7 +7287,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                </widget>
                               </item>
@@ -7213,7 +7340,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                </widget>
                               </item>
@@ -7264,7 +7393,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                </widget>
                               </item>
@@ -7315,7 +7446,9 @@ background-color: rgb(255, 255, 255);</string>
 border-bottom: 1px solid rgb(0,0,0);
 
 border:1px inset;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+
+color: rgb(0, 0, 0);</string>
                                 </property>
                                </widget>
                               </item>
@@ -7687,7 +7820,7 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QLabel" name="Pctiz4">
+                                  <widget class="QLabel" name="Pctiz3">
                                    <property name="minimumSize">
                                     <size>
                                      <width>0</width>
@@ -7765,12 +7898,12 @@ font: 12pt &quot;Times New Roman&quot;;</string>
                                     <string notr="true">font: 14pt &quot;宋体&quot;;</string>
                                    </property>
                                    <property name="text">
-                                    <string>三级节流后摩阻</string>
+                                    <string>最后一级节流后摩阻</string>
                                    </property>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QLabel" name="Pctiz3">
+                                  <widget class="QLabel" name="Pctiz4">
                                    <property name="minimumSize">
                                     <size>
                                      <width>0</width>
@@ -7881,7 +8014,7 @@ font: 14pt &quot;华文琥珀&quot;;
 	border-radius:8px;</string>
                    </property>
                    <property name="text">
-                    <string>添加一级节流管道</string>
+                    <string>添加节流管道</string>
                    </property>
                   </widget>
                  </item>
@@ -8086,6 +8219,25 @@ font: 14pt &quot;华文琥珀&quot;;
                       </layout>
                      </widget>
                     </item>
+                    <item>
+                     <widget class="QFrame" name="frame_85">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_70">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_10">
+                         <property name="text">
+                          <string>删除</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
                    </layout>
                   </widget>
                  </item>
@@ -8203,8 +8355,8 @@ height: 0px;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>1097</width>
-                <height>793</height>
+                <width>653</width>
+                <height>1197</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -9137,6 +9289,12 @@ height: 0px;
                        <layout class="QHBoxLayout" name="horizontalLayout_46">
                         <item>
                          <widget class="QTableWidget" name="tableWidget">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>200</height>
+                           </size>
+                          </property>
                           <property name="font">
                            <font>
                             <family>黑体</family>
@@ -9247,6 +9405,16 @@ height: 0px;
                          </widget>
                         </item>
                        </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QGraphicsView" name="graphicsView_5">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>400</height>
+                        </size>
+                       </property>
                       </widget>
                      </item>
                     </layout>

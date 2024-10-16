@@ -81,7 +81,7 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     BWRSV1 = BWRSV1_func(P1, T0)
     # den0 = BWRSV1[2] 废弃，换作r0
-    r0 = BWRSV1[1]
+    r0 = BWRSV1[1][0]
     Z0 = BWRSV1[0]
     Bg = 3.447e-4 * Z0 * T0 / P1
     V0 = 4 * Qg * Bg / 86400 / math.pi / D ** 2
@@ -100,7 +100,7 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
 
     BWRSV1 = BWRSV1_func(P2, Twash)
     Z2 = BWRSV1[0]  # 一级节流后的压缩因子
-    r2 = BWRSV1[1]
+    r2 = BWRSV1[1][0][0]
     # den = BWRSV1[0]
 
     pm = (3484.48 * r2 * P2) / (Z2 * Twash) / 1000  # 一级节流前气体混合物密度 g/cm^3
@@ -159,7 +159,7 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
         P22, T22, dd, Qg11, __ = JL_func(P11, T11, Qg, r, k, R, Pc, Tc, Pci, Tci)
     Twash2 = T22 + 273.15  # 二级节流后温度，K
 
-    r22 = BWRSV1_func(P22, Twash2)[1]  # 二级节流后的压缩因子
+    r22 = BWRSV1_func(P22, Twash2)[1][0][0]  # 二级节流后的压缩因子
 
     Z22 = BWRSV1_func(P22, Twash2)[0]
     pmm = (3484.48 * r22 * P22) / (Z22 * Twash2) / 1000  # 二级节流前气体混合物密度 kg/m^3
@@ -217,7 +217,7 @@ def compute(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, n1, n2, n3, n4):
     Twash3 = T222 + 273.15  # 二级节流后温度，K
 
 
-    r222 = BWRSV1_func(P222, Twash3)[1]  # 二级节流后的压缩因子
+    r222 = BWRSV1_func(P222, Twash3)[1][0][0]  # 二级节流后的压缩因子
     Z222 = BWRSV1_func(P222, Twash3)[0]
     pmmm = (3484.48 * r222 * P222) / (Z222 * Twash3) / 1000  # 二级节流前气体混合物密度 kg/m^3
     Vccc = (Qg111 * Twash3 * 0.404 * Z222) / (8.64 * 293 * P222 * 3.1415926 * (ddd * 0.1) ** 2)  # 一级节流嘴流速 m/s

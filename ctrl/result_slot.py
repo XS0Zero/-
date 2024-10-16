@@ -162,11 +162,19 @@ def show_moulde3_image(self):
         plt.switch_backend('Qt5Agg')
         plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
         plt.rcParams['axes.unicode_minus'] = False
-        plt.plot(df.iloc[:, 0], df.iloc[:, 1])
-        plt.xlabel('管长')
-        plt.ylabel('振动位移')
-        plt.title('振动位移随管长变化')
-        plt.show()
+        F1 = MyFigure(width=5, height=4, dpi=100)
+        F1.axes1 = F1.fig.add_subplot(111)
+        F1.axes1.plot(df.iloc[:, 0], df.iloc[:, 1], 'r')
+        F1.axes1.set_xlabel('管长', fontsize=11)
+        F1.axes1.set_ylabel('振动位移', fontsize=11)
+        F1.axes1.set_title('振动位移随管长变化')
+        width, height = self.graphicsView_4.width(), self.graphicsView_4.height()
+        F1.resize(width, height)
+        self.scene = QGraphicsScene()  # 创建一个场景
+        self.scene.addWidget(F1)  # 将图形元素添加到场景中
+        self.graphicsView_4.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.graphicsView_4.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.graphicsView_4.setScene(self.scene)  # 将创建添加到图形视图显示窗口
     else:
         QMessageBox.information(self, "错误", "未有数据输入，请先输入数据并计算")
 

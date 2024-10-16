@@ -4,11 +4,19 @@ import sys
 import pandas as pd
 from PyQt5 import QtGui
 from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QMessageBox
 
 array = []
 def getUserInfo():
     print("当前工作目录：%s" % os.getcwd())
-    data = pd.read_csv(r'resource/user.csv', sep=',', header=0)
+    try:
+        data = pd.read_csv(r'resource/user.csv', sep=',', header=0)
+    except Exception as e:
+        print("读取文件失败:", e)
+        df = pd.DataFrame()
+        df = df.append({'username': 'admin', 'password': 'admin'}, ignore_index=True)
+        df.to_csv(f'resource/user.csv', index=False)
+        data = pd.read_csv(r'resource/user.csv', sep=',', header=0)
     global array
     array = data.values[0::, 0::]  # 读取全部行，全部列
     # print(array)
@@ -29,6 +37,7 @@ def on_login_button_clicked(self,window,Main_window):
 
     else:
         print("登录失败")
+        QMessageBox.information(self, "提示", "用户名或密码错误")
 
 
 def on_exit_button_clicked():

@@ -109,7 +109,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, -420, 1080, 2151))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 1080, 2677))
         self.scrollAreaWidgetContents_4.setMinimumSize(QtCore.QSize(1000, 1200))
         self.scrollAreaWidgetContents_4.setStyleSheet("")
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
@@ -1275,9 +1275,15 @@ class Ui_MainWindow(object):
         self.frame_189.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_189.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_189.setObjectName("frame_189")
-        self.horizontalLayout_173 = QtWidgets.QHBoxLayout(self.frame_189)
-        self.horizontalLayout_173.setObjectName("horizontalLayout_173")
-        self.frame_191 = QtWidgets.QFrame(self.frame_189)
+        self.verticalLayout_29 = QtWidgets.QVBoxLayout(self.frame_189)
+        self.verticalLayout_29.setObjectName("verticalLayout_29")
+        self.frame_83 = QtWidgets.QFrame(self.frame_189)
+        self.frame_83.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_83.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_83.setObjectName("frame_83")
+        self.horizontalLayout_64 = QtWidgets.QHBoxLayout(self.frame_83)
+        self.horizontalLayout_64.setObjectName("horizontalLayout_64")
+        self.frame_191 = QtWidgets.QFrame(self.frame_83)
         self.frame_191.setStyleSheet("border:0px")
         self.frame_191.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_191.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -1293,8 +1299,8 @@ class Ui_MainWindow(object):
         self.graphicsView.setMinimumSize(QtCore.QSize(600, 0))
         self.graphicsView.setObjectName("graphicsView")
         self.verticalLayout_46.addWidget(self.graphicsView)
-        self.horizontalLayout_173.addWidget(self.frame_191)
-        self.frame_190 = QtWidgets.QFrame(self.frame_189)
+        self.horizontalLayout_64.addWidget(self.frame_191)
+        self.frame_190 = QtWidgets.QFrame(self.frame_83)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(1)
         sizePolicy.setVerticalStretch(0)
@@ -1348,7 +1354,19 @@ class Ui_MainWindow(object):
 "background-color: rgb(238, 238, 238);")
         self.pushButton_7.setObjectName("pushButton_7")
         self.verticalLayout_45.addWidget(self.pushButton_7)
-        self.horizontalLayout_173.addWidget(self.frame_190)
+        self.horizontalLayout_64.addWidget(self.frame_190)
+        self.verticalLayout_29.addWidget(self.frame_83)
+        self.frame_84 = QtWidgets.QFrame(self.frame_189)
+        self.frame_84.setMinimumSize(QtCore.QSize(0, 500))
+        self.frame_84.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_84.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_84.setObjectName("frame_84")
+        self.verticalLayout_30 = QtWidgets.QVBoxLayout(self.frame_84)
+        self.verticalLayout_30.setObjectName("verticalLayout_30")
+        self.graphicsView_4 = QtWidgets.QGraphicsView(self.frame_84)
+        self.graphicsView_4.setObjectName("graphicsView_4")
+        self.verticalLayout_30.addWidget(self.graphicsView_4)
+        self.verticalLayout_29.addWidget(self.frame_84)
         self.verticalLayout_44.addWidget(self.frame_189)
         self.frame_76 = QtWidgets.QFrame(self.frame_152)
         self.frame_76.setMinimumSize(QtCore.QSize(0, 400))
@@ -1458,7 +1476,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -787, 1081, 1722))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1081, 2228))
         self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(1000, 1200))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
@@ -1564,7 +1582,8 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);")
         self.rEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.rEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.rEdit.setObjectName("rEdit")
@@ -1634,7 +1653,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r1.sizePolicy().hasHeightForWidth())
         self.lineEdit_r1.setSizePolicy(sizePolicy)
         self.lineEdit_r1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r1.setDragEnabled(False)
         self.lineEdit_r1.setObjectName("lineEdit_r1")
         self.horizontalLayout_57.addWidget(self.lineEdit_r1)
@@ -1675,7 +1695,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r2.sizePolicy().hasHeightForWidth())
         self.lineEdit_r2.setSizePolicy(sizePolicy)
         self.lineEdit_r2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r2.setObjectName("lineEdit_r2")
         self.horizontalLayout_58.addWidget(self.lineEdit_r2)
         self.horizontalLayout_53.addWidget(self.frame_71)
@@ -1715,7 +1736,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r3.sizePolicy().hasHeightForWidth())
         self.lineEdit_r3.setSizePolicy(sizePolicy)
         self.lineEdit_r3.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r3.setObjectName("lineEdit_r3")
         self.horizontalLayout_59.addWidget(self.lineEdit_r3)
         self.horizontalLayout_53.addWidget(self.frame_72)
@@ -1755,7 +1777,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r4.sizePolicy().hasHeightForWidth())
         self.lineEdit_r4.setSizePolicy(sizePolicy)
         self.lineEdit_r4.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r4.setObjectName("lineEdit_r4")
         self.horizontalLayout_60.addWidget(self.lineEdit_r4)
         self.horizontalLayout_53.addWidget(self.frame_73)
@@ -1795,7 +1818,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r5.sizePolicy().hasHeightForWidth())
         self.lineEdit_r5.setSizePolicy(sizePolicy)
         self.lineEdit_r5.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r5.setObjectName("lineEdit_r5")
         self.horizontalLayout_61.addWidget(self.lineEdit_r5)
         self.horizontalLayout_53.addWidget(self.frame_74)
@@ -1847,7 +1871,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r6.sizePolicy().hasHeightForWidth())
         self.lineEdit_r6.setSizePolicy(sizePolicy)
         self.lineEdit_r6.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r6.setObjectName("lineEdit_r6")
         self.horizontalLayout_83.addWidget(self.lineEdit_r6)
         self.horizontalLayout_82.addWidget(self.frame_91)
@@ -1887,7 +1912,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r7.sizePolicy().hasHeightForWidth())
         self.lineEdit_r7.setSizePolicy(sizePolicy)
         self.lineEdit_r7.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r7.setObjectName("lineEdit_r7")
         self.horizontalLayout_84.addWidget(self.lineEdit_r7)
         self.horizontalLayout_82.addWidget(self.frame_92)
@@ -1927,7 +1953,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r8.sizePolicy().hasHeightForWidth())
         self.lineEdit_r8.setSizePolicy(sizePolicy)
         self.lineEdit_r8.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r8.setObjectName("lineEdit_r8")
         self.horizontalLayout_85.addWidget(self.lineEdit_r8)
         self.horizontalLayout_82.addWidget(self.frame_93)
@@ -1967,7 +1994,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r9.sizePolicy().hasHeightForWidth())
         self.lineEdit_r9.setSizePolicy(sizePolicy)
         self.lineEdit_r9.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r9.setObjectName("lineEdit_r9")
         self.horizontalLayout_86.addWidget(self.lineEdit_r9)
         self.horizontalLayout_82.addWidget(self.frame_94)
@@ -2007,7 +2035,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lineEdit_r10.sizePolicy().hasHeightForWidth())
         self.lineEdit_r10.setSizePolicy(sizePolicy)
         self.lineEdit_r10.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border:1px inset;")
+"border:1px inset;\n"
+"color: rgb(0, 0, 0);")
         self.lineEdit_r10.setObjectName("lineEdit_r10")
         self.horizontalLayout_87.addWidget(self.lineEdit_r10)
         self.horizontalLayout_82.addWidget(self.frame_95)
@@ -2066,7 +2095,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.QgEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.QgEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.QgEdit.setObjectName("QgEdit")
@@ -2102,7 +2133,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.PflqEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.PflqEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.PflqEdit.setObjectName("PflqEdit")
@@ -2138,7 +2171,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.DEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.DEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.DEdit.setObjectName("DEdit")
@@ -2175,7 +2210,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.LEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LEdit.setObjectName("LEdit")
@@ -2223,7 +2260,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.QlEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.QlEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.QlEdit.setObjectName("QlEdit")
@@ -2254,7 +2293,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.P1Edit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.P1Edit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.P1Edit.setObjectName("P1Edit")
@@ -2285,7 +2326,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.T1Edit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.T1Edit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.T1Edit.setObjectName("T1Edit")
@@ -2316,7 +2359,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.nEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.nEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.nEdit.setObjectName("nEdit")
@@ -3030,7 +3075,36 @@ class Ui_MainWindow(object):
         self.label_124.setObjectName("label_124")
         self.horizontalLayout_63.addWidget(self.label_124)
         self.horizontalLayout_62.addWidget(self.frame_63)
-        self.formLayout_4.setWidget(6, QtWidgets.QFormLayout.SpanningRole, self.frame_58)
+        self.formLayout_4.setWidget(7, QtWidgets.QFormLayout.SpanningRole, self.frame_58)
+        self.frame_82 = QtWidgets.QFrame(self.widget_8)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_82.sizePolicy().hasHeightForWidth())
+        self.frame_82.setSizePolicy(sizePolicy)
+        self.frame_82.setMinimumSize(QtCore.QSize(900, 500))
+        self.frame_82.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_82.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_82.setObjectName("frame_82")
+        self.verticalLayout_28 = QtWidgets.QVBoxLayout(self.frame_82)
+        self.verticalLayout_28.setObjectName("verticalLayout_28")
+        self.label_79 = QtWidgets.QLabel(self.frame_82)
+        self.label_79.setStyleSheet("font: 20pt \"黑体\"; ")
+        self.label_79.setObjectName("label_79")
+        self.verticalLayout_28.addWidget(self.label_79)
+        self.pushButton_9 = QtWidgets.QPushButton(self.frame_82)
+        self.pushButton_9.setObjectName("pushButton_9")
+        self.verticalLayout_28.addWidget(self.pushButton_9)
+        self.graphicsView_3 = QtWidgets.QGraphicsView(self.frame_82)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.graphicsView_3.sizePolicy().hasHeightForWidth())
+        self.graphicsView_3.setSizePolicy(sizePolicy)
+        self.graphicsView_3.setMinimumSize(QtCore.QSize(900, 0))
+        self.graphicsView_3.setObjectName("graphicsView_3")
+        self.verticalLayout_28.addWidget(self.graphicsView_3)
+        self.formLayout_4.setWidget(6, QtWidgets.QFormLayout.SpanningRole, self.frame_82)
         self.verticalLayout.addWidget(self.widget_8)
         self.verticalLayout_5.addWidget(self.widget_3)
         self.line_3 = QtWidgets.QFrame(self.widget)
@@ -3122,7 +3196,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.LLEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LLEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LLEdit.setObjectName("LLEdit")
@@ -3160,7 +3236,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.LL1Edit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LL1Edit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LL1Edit.setObjectName("LL1Edit")
@@ -3198,7 +3276,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.LL2Edit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LL2Edit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LL2Edit.setObjectName("LL2Edit")
@@ -3232,11 +3312,13 @@ class Ui_MainWindow(object):
         self.LL3Edit = QtWidgets.QTextEdit(self.frame_21)
         self.LL3Edit.setMinimumSize(QtCore.QSize(0, 35))
         self.LL3Edit.setMaximumSize(QtCore.QSize(75, 50))
-        self.LL3Edit.setStyleSheet("font: 75 11pt \"宋体\";\n"
+        self.LL3Edit.setStyleSheet("font: 75 12pt \"宋体\";\n"
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.LL3Edit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LL3Edit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.LL3Edit.setObjectName("LL3Edit")
@@ -3281,7 +3363,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.nEdit_2.setObjectName("nEdit_2")
         self.horizontalLayout_66.addWidget(self.nEdit_2)
         self.verticalLayout_25.addWidget(self.frame_78)
@@ -3303,7 +3387,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.nEdit_3.setObjectName("nEdit_3")
         self.horizontalLayout_67.addWidget(self.nEdit_3)
         self.verticalLayout_25.addWidget(self.frame_79)
@@ -3325,7 +3411,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.nEdit_4.setObjectName("nEdit_4")
         self.horizontalLayout_68.addWidget(self.nEdit_4)
         self.verticalLayout_25.addWidget(self.frame_81)
@@ -3347,7 +3435,9 @@ class Ui_MainWindow(object):
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"color: rgb(0, 0, 0);")
         self.nEdit_5.setObjectName("nEdit_5")
         self.horizontalLayout_69.addWidget(self.nEdit_5)
         self.verticalLayout_25.addWidget(self.frame_80)
@@ -3513,15 +3603,15 @@ class Ui_MainWindow(object):
         self.label_83.setAlignment(QtCore.Qt.AlignCenter)
         self.label_83.setObjectName("label_83")
         self.horizontalLayout_55.addWidget(self.label_83)
-        self.Pctiz4 = QtWidgets.QLabel(self.frame_68)
-        self.Pctiz4.setMinimumSize(QtCore.QSize(0, 30))
-        self.Pctiz4.setStyleSheet("font: 75 12pt \"宋体\";\n"
+        self.Pctiz3 = QtWidgets.QLabel(self.frame_68)
+        self.Pctiz3.setMinimumSize(QtCore.QSize(0, 30))
+        self.Pctiz3.setStyleSheet("font: 75 12pt \"宋体\";\n"
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
 "background-color: rgb(255, 255, 255);")
-        self.Pctiz4.setObjectName("Pctiz4")
-        self.horizontalLayout_55.addWidget(self.Pctiz4)
+        self.Pctiz3.setObjectName("Pctiz3")
+        self.horizontalLayout_55.addWidget(self.Pctiz3)
         self.label_84 = QtWidgets.QLabel(self.frame_68)
         self.label_84.setMaximumSize(QtCore.QSize(45, 16777215))
         self.label_84.setStyleSheet("\n"
@@ -3547,15 +3637,15 @@ class Ui_MainWindow(object):
         self.label_85.setStyleSheet("font: 14pt \"宋体\";")
         self.label_85.setObjectName("label_85")
         self.horizontalLayout_56.addWidget(self.label_85)
-        self.Pctiz3 = QtWidgets.QLabel(self.frame_69)
-        self.Pctiz3.setMinimumSize(QtCore.QSize(0, 30))
-        self.Pctiz3.setStyleSheet("font: 75 12pt \"宋体\";\n"
+        self.Pctiz4 = QtWidgets.QLabel(self.frame_69)
+        self.Pctiz4.setMinimumSize(QtCore.QSize(0, 30))
+        self.Pctiz4.setStyleSheet("font: 75 12pt \"宋体\";\n"
 "border-bottom: 1px solid rgb(0,0,0);\n"
 "\n"
 "border:1px inset;\n"
 "background-color: rgb(255, 255, 255);")
-        self.Pctiz3.setObjectName("Pctiz3")
-        self.horizontalLayout_56.addWidget(self.Pctiz3)
+        self.Pctiz4.setObjectName("Pctiz4")
+        self.horizontalLayout_56.addWidget(self.Pctiz4)
         self.label_86 = QtWidgets.QLabel(self.frame_69)
         self.label_86.setMaximumSize(QtCore.QSize(45, 16777215))
         self.label_86.setStyleSheet("\n"
@@ -3692,6 +3782,16 @@ class Ui_MainWindow(object):
         self.pushButton_5.setObjectName("pushButton_5")
         self.horizontalLayout_35.addWidget(self.pushButton_5)
         self.verticalLayout_19.addWidget(self.frame_35)
+        self.frame_85 = QtWidgets.QFrame(self.frame_39)
+        self.frame_85.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_85.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_85.setObjectName("frame_85")
+        self.horizontalLayout_70 = QtWidgets.QHBoxLayout(self.frame_85)
+        self.horizontalLayout_70.setObjectName("horizontalLayout_70")
+        self.pushButton_10 = QtWidgets.QPushButton(self.frame_85)
+        self.pushButton_10.setObjectName("pushButton_10")
+        self.horizontalLayout_70.addWidget(self.pushButton_10)
+        self.verticalLayout_19.addWidget(self.frame_85)
         self.verticalLayout_8.addWidget(self.frame_39, 0, QtCore.Qt.AlignTop)
         self.pushButton_2 = QtWidgets.QPushButton(self.frame_37)
         self.pushButton_2.setMinimumSize(QtCore.QSize(0, 40))
@@ -3765,7 +3865,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1097, 793))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 653, 1197))
         self.scrollAreaWidgetContents_2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
@@ -4267,6 +4367,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_46 = QtWidgets.QHBoxLayout(self.frame_57)
         self.horizontalLayout_46.setObjectName("horizontalLayout_46")
         self.tableWidget = QtWidgets.QTableWidget(self.frame_57)
+        self.tableWidget.setMinimumSize(QtCore.QSize(0, 200))
         font = QtGui.QFont()
         font.setFamily("黑体")
         font.setPointSize(12)
@@ -4323,6 +4424,10 @@ class Ui_MainWindow(object):
         self.pushButton_3.setObjectName("pushButton_3")
         self.horizontalLayout_46.addWidget(self.pushButton_3)
         self.verticalLayout_20.addWidget(self.frame_57)
+        self.graphicsView_5 = QtWidgets.QGraphicsView(self.frame_43)
+        self.graphicsView_5.setMinimumSize(QtCore.QSize(0, 400))
+        self.graphicsView_5.setObjectName("graphicsView_5")
+        self.verticalLayout_20.addWidget(self.graphicsView_5)
         self.verticalLayout_14.addWidget(self.frame_43)
         self.verticalLayout_12.addWidget(self.frame_41)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
@@ -4540,6 +4645,8 @@ class Ui_MainWindow(object):
         self.label_121.setText(_translate("MainWindow", "极限处理产量"))
         self.Qd.setText(_translate("MainWindow", "输出结果"))
         self.label_124.setText(_translate("MainWindow", "万m³/d"))
+        self.label_79.setText(_translate("MainWindow", "水合物生成曲线"))
+        self.pushButton_9.setText(_translate("MainWindow", "刷新"))
         self.label_18.setText(_translate("MainWindow", "每一级节流前的管线总长度"))
         self.label_39.setText(_translate("MainWindow", "一级节流前"))
         self.label_19.setText(_translate("MainWindow", "m"))
@@ -4547,7 +4654,7 @@ class Ui_MainWindow(object):
         self.label_60.setText(_translate("MainWindow", "m"))
         self.label_40.setText(_translate("MainWindow", "三级节流前"))
         self.label_77.setText(_translate("MainWindow", "m"))
-        self.label_41.setText(_translate("MainWindow", "三级节流到分离器前"))
+        self.label_41.setText(_translate("MainWindow", "最后一级节流到分离器前"))
         self.label_78.setText(_translate("MainWindow", "m"))
         self.label_92.setText(_translate("MainWindow", "弯头个数"))
         self.label_93.setText(_translate("MainWindow", "弯头个数"))
@@ -4562,12 +4669,12 @@ class Ui_MainWindow(object):
         self.Pctiz2.setText(_translate("MainWindow", "输出结果"))
         self.label_64.setText(_translate("MainWindow", "MPa"))
         self.label_83.setText(_translate("MainWindow", "三级节流前摩阻"))
-        self.Pctiz4.setText(_translate("MainWindow", "输出结果"))
-        self.label_84.setText(_translate("MainWindow", "MPa"))
-        self.label_85.setText(_translate("MainWindow", "三级节流后摩阻"))
         self.Pctiz3.setText(_translate("MainWindow", "输出结果"))
+        self.label_84.setText(_translate("MainWindow", "MPa"))
+        self.label_85.setText(_translate("MainWindow", "最后一级节流后摩阻"))
+        self.Pctiz4.setText(_translate("MainWindow", "输出结果"))
         self.label_86.setText(_translate("MainWindow", "MPa"))
-        self.addpipe2.setText(_translate("MainWindow", "添加一级节流管道"))
+        self.addpipe2.setText(_translate("MainWindow", "添加节流管道"))
         self.addpipe1_3.setText(_translate("MainWindow", "添加法兰"))
         self.addpipe1_4.setText(_translate("MainWindow", "添加直角接头"))
         self.addpipe1_5.setText(_translate("MainWindow", "添加固定点"))
@@ -4578,6 +4685,7 @@ class Ui_MainWindow(object):
         self.label_67.setText(_translate("MainWindow", "mm"))
         self.pushButton_4.setText(_translate("MainWindow", "修改"))
         self.pushButton_5.setText(_translate("MainWindow", "旋转"))
+        self.pushButton_10.setText(_translate("MainWindow", "删除"))
         self.pushButton_2.setText(_translate("MainWindow", "保存图像"))
         self.label_26.setText(_translate("MainWindow", "安全校核模块"))
         self.label_50.setText(_translate("MainWindow", "井口压力"))

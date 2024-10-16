@@ -2,12 +2,16 @@ import math
 import re
 
 import numpy as np
-from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QMessageBox, QGraphicsScene
+from matplotlib import pyplot as plt
 
 import matlab_project.main
+from ctrl.result_slot import MyFigure
 from data import result_form
 from matlab_project import MAXQd, Mz
 from matlab_project.BWRSV1 import BWRSV1_func
+from matlab_project.BWRSV2 import BWRSV2_func
 from matlab_project.JL3 import JL_func
 
 result = None
@@ -19,7 +23,7 @@ def on_compute_button_clicked(self):
     try:
         result_form.Px1 = []
         result_form.Tx1 = []
-        result_form.G1= result_form.G2= result_form.G3 = 0
+        result_form.G1 = result_form.G2 = result_form.G3 = 0
         global result, Qg, Ql, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, r1, r2
         print("Compute button clicked")
         Qg = self.QgEdit.toPlainText()
@@ -206,6 +210,7 @@ def on_compute_button_clicked(self):
         if result_form.G3 != 0:
             str1 += f"\n三级水合物抑制剂：{round(result_form.G3, 2)}kg/d"
         self.label_56.setText(str1)
+        show_moulde1_image(self)
         QMessageBox.information(self, "提示", "计算完成")
     except Exception as e:
         QMessageBox.warning(self, "错误", f"错误：{e}")
@@ -251,11 +256,11 @@ def getparameter(self):
     LL3 = self.LL3Edit.toPlainText()
 
     if any(isinstance(x, str) and x == '' for x in
-           [Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L,  LL, LL1, LL2, LL3, r1, r2]):
-        Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L,  LL, LL1, LL2, LL3, r1, r2 = [
+           [Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L, LL, LL1, LL2, LL3, r1, r2]):
+        Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L, LL, LL1, LL2, LL3, r1, r2 = [
             '0' if isinstance(x, str) and x == '' else x for x in
-            [Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L,  LL, LL1, LL2, LL3, r1, r2]]
-    return Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L,  LL, LL1, LL2, LL3, r1, r2
+            [Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L, LL, LL1, LL2, LL3, r1, r2]]
+    return Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L, LL, LL1, LL2, LL3, r1, r2
 
 
 def setparameter(self):
@@ -321,7 +326,7 @@ def setresult(self):
 
 def compute_pctiz(self):
     global Qg, Ql, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3, r1, r2
-    print("Compute button clicked")
+    print("compute_pctiz")
     Qg = self.QgEdit.toPlainText()
     Ql = self.QlEdit.toPlainText()
 
@@ -425,13 +430,20 @@ def compute_pctiz(self):
     else:
         n4 = 0
     print('三级节流到分离器前弯头个数', n4)
-
+    T0 = float(T1) + 273.15
     if self.tabWidget.currentIndex() == 1:
         r = r2
+        try:
+            len(r)
+            r = BWRSV2_func(P1, T0, r)
+            r = float(r[0])
+            r = round(r, 2)
+        except TypeError:
+            print("相对密度形式输入")
     if self.tabWidget.currentIndex() == 0:
         print("相对密度形式输入")
         r = float(r1)
-    T0 = float(T1) + 273.15
+
 
     Lep = 30 * D * 1
     try:
@@ -441,7 +453,7 @@ def compute_pctiz(self):
         V0 = 4 * Qg * Bg / 86400 / math.pi / D ** 2
         den0 = BWRSV1[2]
         LL = LL + n1 * Lep
-        Pctiz1 = round(Mz.Pctiz_func(V0, LL, D, den0),2)
+        Pctiz1 = round(Mz.Pctiz_func(V0, LL, D, den0), 2)
         result_form.jieliu_result[12] = str(Pctiz1)
         self.Pctiz1.setText(str(Pctiz1))
     except Exception as e:
@@ -462,14 +474,16 @@ def compute_pctiz(self):
         BWRSV1 = BWRSV1_func(P2, Twash)
         Z2 = BWRSV1[0]  # 一级节流后的压缩因子
 
-        den = BWRSV1[0]
+        r2 = BWRSV1[1][0][0]
         Vc = (Qg1 * Twash * 0.404 * Z2) / (8.64 * 293 * P2 * math.pi * (d * 0.1) ** 2)
         LL1 = LL1 + n2 * Lep
-        Pctiz2 = round(Mz.Pctiz_func(Vc, LL1, D, den),2)
+        Pctiz2 = round(Mz.Pctiz_func(Vc, LL1, D, r2), 2)
         result_form.jieliu_result[13] = str(Pctiz2)
         self.Pctiz2.setText(str(Pctiz2))
     except Exception as e:
-        QMessageBox.warning(self, "错误", str(e))
+        Pctiz2 = 0
+        self.Pctiz2.setText(str(Pctiz2))
+        # QMessageBox.warning(self, "错误", str(e))
     while True:
         try:
             if P2 > Pflq:
@@ -481,20 +495,22 @@ def compute_pctiz(self):
             T11 = T2  # 一级节流后温度
             P22, T22, dd, Qg11, __ = JL_func(P11, T11, Qg, r, k, R, Pc, Tc, Pci, Tci)
             Twash2 = T22 + 273.15  # 二级节流后温度，K
-            denn = BWRSV1_func(P22, Twash2)[0]  # 二级节流后的压缩因子
+            r22 = BWRSV1_func(P22, Twash2)[1][0][0]  # 二级节流后的压缩因子
             Z22 = BWRSV1_func(P22, Twash2)[0]
             Vcc = (Qg11 * Twash2 * 0.404 * Z22) / (8.64 * 293 * P22 * math.pi * (dd * 0.1) ** 2)  # 一级节流嘴流速 m/s
             LL2 = LL2 + n3 * Lep
-            Pctiz3 = round(Mz.Pctiz_func(Vcc, LL2, D, denn),2)
+            Pctiz3 = round(Mz.Pctiz_func(Vcc, LL2, D, r22), 2)
             result_form.jieliu_result[14] = str(Pctiz3)
             self.Pctiz3.setText(str(Pctiz3))
             break
         except Exception as e:
-            QMessageBox.warning(self, "错误", str(e))
+            Pctiz3 = 0
+            self.Pctiz3.setText(str(Pctiz3))
+            # QMessageBox.warning(self, "错误", str(e))
             break
     while True:
         try:
-            if P22 > Pflq:
+            if P22 > Pflq and P22 > 9:
                 P111 = P22  # 二级节流后压力（减掉摩阻后）
             else:
                 Pctiz4 = 0
@@ -503,14 +519,52 @@ def compute_pctiz(self):
             T111 = T22  # 二级节流后温度
             P222, T222, ddd, Qg111, __ = JL_func(P111, T111, Qg, r, k, R, Pc, Tc, Pci, Tci)
             Twash3 = T222 + 273.15  # 二级节流后温度，K
-            dennn = BWRSV1_func(P222, Twash3)[0]  # 二级节流后的压缩因子
+            r222 = BWRSV1_func(P222, Twash3)[1][0][0]  # 二级节流后的压缩因子
             Z222 = BWRSV1_func(P222, Twash3)[0]
             Vccc = (Qg111 * Twash3 * 0.404 * Z222) / (8.64 * 293 * P222 * 3.1415926 * (ddd * 0.1) ** 2)  # 一级节流嘴流速 m/s
             LL3 = LL3 + n4 * Lep
-            Pctiz4 = round(Mz.Pctiz_func(Vccc, LL3, D, dennn),2)
+            Pctiz4 = round(Mz.Pctiz_func(Vccc, LL3, D, r222), 2)
             result_form.jieliu_result[15] = str(Pctiz4)
             self.Pctiz4.setText(str(Pctiz4))
             break
         except Exception as e:
-            QMessageBox.warning(self, "错误", str(e))
+            Pctiz4 = 0
+            self.Pctiz4.setText(str(Pctiz4))
+            # QMessageBox.warning(self, "错误", str(e))
             break
+
+
+def show_moulde1_image(self):
+    try:
+        if result_form.P2 is not None:
+            plt.rcParams['font.sans-serif'] = ['SimHei']  # 指定默认字体
+            plt.rcParams['axes.unicode_minus'] = False
+            F1 = MyFigure(width=5, height=4, dpi=100)
+            F1.axes1 = F1.fig.add_subplot(111)
+            F1.axes1.plot(result_form.Px1[0], result_form.Tx1[0], 'r')
+            # F1.axes1.plot(result_form.Px1[1], result_form.Tx1[1], 'r')
+            # F1.axes1.plot(result_form.Px1[2], result_form.Tx1[2], 'r')
+            F1.axes1.set_xlabel('压力 (MPa)', fontsize=11)
+            F1.axes1.set_ylabel('温度 (℃)', fontsize=11)
+            F1.axes1.set_title('水合物相平衡曲线')
+            F1.axes1.plot(result_form.P2, result_form.T2, color='blue', marker='.', markersize=16)
+            F1.axes1.text(result_form.P2, result_form.T2, '一级节流')
+            result_form.Pflq = float(result_form.Pflq)
+            if result_form.P2 > result_form.Pflq:
+                F1.axes1.plot(result_form.P22, result_form.T22, color='red', marker='<', markersize=8)
+                F1.axes1.text(result_form.P22, result_form.T22, '二级节流')
+                if result_form.P22 > result_form.Pflq:
+                    F1.axes1.plot(result_form.P222, result_form.T222, color='green', marker='*', markersize=8)
+                    F1.axes1.text(result_form.P222, result_form.T222, '三级节流')
+
+            width, height = self.graphicsView_3.width(), self.graphicsView_3.height()
+            F1.resize(width, height)
+            self.scene = QGraphicsScene()  # 创建一个场景
+            self.scene.addWidget(F1)  # 将图形元素添加到场景中
+            self.graphicsView_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+            self.graphicsView_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+            self.graphicsView_3.setScene(self.scene)  # 将创建添加到图形视图显示窗口
+        else:
+            QMessageBox.information(self, "错误", "未有数据输入，请先输入数据并计算")
+    except Exception as e:
+        QMessageBox.information(self, "错误", str(e))
