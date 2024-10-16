@@ -2,7 +2,7 @@ import numpy as np
 
 
 def BWRSV1_func(P, T):
-    z = np.transpose(np.array([[0.952, 0, 0.048, 0, 0, 0, 0, 0, 0, 0]]))
+    z = np.transpose(np.array([[0.919,0,0.048,0,0,0,0,0,0,0.011]]))
 
     M = np.array([[16, 30, 44, 58, 58, 72, 72, 44, 28, 34]])
 
