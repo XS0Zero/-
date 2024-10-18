@@ -4,7 +4,7 @@ import time
 
 import pandas as pd
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QGraphicsScene
+from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QGraphicsScene, QApplication
 from matplotlib import pyplot as plt
 from pandas.errors import EmptyDataError
 
@@ -47,7 +47,8 @@ def module3_compute(self):
             df.to_csv(filename, index=False)
         inputdata = pd.read_csv(r'输入数据.csv', sep=',', header=None)
     except EmptyDataError:
-        inputdata = pd.DataFrame(index=range(8), columns=range(6))
+        # inputdata = pd.DataFrame(index=range(8), columns=range(6))
+        inputdata = pd.DataFrame(index=range(8), columns=range(len(saved_data)))
     print(inputdata)
     print(inputdata.iloc[:, 0])
 
@@ -79,9 +80,11 @@ def module3_compute(self):
                 QMessageBox.information(self, "提示", "存在错误输入参数")
                 flag = 1
                 break
+            print(i)
             inputdata.iloc[7, index] = float(i)
             index += 1
     except Exception as e:
+        print(e)
         QMessageBox.information(self, "错误", str(e))
 
     result_form.moudle3_inform = data
@@ -110,20 +113,31 @@ def module3_compute(self):
         # self.msg.show()
         # time.sleep(1)
         print("开始调用matlab函数")
-
+        self.msg = QMessageBox()
+        # 设置非模态
+        self.msg.setWindowModality(Qt.NonModal)
+        # 设置弹窗标题和内容
+        self.msg.setWindowTitle('提示')
+        self.msg.setText('正在计算中')
+        self.msg.setStandardButtons(QMessageBox.Ok)
+        # 显示窗口
+        self.msg.show()
+        QApplication.processEvents()
         # message()
         # QMessageBox.information(self, "提示", "计算中，请稍后...")
-
-        myPopenObj = subprocess.Popen("matlab2/test.exe")
         try:
-            myPopenObj.wait(timeout=1200)
+            myPopenObj = subprocess.Popen("matlab2/test.exe")
+            try:
+                myPopenObj.wait(timeout=1200)
+            except Exception as e:
+                print("===== process timeout ======")
+                print(e)
+                myPopenObj.kill()
         except Exception as e:
-            print("===== process timeout ======")
-            print(e)
-            myPopenObj.kill()
+            QMessageBox.information(self, "错误", str(e))
         print("模块三计算完成")
 
-
+        self.msg.accept()
         try:
             df = pd.read_csv('振动位移随管长变化.csv')
             result_form.moudle3_flag = True
@@ -152,9 +166,10 @@ def module3_compute(self):
             # plt.show()
             show_moulde3_image(self)
         except Exception as e:
+
             print("===== process error ======")
             print("模块三计算失败")
-            QMessageBox.information(self, "提示", "模块三计算失败")
+            QMessageBox.information(self, "错误", str(e))
 
 
 # def matlab_function():
@@ -195,8 +210,8 @@ def show_moulde3_image(self):
         F1 = MyFigure(width=5, height=4, dpi=100)
         F1.axes1 = F1.fig.add_subplot(111)
         F1.axes1.plot(df.iloc[:, 0], df.iloc[:, 1], 'r')
-        F1.axes1.set_xlabel('管长', fontsize=11)
-        F1.axes1.set_ylabel('振动位移', fontsize=11)
+        F1.axes1.set_xlabel('管长 (m)', fontsize=11)
+        F1.axes1.set_ylabel('振动位移 (m)', fontsize=11)
         F1.axes1.set_title('振动位移随管长变化')
         width, height = self.graphicsView_5.width(), self.graphicsView_5.height()
         F1.resize(width, height)

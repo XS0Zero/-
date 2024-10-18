@@ -9,7 +9,6 @@
 #     return True
 import os
 import sys
-import time
 
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
@@ -47,6 +46,8 @@ class Login_window(QMainWindow, Login_window):
     def keyPressEvent(self, QKeyEvent):
         if QKeyEvent.key() == Qt.Key_Return:
             on_login_button_clicked(self, window, Main_window)
+
+
 
 
 class MainWindow(QMainWindow, MainWindow):
@@ -109,20 +110,20 @@ class MainWindow(QMainWindow, MainWindow):
         self.action_4.triggered.connect(lambda: load_project(_self))
         self.action_5.triggered.connect(lambda: save_project(_self))
 
+
         # self.setinit()
 
         self.pushButton_3.clicked.connect(lambda: module3_compute(self))
         self.pushButton_add.clicked.connect(lambda: add_a(self))
         self.pushButton_delete.clicked.connect(lambda: delete_a(self))
-        self.addpipe2.clicked.connect(self.add_label_main)
-        self.addpipe1_3.clicked.connect(lambda: self.add_label_image_main("resource/falan.png"))
-        self.addpipe1_4.clicked.connect(lambda: self.add_label_image_main("resource/wantou.png"))
-        self.addpipe1_5.clicked.connect(lambda: self.add_label_image_main("resource/gudingdian.png"))
-        self.addpipe1_6.clicked.connect(lambda: self.add_label_image_main("resource/jingkou.png"))
-        self.pushButton_10.clicked.connect(lambda: mappint_slot.delete_pipe(self))
+        self.addpipe2.clicked.connect(lambda: add_label(self, "#000000", 5, 300))
+        self.addpipe1_3.clicked.connect(lambda: add_image_label(self, "resource/falan.png"))
+        self.addpipe1_4.clicked.connect(lambda: add_image_label(self, "resource/wantou.png"))
+        self.addpipe1_5.clicked.connect(lambda: add_image_label(self, "resource/gudingdian.png"))
+        self.addpipe1_6.clicked.connect(lambda: add_image_label(self, "resource/jingkou.png"))
 
         self.pushButton_2.clicked.connect(self.saveimage)
-        self.pushButton_5.clicked.connect(lambda: rotate_label(self))
+        self.pushButton_5.clicked.connect(lambda: rotate_label())
         self.pushButton_4.clicked.connect(lambda: change_label_size())
         self.pushButton_6.clicked.connect(lambda: show_moulde1_image(self))
         self.pushButton_7.clicked.connect(lambda: show_moulde3_image(self))
@@ -242,18 +243,9 @@ class MainWindow(QMainWindow, MainWindow):
         init_result(self)
         change_page(self, 0)
 
-    def add_label_main(self):
-        mappint_slot.add_label(self, "#000000", 5, 300)
-        mappint_slot.init_all(self)
-
-    def add_label_image_main(self, image):
-        mappint_slot.add_image_label(self, image)
-        mappint_slot.init_all(self)
-
 
 class NewProject_Dialog(QDialog, Ui_Newproject_Dialog):
     _self = None
-
     def __init__(self):
         super(NewProject_Dialog, self).__init__()
         self.setupUi(self)
@@ -262,9 +254,8 @@ class NewProject_Dialog(QDialog, Ui_Newproject_Dialog):
         self.pushButton.clicked.connect(lambda: self.save_project_inform())
         self.pushButton_2.clicked.connect(lambda: self.close())
 
-    def set_parent(self, _self):
+    def set_parent(self,_self):
         self._self = _self
-
     def save_project_inform(self):
         try:
             project_inform = [self.lineEdit.text(), self.lineEdit_2.text(), self.lineEdit_3.text(),
@@ -276,7 +267,7 @@ class NewProject_Dialog(QDialog, Ui_Newproject_Dialog):
                     QMessageBox.information(self, "提示", "请输入完整信息")
                     flag = 0
                     break
-        except Exception:
+        except Exception :
             print("请输入正确信息")
             QMessageBox.information(self, "提示", "请输入正确工程信息")
         if flag == 1:

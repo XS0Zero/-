@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="ICO">
+    <file>icon.png</file>
+  </qresource>
+  <qresource prefix="img">
+    <file>green.png</file>
+    <file>red.png</file>
+    <file>yellow.png</file>
+  </qresource>
+</RCC>

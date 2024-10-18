@@ -8,7 +8,8 @@ from PyQt5.QtWidgets import QMessageBox
 
 from ctrl import Jieliu_slot, compute_slot
 from ctrl.Jieliu_slot import getparameter
-from ctrl.menu_slot import change_page
+# from Project.ctrl.menu_slot import change_page
+import ctrl.menu_slot
 
 Project_inform = None
 image_base64 = None
@@ -158,7 +159,7 @@ def save_project(self, path):
         QMessageBox.information(self, "提示", "保存成功")
 
 
-def open_project(self, path):
+def open_project(self, path, label_dict):
     global Qg, Ql, P1, Pflq, T1, D, n, n1, n2, n3, n4, L, LL, LL1, LL2, LL3, r1, r2, moudle3_result, G1, G2, G3
     global P2, P22, P222, T2, T22, T222, Px1, Tx1
     Px1 = []
@@ -264,7 +265,7 @@ def open_project(self, path):
     Jieliu_slot.setparameter(self)
     Jieliu_slot.setresult(self)
     compute_slot.setParameters(self)
-    change_page(self, 1)
+    ctrl.menu_slot.change_page(self, 1, label_dict)
 
 
 def clearData(self):

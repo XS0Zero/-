@@ -1,2 +1,4 @@
 /dist/
 /test/
+image/image_res_rc.py
+*.exe

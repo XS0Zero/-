@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="Login">
+    <file>1.png</file>
+    <file>2.png</file>
+    <file>clear(1).png</file>
+    <file>clear.png</file>
+    <file>loginClose.png</file>
+    <file>sky.jpg</file>
+    <file>sky2.jpg</file>
+    <file>sky3.jpeg</file>
+    <file>scene.png</file>
+    <file>universe.jpg</file>
+    <file>universe2.jpeg</file>
+  </qresource>
+</RCC>

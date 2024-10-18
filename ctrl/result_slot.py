@@ -4,14 +4,14 @@ import numpy as np
 import pandas as pd
 import sys
 
-from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
 
 sys.setrecursionlimit(2000)
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap, QImage
-from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QGraphicsScene, QGraphicsView
+from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QGraphicsScene, QGraphicsView, QGraphicsPixmapItem
 from matplotlib import pyplot as plt
 
 from data import result_form
@@ -165,8 +165,8 @@ def show_moulde3_image(self):
         F1 = MyFigure(width=5, height=4, dpi=100)
         F1.axes1 = F1.fig.add_subplot(111)
         F1.axes1.plot(df.iloc[:, 0], df.iloc[:, 1], 'r')
-        F1.axes1.set_xlabel('管长', fontsize=11)
-        F1.axes1.set_ylabel('振动位移', fontsize=11)
+        F1.axes1.set_xlabel('管长 (m)', fontsize=11)
+        F1.axes1.set_ylabel('振动位移 (m)', fontsize=11)
         F1.axes1.set_title('振动位移随管长变化')
         width, height = self.graphicsView_4.width(), self.graphicsView_4.height()
         F1.resize(width, height)

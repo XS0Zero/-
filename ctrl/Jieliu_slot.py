@@ -1,9 +1,10 @@
 import math
 import re
+import time
 
 import numpy as np
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMessageBox, QGraphicsScene
+from PyQt5.QtCore import Qt, QThread
+from PyQt5.QtWidgets import QMessageBox, QGraphicsScene, QApplication
 from matplotlib import pyplot as plt
 
 import matlab_project.main
@@ -17,6 +18,9 @@ from matlab_project.JL3 import JL_func
 result = None
 Qg, Ql, P1, Pflq, T1, D, n, LL, r1 = 0, 0, 0, 0, 0, 0, 0, 0, 0
 r2 = None
+
+
+
 
 
 def on_compute_button_clicked(self):
@@ -146,6 +150,18 @@ def on_compute_button_clicked(self):
 
         # print(Qg, Ql, r, P1, Pflq, T1, D, n, LL, LL1, LL2, LL3)
 
+        self.msg = QMessageBox()
+        # 设置非模态
+        self.msg.setWindowModality(Qt.NonModal)
+        # 设置弹窗标题和内容
+        self.msg.setWindowTitle('提示')
+        self.msg.setText('正在计算中')
+        self.msg.setStandardButtons(QMessageBox.Ok)
+        # 显示窗口
+        self.msg.show()
+        QApplication.processEvents()
+
+
         if self.tabWidget.currentIndex() == 1:
             result = matlab_project.main.compute(float(Qg), float(Ql), r2, float(P1), float(Pflq), float(T1),
                                                  float(D),
@@ -155,11 +171,13 @@ def on_compute_button_clicked(self):
             result = matlab_project.main.compute(float(Qg), float(Ql), float(r1), float(P1), float(Pflq), float(T1),
                                                  float(D),
                                                  int(n), LL, LL1, LL2, LL3, int(n1), int(n2), int(n3), int(n4))
+        self.msg.accept()
         result = list(result)
         print(result)
         if result is None:
             QMessageBox.information(self, "错误", "参数输入有误")
             return
+
         result = [
             str(round(result[0] if result[0] is not None else 0.0, 2)),
             str(round(result[1] if result[1] is not None else 0.0, 2)),
@@ -458,6 +476,7 @@ def compute_pctiz(self):
         self.Pctiz1.setText(str(Pctiz1))
     except Exception as e:
         QMessageBox.warning(self, "错误", str(e))
+        return
     R = 8.314  # 气体常数
     k = 1.2917  # 比热容比
     Tci = 190.69  # 临界温度，K
@@ -561,8 +580,8 @@ def show_moulde1_image(self):
             F1.resize(width, height)
             self.scene = QGraphicsScene()  # 创建一个场景
             self.scene.addWidget(F1)  # 将图形元素添加到场景中
-            self.graphicsView_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-            self.graphicsView_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+            self.graphicsView_3.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+            self.graphicsView_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
             self.graphicsView_3.setScene(self.scene)  # 将创建添加到图形视图显示窗口
         else:
             QMessageBox.information(self, "错误", "未有数据输入，请先输入数据并计算")

@@ -156,7 +156,7 @@ height: 0px;
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>0</y>
+                <y>-1419</y>
                 <width>1080</width>
                 <height>2677</height>
                </rect>
@@ -3136,7 +3136,7 @@ height: 0px;
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>0</y>
+                <y>-1433</y>
                 <width>1081</width>
                 <height>2228</height>
                </rect>
@@ -8014,7 +8014,7 @@ font: 14pt &quot;华文琥珀&quot;;
 	border-radius:8px;</string>
                    </property>
                    <property name="text">
-                    <string>添加节流管道</string>
+                    <string>添加一级节流管道</string>
                    </property>
                   </widget>
                  </item>
@@ -8219,25 +8219,6 @@ font: 14pt &quot;华文琥珀&quot;;
                       </layout>
                      </widget>
                     </item>
-                    <item>
-                     <widget class="QFrame" name="frame_85">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_70">
-                       <item>
-                        <widget class="QPushButton" name="pushButton_10">
-                         <property name="text">
-                          <string>删除</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
                    </layout>
                   </widget>
                  </item>
@@ -8354,8 +8335,8 @@ height: 0px;
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>0</y>
-                <width>653</width>
+                <y>-404</y>
+                <width>1080</width>
                 <height>1197</height>
                </rect>
               </property>
