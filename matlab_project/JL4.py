@@ -4,7 +4,7 @@ def JL4(P1, T1, Qg, r, k, R, Pc, Tc, Pci, Tci, Pflq):
     Pr1 = P1 / Pc  # Pressure before throttling
     Tr1 = T1 / Tc  # Temperature before throttling
 
-    Z1 = BWRSV1_func(P1, T1)  # Call to the BWRSV1 function
+    Z1 = BWRSV1_func(P1, T1)[0]  # Call to the BWRSV1 function
     P2 = Pflq
 
     a0 = (P2 / P1) ** (2 / k) - (P2 / P1) ** ((k + 1) / k)
@@ -36,4 +36,4 @@ def JL4(P1, T1, Qg, r, k, R, Pc, Tc, Pci, Tci, Pflq):
     d = d1
     Qg1 = Qg
 
-    return P2, T2, d, Qg1
+    return P2, T2, d, Qg1, Z1

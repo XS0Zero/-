@@ -83,5 +83,5 @@ def BWRSV1_func(P, T):
     Z = z1
     M1 = np.dot(M, z)
     denqti = M1 / 29.16
-    r = denqti
+    r = denqti[0]
     return Z, r, den
